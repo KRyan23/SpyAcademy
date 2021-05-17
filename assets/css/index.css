@@ -1,13 +1,25 @@
 
-body {
-  background-image: url("/assets/images/main-background.jpg");
-  background-color: #336EFF;
-  width: calc(100vw - 100px);
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
+.background-image {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
   background-size: cover;
+  background-image: url("/assets/images/main-background.jpg");
+  background-repeat: no-repeat;
+  background-color: #336EFF;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
+/*
 .lock-background {
   background-size: 100%;
   width: 280px;
@@ -38,51 +50,31 @@ body {
 
 
 
-/* Smartphones (portrait and landscape) ----------- */
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
+
+}
 
 
-/* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
-/* Styles */
+
+}
 
 
-/* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
-/* Styles */
 
+}
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
+@media only screen and (min-device-width: 321) and (max-device-width: 768px){
 
+}
 
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
-
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
-
-/**********
-iPad 3
-**********/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
+
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-/* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
-/* Styles */
+
 }
 
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-/* Styles */
-}
+*/
