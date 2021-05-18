@@ -293,7 +293,29 @@ The pictures on the x page were borrowed from the following sources.
 
 [13 - Main Background](http://clipart-library.com/clipart/yTkr9Xq9c.htm)
 
+[14 - BackgroundTray1](https://www.behance.net/gallery/17202921/Human-Target-Season-2)
 
+[15 - BackgroundTray1](https://www.behance.net/gallery/17202921/Human-Target-Season-2)
+
+[16 - BackgroundTray1](https://www.behance.net/gallery/17202921/Human-Target-Season-2)
+
+[17 - BackgroundTray1](https://www.behance.net/gallery/17202921/Human-Target-Season-2)
+
+[18 - Danger Explosive](https://www.signomatic.ie/signomatic/plasticsign)
+
+[19 - Dangerous Chemicals](https://www.signomatic.ie/signomatic/plasticsign)
+
+[20 - Dangerous Chemicals Red](https://www.signomatic.ie/signomatic/plasticsign)
+
+[18 - Danger Explosive]
+
+[18 - Danger Explosive]
+
+[18 - Danger Explosive]
+
+[18 - Danger Explosive]
+
+[18 - Danger Explosive]
 The images on the second page for challenge 2 "Break the Password" were chosen from the following sources.
 
 [1 - ]( )
