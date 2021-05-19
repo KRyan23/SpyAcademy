@@ -307,15 +307,9 @@ The pictures on the x page were borrowed from the following sources.
 
 [20 - Dangerous Chemicals Red](https://www.signomatic.ie/signomatic/plasticsign)
 
-[18 - Danger Explosive]
+[21 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
 
-[18 - Danger Explosive]
 
-[18 - Danger Explosive]
-
-[18 - Danger Explosive]
-
-[18 - Danger Explosive]
 The images on the second page for challenge 2 "Break the Password" were chosen from the following sources.
 
 [1 - ]( )
