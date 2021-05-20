@@ -45,7 +45,7 @@ It is designed to be challenging yet fun and reponsive on a range of devices.
             <img src="assets/images/colours-used.png">
 
     -   #### Typography
-        -   The NotoSans font is the main font used throughout the whole site with Sans Serif as the fall-back font. NotoSans was chosen to appear friendly but maintain a sense of purpose so it is both functional and appropriate.
+        -   The 'Saira Stencil One' font is used as the main font used throughout the site with Sans Serif as the fall-back font. 'Saira Stencil One' was chosen to enhance the sites content by giving a 'Top Secret' / 'Spy' feel.
 
     -   #### Imagery
         -   The hero image was chosen to be attractive with a sense of space in line with what the services the Business provides. Similarly, the rest of the images were chosen to complement the logo and colour scheme used in throughout the site.
@@ -309,6 +309,9 @@ The pictures on the x page were borrowed from the following sources.
 
 [21 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
 
+[22 - Barbed Wire 1-3](https://www.filterforge.com/filters/904-seamless.html)
+
+[23 - Main Page barbed-wire-small](https://pixabay.com/photos/barbed-wire-wire-demarcation-limit-3104944/)
 
 The images on the second page for challenge 2 "Break the Password" were chosen from the following sources.
 

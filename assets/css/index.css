@@ -1,7 +1,29 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
 body {
+
   background-color: black;
+  }
+
+.main-page-text-top {
+  text-align: center;
+  background:black;
+  border-top: 10%;
+  font-size: 8vw;
+  color: #fafafa;
+  font-family: 'Saira Stencil One', cursive;
 }
+
+.main-page-text-bottom {
+  text-align: center;
+  border-top: 50%;
+  background:black;
+  font-size: 8vw;
+  color: #fafafa;
+  font-family: 'Saira Stencil One', cursive;
+}
+
 
 /* This is the rule for the main Div tha displays the 'Breaking Clock Image' */
 .background-image {
@@ -56,22 +78,53 @@ body {
 /* This rule is for the Big red button on the front page + its animation */
 .main-button {
 
-  display: flex;
+/*  display: flex;
   background-size: 100%;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  background-color: green;
+  background-color: white;
   position:fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.9;
-  animation: big-red-button 2s infinite;
-
+  animation: big-red-button 1s infinite; */
+  background-size: 100%;
+  position:fixed;
+  display: flex;
+  width: 50%;
+  height: auto;
+  padding: 10% 0 10% 0;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
 }
 
+.barbed-wire {
+  width: 80%;
+  height: auto;
+  padding: 10% 0 10% 0;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
 
+/*.barbed-wire {
+  position: absolute;
+  display: flex;
+  background-size: 100%;
+  padding: 10% 0 10% 0;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}*/
+
+.barbed-wire-lower{
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
 
 .lock-barrels {
   width: 60px;
@@ -93,11 +146,9 @@ body {
 
 /* For the big-red-button on the front page */
 @keyframes big-red-button {
-  0%   {background: green;}
-  25% {background: red; }
-  50%  {background: red; }
-  75% {background: red; }
-  100% {background: green;}
+  0%   {background: white;}
+  50%  {background: black;}
+  100% {background: white;}
 }
 
 
