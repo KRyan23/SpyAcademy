@@ -313,6 +313,10 @@ The pictures on the x page were borrowed from the following sources.
 
 [23 - Main Page barbed-wire-small](https://pixabay.com/photos/barbed-wire-wire-demarcation-limit-3104944/)
 
+[24 - Main Page Spy Face Image](https://images.app.goo.gl/zXfs831NsdFR2UqF7)
+
+[25 - Main Page Ladder](https://images.app.goo.gl/2uo8WUmocN96twcf7)
+
 The images on the second page for challenge 2 "Break the Password" were chosen from the following sources.
 
 [1 - ]( )

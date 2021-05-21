@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+body {
+
+  background-color: black;
+  }
+
+.main-page-text-top {
+  text-align: center;
+  background:black;
+  border-top: 10%;
+  font-size: 8vw;
+  color: #fafafa;
+  font-family: 'Saira Stencil One', cursive;
+}
+
+.main-page-text-bottom {
+  text-align: center;
+  border-top: 50%;
+  background:black;
+  font-size: 8vw;
+  color: #fafafa;
+  font-family: 'Saira Stencil One', cursive;
+}
+
+
+/* This is the rule for the main Div tha displays the 'Breaking Clock Image' */
+.background-image {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+  background-image: url("/assets/images/main-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  display: none;
+
+}
+
+/*This rule is for the background tray image that sits behind the interactive game elements*/
+.background-tray {
+    width: 80%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+}
+/* This rule is for the container for the combination lock main elements */
+.lock-background {
+  background-size: 100%;
+  background-color: black;
+  width: 280px;
+  height: 280px;
+  border-radius: 5%;
+  border: 10px solid black;
+  color: blue;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(200, 54, 54, 0.8);
+
+}
+
+/* This rule is for the Big red button on the front page + its animation */
+.main-button {
+
+/*  display: flex;
+  background-size: 100%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: white;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  animation: big-red-button 1s infinite; */
+  background-size: 100%;
+  position:fixed;
+  display: flex;
+  width: 50%;
+  height: auto;
+  padding: 10% 0 10% 0;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+.barbed-wire {
+  width: 80%;
+  height: auto;
+  padding: 10% 0 10% 0;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+/*.barbed-wire {
+  position: absolute;
+  display: flex;
+  background-size: 100%;
+  padding: 10% 0 10% 0;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}*/
+
+.barbed-wire-lower{
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.lock-barrels {
+  width: 60px;
+  height: 25px;
+  border: 2px solid blue;
+  display:inline-block;
+  padding: 0px;
+  margin: 0px;
+}
+
+.increment-sign {
+  position: absolute;
+  top: 2.5%;
+  left: 9%;
+
+}
+
+/*----------------------------- All Keyframes calls ---------------------------*/
+
+/* For the big-red-button on the front page */
+@keyframes big-red-button {
+  0%   {background: white;}
+  50%  {background: black;}
+  100% {background: white;}
+}
+
+
+
+/*------------------------------- All Media Queries --------------------------*/
+/*- < 249px -*/
+@media only screen and (max-width: 249px) {
+}
+
+/*- 250px - 499px -*/
+@media only screen and (min-width: 250px) and (max-width: 499px) {
+/*Here we snap the background tray to the same dimensions as the container for the combination lock main elements */
+  .background-tray {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/*- 500px - 767px -*/
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  /*Here we snap the background tray to the same dimensions as the container for the combination lock main elements */
+  .background-tray {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/*- 767px - 991px -*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/*- 992px - 1023px -*/
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+}
+
+/*- 1024px - 1200px -*/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+
+/*- 1201px > -*/
+@media only screen and (min-width: 1201px) {
+}
