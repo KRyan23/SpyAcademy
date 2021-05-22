@@ -1,115 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
 body {
-  background-color: #2B303A;
+  background-color: darkgray;
   font-family: 'Saira Stencil One', cursive;
   text-align: center;
-
-}
-
-.main-page-text-top {
-  background:darkgray;
   color: #fafafa;
-  margin: 0 0 1em 0;
-  border-radius: 5px;
 }
 
-
-.main-page-text-bottom {
-  background:darkgray;
-  color: #fafafa;
-  padding: 10vw 0 10vw 0;
-  margin:auto;
-  /*margin: 8vw 0px 0 0;*/
-  border-radius: 5px;
+/* This rule is for the "Welcome to Text" */
+.main-page-text-welcome {
+  margin: 2em 0 1em 0;
+}
+/* This rule is for the "Spy Image" */
+.spy-image {
+  width: 10em;
+  height: auto;
+}
+/* This rule is for the Spy Academy Text" */
+.main-page-text-academy {
+  font-size: 2em;
+  color: #2B303A;
 }
 
-/* This rule is for the Big red button on the front page + its animation */
+/* This rule is for the Big red button div + its animation */
 .main-button {
-  margin: 0 0 5vw 0;
-  padding: 1vw;
+  margin: 0 0 0.1em 0;
+  padding: 0.25em;
   background-color:black;
-  height: 36vw;
-  width: 36vw;
-  color: #fafafa;
+  height: 10em;
+  width: 10em;
   position:relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   opacity: 0.9;
-  animation: big-red-button 1s infinite;
+  animation: big-red-button 5s infinite;
 
 }
-
-.barbed-wire {
-  width: 15vw;
-  height: auto;
-  padding: 10% 0 10% 0;
-
+/* This rule is for the "Start Your Mission Text" */
+.main-page-text-mission {
+  margin:2em 0 2em 0;
 }
-/*----------------------------- All Keyframes calls ---------------------------*/
+/* This rule is for the "Enter your Age Text" */
+.main-page-text-age {
+  margin:1em 0 2em 0;
+  animation: big-red-button 3s infinite;
+  padding: 0.5em 0 0.5em 0;
+}
+
+input {
+  border: none;
+  background-color: darkgray;
+  max-width: 3em;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+
+
+/*----------------------------- Keyframe calls ---------------------------*/
 
 /* For the big-red-button on the front page */
 @keyframes big-red-button {
-  0%   {background: silver;}
-  50%  {background: red;}
-  100% {background: silver;}
+  0%   {background: darkgray;}
+  50%  {background: #2B303A;}
+  100% {background: darkgray;}
 }
 
 /*------------------------------- All Media Queries --------------------------*/
 
 /*- 250px - 499px -*/
 @media only screen and (min-width: 250px) and (max-width: 499px) {
-  /*Main text is a little to small on these vieports so incresing it */
-  .main-page-text-top {
-  font-size: 1.2em;
-  }
-  .main-page-text-bottom {
-  font-size: em;
-}
 
 }
 
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
-  /*Here we snap the background tray to the same dimensions as the container for the combination lock main elements */
+
+  .main-page-text-welcome {
+    margin: 3em 0 3em 0;
   }
+
+}
 
 /*- 767px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  .main-page-text-welcome {
+    margin: 5em 0 5em 0;
+  }
+
+  .main-page-text-mission {
+    margin: 3em 0 3em 0;
+  }
+
+  .main-page-text-age {
+    margin:2em 0 2em 0;
+  }
 
 }
 
 /*- 992px - 1023px -*/
 @media only screen and (min-width: 992px) and (max-width: 1023px) {
+
+  .main-page-text-welcome {
+    margin: 8em 0 8em 0;
+  }
+
+  .main-page-text-mission {
+  margin: 4em 0 4em 0;
+  }
 }
 
 /*- 1024px - 1200px -*/
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+
+  .main-page-text-welcome {
+    margin: 10em 0 10em 0;
+  }
+
+  .main-page-text-mission {
+  margin: 5em 0 5em 0;
+  }
+
 }
 
 /*- 1201px > -*/
 @media only screen and (min-width: 1201px) {
-/*
-.main-page-text-top {
-  font-size: 5vw;
-  height: 180px;
-  width: 180px;
-  margin: 0;
-  padding: 0;
-}
 
-   .main-page-text-bottom {
-    height: 10vw;
-    width: 5vw;
-    margin-top: 5vw;
+  .main-page-text-welcome {
+    margin: 4em 0 4em 0;
   }
 
-.main-button {
-    height: 180px;
-    width: 180px;
-    margin: 0;
-    padding: 0;
-  } */
 }
