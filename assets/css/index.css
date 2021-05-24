@@ -49,14 +49,19 @@ body {
   padding: 0.5em 0 0.5em 0;
 }
 
-input {
-  border: none;
-  background-color: darkgray;
-  max-width: 3em;
-  border-radius: 0.5em;
+#age-slider{
+  max-width: 8em;
+  background-color:darkgray;
   text-align: center;
+  color:red;
 }
-
+/*#age-slider-entry {
+  max-width: 2em;
+  background-color:darkgray;
+  text-align: center;
+  color:red;
+}
+*/
 
 
 /*----------------------------- Keyframe calls ---------------------------*/

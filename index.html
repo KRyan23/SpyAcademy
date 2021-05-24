@@ -36,8 +36,20 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-12 main-page-text-age">
-    Enter Your Age to Begin: <span class="main-page-text-age"><input type="number" required/></span>
+  <div class="col-12 main-page-text-age slidecontainer">
+
+    <span>Please Choose Your Age:</span>
+
+    <br>
+
+
+
+  <span id="age-slider"></span><input type="range" min="5" max="16" value="5"  onchange="show_value(this.value);"/>
+  <label for id="age-slider"></label>
+  <br>
+
+
+
 </div>
 </div>
 
@@ -46,6 +58,7 @@
 
 <!-- Script tags put at the bottom of page to ensure a faster page load -->
 <!-- Using the JQuery CDN-v3.6.0  -->
+<script defer async src="assets/scripts/index.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
 </html>
