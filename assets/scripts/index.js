@@ -1,29 +1,26 @@
 
 
-
 function show_value(x)
 {
  document.getElementById("age-slider").innerHTML=x;
+ karl();
+ karl2();
 }
-
-/*function updateTextInput(val) {
-          //document.getElementById("age-slider-entry").value=val;
-          document.getElementById("age-slider").innerHTML=val;
-        }
-*/
-
 
 /*
-var g = document.getElementById("age-input").addEventListener('input', enterGame);
-
-function enterGame(){
-let g;
-if (Number.isInteger(g)){
-console.log("your old enough");
-}else{
-
-console.log("Your age is", g);
+function buttonActive(){
+If (x >= 6){
+ var element = document.getElementById("myDIV");
+ element.classList.remove("game-active");
 }
-}
-enterGame();
 */
+function karl(){
+  var element = document.getElementById("link-for-brb");
+  element.classList.remove("button-not-active");
+}
+
+
+function karl2(){
+  var element = document.getElementById("big-red-button");
+    element.classList.add("main-button-active");
+}

@@ -35,44 +35,57 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   opacity: 0.9;
-  animation: big-red-button 5s infinite;
 
 }
-/* This rule is for the "Start Your Mission Text" */
-.main-page-text-mission {
-  margin:2em 0 2em 0;
+
+/* To flash the big red button once an age is chosen.*/
+.main-button-active {
+  animation: big-red-button 500ms infinite;
+  opacity: 0.8;
+
+
 }
+/* To disable the big red button until the user enters their age.*/
+.button-not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+
 /* This rule is for the "Enter your Age Text" */
 .main-page-text-age {
-  margin:1em 0 2em 0;
-  animation: big-red-button 3s infinite;
+  margin:0em 0 0em 0;
+  animation: slider-age-chooser 9s infinite;
   padding: 0.5em 0 0.5em 0;
 }
 
-#age-slider{
-  max-width: 8em;
-  background-color:darkgray;
-  text-align: center;
-  color:red;
+/* Style the slider but needs more work */
+#age-slider {
+    font-size: 2em;
+    color:red;
+    text-align: center;
 }
-/*#age-slider-entry {
-  max-width: 2em;
-  background-color:darkgray;
-  text-align: center;
-  color:red;
-}
-*/
+
+
+
+
 
 
 /*----------------------------- Keyframe calls ---------------------------*/
 
 /* For the big-red-button on the front page */
-@keyframes big-red-button {
+@keyframes slider-age-chooser {
   0%   {background: darkgray;}
   50%  {background: #2B303A;}
   100% {background: darkgray;}
 }
 
+@keyframes big-red-button {
+  0%   {background: white;}
+  50%  {background: red;}
+  100% {background: white;}
+}
 /*------------------------------- All Media Queries --------------------------*/
 
 /*- 250px - 499px -*/
