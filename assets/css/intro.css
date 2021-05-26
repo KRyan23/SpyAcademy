@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+body {
+  background-color: darkgray;
+  font-family: 'Saira Stencil One', cursive;
+  text-align: center;
+  color: #fafafa;
+}
+
+/* This rule is for the "Welcome to Text" */
+.game-instructions h1 {
+  padding:0.9em 0 0.9em 0;
+  color:black;
+  font-size: 1.8em;
+}
+
+.game-instructions {
+  border: 1px solid black;
+  font-size: 1.2em;
+  margin: 2em 0 1em 0;
+}
+
+.spy-image {
+  width: 1.4em;
+  height: auto;
+  padding: 0.9em 0 0.9em 0;
+}
+
+p {
+    padding: 0.9em 0 0.9em 0;
+}
+
+.text-academy {
+
+}
