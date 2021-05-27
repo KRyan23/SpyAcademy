@@ -352,7 +352,7 @@ The sounds on the main page for game 1 "Combination Lock" were chosen from the f
 
 [7 - Background Music for game 1 Combination Lock]( )
 
-[8 - Clunk metal sound when changing age](https://freesound.org/people/BMacZero/sounds/94130/)
+[8 - Clunk metal sound ](https://freesound.org/people/BMacZero/sounds/94130/)
 
 
 ### Acknowledgements
