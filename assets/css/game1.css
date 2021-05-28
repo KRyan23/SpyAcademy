@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+/*This rule is to set up the background image to make it responsive and centered*/
+html {
+  background: url(/assets/images/combination_lock/background4.jpg) center;
+  background-repeat:no-repeat;
+  background-position: fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+ }
+
+/*This rule sets certain common parameters for the body*/
+body  {
+
+  font-family: 'Saira Stencil One', cursive, sans-serif;
+  text-align: center;
+  color: grey;
+  }
+
+.combination-outline {
+position: fixed;
+width: 80%;
+height: 20%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border: 5px solid greenyellow;
+display: inline-flex;
+
+}
+
+.barrel {
+  border: 1px solid silver;
+  text-align: center;
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+.lock-barrel-image {
+  position:inherit;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  display: inline;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+
+}
+
+.increment-sign {
+  position: absolute;
+  top: 2.5%;
+  left: 9%;
+
+}
+
+
+/*------------------------------- All Media Queries --------------------------*/
+/*- < 249px -*/
+@media only screen and (max-width: 249px) {
+  .lock-background-barrel {
+    width: 100%;
+
+    }
+}
+
+/*- 250px - 499px -*/
+@media only screen and (min-width: 250px) and (max-width: 499px) {
+
+}
+
+/*- 500px - 767px -*/
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  /*Here we snap the background tray to the same dimensions as the container for the combination lock main elements */
+
+}
+
+/*- 767px - 991px -*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/*- 992px - 1023px -*/
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+}
+
+/*- 1024px - 1200px -*/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+
+/*- 1201px > -*/
+@media only screen and (min-width: 1201px) {
+.combination-outline {
+  width: 40%;
+}
+
+}
