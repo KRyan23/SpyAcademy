@@ -16,17 +16,20 @@ body  {
   font-family: 'Saira Stencil One', cursive, sans-serif;
   text-align: center;
   color: grey;
+  font-size: 1.75em;
   }
 
 .combination-outline {
 position: fixed;
 width: 80%;
-height: 20%;
+height: 30%;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-border: 5px solid greenyellow;
+border: 3px solid white;
 display: inline-flex;
+background-color: black;
+
 
 }
 
@@ -34,9 +37,15 @@ display: inline-flex;
   border: 1px solid silver;
   text-align: center;
   align-self: center;
+
 }
 
-
+.plus-minus-symbol {
+  border: 1px;
+  display: inline-flex;
+  text-align: center;
+  border-radius: 50%;
+}
 
 
 
@@ -57,12 +66,7 @@ display: inline-flex;
 
 }
 
-.increment-sign {
-  position: absolute;
-  top: 2.5%;
-  left: 9%;
 
-}
 
 
 /*------------------------------- All Media Queries --------------------------*/
@@ -76,7 +80,9 @@ display: inline-flex;
 
 /*- 250px - 499px -*/
 @media only screen and (min-width: 250px) and (max-width: 499px) {
-
+body {
+  font-size: 1em;
+}
 }
 
 /*- 500px - 767px -*/

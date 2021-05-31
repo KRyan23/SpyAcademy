@@ -30,6 +30,175 @@ p {
     padding: 0.9em 0 0.9em 0;
 }
 
-.text-academy {
+.start-button {
+  margin: 1em 0 1em 0;
+  padding: 0.05em;
+  height: 5em;
+  width: 5em;
+  opacity: 0.9;
+  border-radius: 50%;
+  animation: big-red-button 1s infinite;
+}
+
+/*----------------------------- Keyframe calls ---------------------------*/
+
+/* For the big-red-button on the front page */
+
+@keyframes big-red-button {
+  0%   {background: white;}
+  50%  {background: red;}
+  100% {background: white;}
+}
+/*------------------------------- All Media Queries --------------------------*/
+
+/*- 250px - 499px -*/
+@media only screen and (min-width: 250px) and (max-width: 499px) {
+
+  .game-instructions {
+  margin: 0.1em 0 0.1em 0;
+  border: none;
+  }
+}
+/* - 320px Just for iphone 5-*/
+@media only screen and (min-width: 320px) and (max-width: 321px) {
+  .game-instructions {
+  margin: 0 0 0 0;
+  border: none;
+  }
+
+p {
+  padding: 0.3em 0 0.3em 0;
+  }
+
+}
+/*- 500px - 767px -*/
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+
+}
+
+/*- 767px - 991px -*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  .game-instructions h1 {
+    padding:1em 0 1em 0;
+  }
+
+  .game-instructions {
+    border: none;
+    font-size: 1.3em;
+    margin: 2em 0 1em 0;
+  }
+
+  .spy-image {
+    width: 1.5em;
+    height: auto;
+    padding: 1.2em 0 1.2em 0;
+  }
+
+  p {
+      padding: 1.2em 0 1.2em 0;
+  }
+
+  .start-button {
+    margin-top: 2em;
+    padding: 0.05em;
+
+  }
+
+
+}
+
+/*- 992px - 1023px -*/
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+
+  .game-instructions h1 {
+    padding:1em 0 1em 0;
+  }
+
+  .game-instructions {
+    border: none;
+    font-size: 1.3em;
+    margin: 2em 0 1em 0;
+  }
+
+  .spy-image {
+    width: 1.5em;
+    height: auto;
+    padding: 1.2em 0 1.2em 0;
+  }
+
+  p {
+      padding: 1.2em 0 1.2em 0;
+  }
+
+  .start-button {
+    margin-top:2em;
+    padding: 0.05em;
+
+  }
+
+}
+
+/*- 1024px - 1200px -*/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+
+  .game-instructions h1 {
+    padding:1em 0 1em 0;
+  }
+
+  .game-instructions {
+    border: none;
+    font-size: 1.3em;
+    margin: 2em 0 1em 0;
+  }
+
+  .spy-image {
+    width: 1.5em;
+    height: auto;
+    padding: 1.2em 0 1.2em 0;
+  }
+
+  p {
+      padding: 1.2em 0 1.2em 0;
+  }
+
+  .start-button {
+    margin-top: 3em;
+    padding: 0.05em;
+
+  }
+
+}
+
+/*- 1201px > -*/
+@media only screen and (min-width: 1201px) {
+
+  .game-instructions h1 {
+    padding:1em 0 1em 0;
+  }
+
+  .game-instructions {
+    border: none;
+    font-size: 1.3em;
+    margin: 2em 0 1em 0;
+  }
+
+  .spy-image {
+    width: 1.5em;
+    height: auto;
+    padding: 1.2em 0 1.2em 0;
+  }
+
+  p {
+      padding: 1.2em 0 1.2em 0;
+  }
+
+  .start-button {
+    margin-top: 3em;
+    padding: 0.05em;
+
+  }
+
+
 
 }
