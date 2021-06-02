@@ -1,64 +1,40 @@
 # Spy Academy
 
-[View the live project here.](https)
+[View the live project here(Not yet deployed).](https)
 
-This is a browser based game with 3 spy themed challenges for kids aged 6 - 16.
-The games are an addition to an existing website called Spy Academy.
+Spy Academy is a browser based game written in Html/Css and Javascript for kids aged 6 - 16yrs.
+
+The game has 3 spy themed challenges with 3 levels of difficulty based on age.
+
 It is designed to be challenging yet fun and reponsive on a range of devices.
+<p align="center">
+  <img width="30%" height="30%" src="assets/images/home_page/SpyAcademyFrontPage.png">
+</p>
 
-<img src="/assets/images/">
-
-## User Experience (UX)
-
--   ### User stories
-
-#### Business Goals
-* The Business already has an existing website called Spy Academy but the design lacks interactivity. Rather than redesigning the whole site the customer is looking to add the game to improve is customer experience.
-* The Spy Academy website is the front end to a businees that runs a 2hr Spy Academy where kids solve problems, crack codes and learn what its like to be a 'real spy' earning points along the way with a goal to graduate from the Spy Academy.
-* The addition of the game to the main website is to give customers a flavour of what to expect from the onsite activity.
-* Between the customer and the developer it has been decided that the game was the best way to drive sales with possiblly sending the user a discount code by email if they complete the 3 challenges on-line.
-
-#### User Goals
-
-
-
-##### First Time Visitor Goals
-
-  * As a First Time Visitor, I would like to play the games to understand the difficulty of the on-site activity.
-  * As a First Time Visitor, I would like to earn a discount for my next booking by sucessfully completing the games.
-
-
-##### Returning Visitor Goals
-
-
-
-    -   #### Frequent User Goals
 
 
 -   ### Design
     -   #### Colour Scheme
-        -   The 3 main colours used
+        -   The 5 main colours used
+            are, DarkGrey, Black, BrightRed, Yellow and White.
 
-            <img src="assets/images/colours-used.png">
 
     -   #### Typography
         -   The 'Saira Stencil One' font is used as the main font used throughout the site with Sans Serif as the fall-back font. 'Saira Stencil One' was chosen to enhance the sites content by giving a 'Top Secret' / 'Spy' feel.
 
     -   #### Imagery
-        -
+        - The imagery of the website were chosen to have a functional minimal feel to fit in with the overall Spy theme.
 
 
 *   ### Wireframes
 
-    -   Desktop Wireframes - [View]()
+    -   Desktop Wireframes - [View](assets/wireframes/Spy-Academy-Desktop-and-Site-Map.pdf)
 
-    -   Tablet Wireframes - [View]()
 
-    -   Mobile Wireframes - [View]()
 
     *   ### Screenshots
 
-        -   Screenshots to align with user stories can be found here - [View]()
+        -
 
 
 ## Features
@@ -108,68 +84,17 @@ The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to val
 -   [W3C Mark-up Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]()
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]()
 
-### Testing User Stories from User Experience (UX) Section
-
-### Business Stories
-
-
-
-- #### Addressing the Business needs
-
-
-
-
-### Users Stories
--   #### First Time Visitor Goals
-
-
--   #### Returning Visitor Goals
-
-
-
-
--   #### Frequent User Goals
-
-
-
-
-### Further Testing
-
--
-
-### Known Bugs
-
--
-
-## Deployment
-
-### GitHub Pages
-
-The project was deployed to GitHub Pages using the following steps...
-
-
-
-### Forking the GitHub Repository
-
-
-
-### Making a Local Clone
-
-
-
-## Credits
-
-### Code
 
 
 ### Content
 
--   All content was written by myself.
+-   All content was written by myself with some minor contributions by family and friends.
 
 
 ### Media
 
 ####Images
+(For research not yet assigned to invidual pages)
 
 
 
@@ -196,7 +121,7 @@ The project was deployed to GitHub Pages using the following steps...
 
 
 [11. - Background4](https://pngtree.com/freebackground/tech-data-grid-poster-background-free-download_1052045.html)
-The pictures on the x page were borrowed from the following sources.
+
 
 [12 - Background5 - Credit Markus Spiske ](https://unsplash.com/photos/iar-afB0QQw)
 
@@ -226,7 +151,39 @@ The pictures on the x page were borrowed from the following sources.
 
 [25 - Main Page Ladder](https://images.app.goo.gl/2uo8WUmocN96twcf7)
 
+The images on the first page for challenge 1 "Combination Lock" were chosen from the following sources.
+
+[1 - ]( )
+
+[2 - ]( )
+
+[3 - ]( )
+
+[4 - ]( )
+
+[5 - ]( )
+
+[6 - ]( )
+
+[7 - ]( )
+
 The images on the second page for challenge 2 "Break the Password" were chosen from the following sources.
+
+[1 - ]( )
+
+[2 - ]( )
+
+[3 - ]( )
+
+[4 - ]( )
+
+[5 - ]( )
+
+[6 - ]( )
+
+[7 - ]( )
+
+The images on the third page for challenge 3 "Defuse the Bomb" were chosen from the following sources.
 
 [1 - ]( )
 
@@ -259,7 +216,7 @@ The sounds on the main page for game 1 "Combination Lock" were chosen from the f
 
 [6 - Speech sound F](https://ttsmp3.com/)
 
-[7 - Background Music for game 1 Combination Lock]( )
+[7 - Background Music for game 1 Combination Lock](not yet sourced )
 
 [8 - Clunk metal sound ](https://freesound.org/people/BMacZero/sounds/94130/)
 

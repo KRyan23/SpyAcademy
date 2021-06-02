@@ -10,57 +10,104 @@
   <title>Spy Academy Combination Lock</title>
 </head>
 <body>
-
-
-
 <div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-10 instructions">
+      <br>
+      <p>Your first task is to break the combination on this safe.</p>
+      <p>The + and - arrows to change the numbers, a correct answer turns the barrel green.</p>
+      <p>Use the "Try Combination" button to guess your answers.</p>
+    </div>
+  </div>
+</div>
+
+<!-- These rules represent the 'Control' peice or the top div that controls the game -->
+<div class= "container-fluid combination-outline-controls">
   <div class="row">
-  <div class="combination-outline">
+    <div class="col-12 ">
+    <span id="try-button">Try Combination </span>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-between">
+    <div class="col-xm-4">
+Time left<br><span>02:30</span>
+    </div>
 
 
-    <div class="col-2 barrel">
-      <i class="fas fa-plus plus-minus-symbol"></i>
-      <h2>0</h2>
-      <i class="fas fa-minus plus-minus-symbol"></i>
-      </div>
-
-  <div class="col-2 barrel">
-    <i class="fas fa-plus plus-minus-symbol"></i>
-      <h2>1</h2>
-      <i class="fas fa-minus plus-minus-symbol"></i>
+    <div class="col-xm-4">
+Trys left<br><span>20</span>
     </div>
-  <div class="col-2 barrel">
-    <i class="fas fa-plus plus-minus-symbol"></i>
-      <h2>2</h2>
-      <i class="fas fa-minus plus-minus-symbol"></i>
-    </div>
-  <div class="col-2 barrel">
-    <i class="fas fa-plus plus-minus-symbol"></i>
-      <h2>3</h2>
-      <i class="fas fa-minus plus-minus-symbol"></i>
-    </div>
-    <div class="col-2 barrel">
-      <i class="fas fa-plus plus-minus-symbol"></i>
-        <h2>4</h2>
-        <i class="fas fa-minus plus-minus-symbol"></i>
-      </div>
-    <div class="col-2 barrel">
-      <i class="fas fa-plus plus-minus-symbol"></i>
-        <h2>5</h2>
-        <i class="fas fa-minus plus-minus-symbol"></i>
-      </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+  <div class="col-sm-6 col-md-6 spy-badges">
+    <img src="assets/images/home_page/spy.png" class="spy-image" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+ <img src="assets/images/home_page/spy.png" class="spy-image" id="second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+  <img src="assets/images/home_page/spy.png" class="spy-image" id="third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+  </div>
 </div>
-</div>
+  </div>
 
+<!--  This Div visually joins the top and bottom parts of the game its the 2 black bars-->
+<div class="container-fluid">
+    <div class="row">
+      <div class="combination-game-center">
+        <img src="assets/images/combination_lock/abortbutton.png" class="abort-button" alt="abort button" aria-label="abort button yellow" title="abort button"/>
+      </div>
+      </div>
+      </div>
 
+<!-- These rules represent the 'Game' peice or the bottom div that control all 6 barrels -->
+<div class="container-fluid">
+    <div class="row">
+      <div class="combination-outline-game">
+    <div class="col-2 barrel">
+      <i class="fas fa-plus plus-minus-symbol"></i>
+      <h3>0</h3>
+      <i class="fas fa-minus plus-minus-symbol"></i>
+      </div>
 
+    <div class="col-2 barrel">
+      <i class="fas fa-plus plus-minus-symbol"></i>
+      <h3>1</h3>
+      <i class="fas fa-minus plus-minus-symbol"></i>
+    </div>
+
+    <div class="col-2 barrel">
+      <i class="fas fa-plus plus-minus-symbol"></i>
+      <h3>2</h3>
+      <i class="fas fa-minus plus-minus-symbol"></i>
+    </div>
+
+    <div class="col-2 barrel">
+      <i class="fas fa-plus plus-minus-symbol"></i>
+      <h3>3</h3>
+      <i class="fas fa-minus plus-minus-symbol"></i>
+    </div>
+
+    <div class="col-2 barrel">
+      <i class="fas fa-plus plus-minus-symbol"></i>
+      <h3>4</h3>
+      <i class="fas fa-minus plus-minus-symbol"></i>
+      </div>
+
+    <div class="col-2 barrel">
+      <i class="fas fa-plus plus-minus-symbol"></i>
+      <h3>5</h3>
+      <i class="fas fa-minus plus-minus-symbol"></i>
     </div> <!-- Col- lock background -->
 
   </div> <!-- row background -->
+
 </div> <!-- container fluid -->
 
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
 
-
+    </div>
+  </div>
+</div>
 
 
 <!-- <p>This is the Combination lock Challenge</p>
@@ -72,6 +119,6 @@
   <!-- Script tags put at the bottom of page to ensure a faster page load this.value-->
   <!-- Using the JQuery CDN-v3.6.0  -->
   <script defer async src="assets/scripts/game1.js" type="text/javascript"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 </body>
 </html>

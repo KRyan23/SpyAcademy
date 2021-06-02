@@ -10,27 +10,61 @@ html {
   overflow: hidden;
  }
 
+h2 {
+  font-size: 0.5em;
+}
+
+h3 {
+  color: black;
+}
 /*This rule sets certain common parameters for the body*/
-body  {
+body {
 
   font-family: 'Saira Stencil One', cursive, sans-serif;
   text-align: center;
-  color: grey;
+  color: black;
   font-size: 1.75em;
   }
 
-.combination-outline {
+
+
+.combination-outline-game {
 position: fixed;
 width: 80%;
-height: 30%;
-top: 50%;
+height: 20%;
+top: 78%;
 left: 50%;
-transform: translate(-50%, -50%);
-border: 3px solid white;
+transform: translate(-50%, -78%);
 display: inline-flex;
-background-color: black;
+background-color: darkgray;
+border: 2px solid black;
+border-radius: 15%;
 
 
+}
+
+.combination-outline-controls {
+padding-top: 0.2em;
+position: fixed;
+width: 80%;
+height: 20%;
+top: 45%;
+left: 50%;
+transform: translate(-50%, -45%);
+border: 3px solid black;
+display: block;
+background-color: darkgray;
+}
+
+.combination-time {
+  position: fixed;
+  width: 80%;
+  height: 25%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  display: block;
+  background-color:darkgray;
 }
 
 .barrel {
@@ -41,15 +75,70 @@ background-color: black;
 }
 
 .plus-minus-symbol {
-  border: 1px;
   display: inline-flex;
   text-align: center;
-  border-radius: 50%;
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+}
+
+.spy-badges {
+  border: 1px;
+  text-align: center;
+
+}
+
+.spy-image {
+  width: 1.4em;
+  height: auto;
+  text-align: center;
+}
+
+.abort-button {
+  text-align: center;
+
+  width: 50%;
+  height: auto;
+
+}
+
+#try-button {
+padding: 0.1em 0.2em 0.1em 0.2em;
+color: white;
+border: 1px solid red;
+opacity: 0.9;
+border-radius: 5%;
+background-color: black;
+}
+
+.instructions {
+position: fixed;
+text-align: center;
+color: white;
+font-size: 0.75em;
+animation: textFade ease 15s;
+-webkit-animation: textFade ease 15s;
+ -moz-animation: textFade ease 15s;
+
+}
+/* This rule puts the 2 black bars that connects the top an borrom game peices */
+.combination-game-center {
+  position: fixed;
+  text-align: center;
+  color: darkgray;
+  width: 20%;
+  height: 14%;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  border-left: 5px solid black;
+  border-right: 5px solid black;
 }
 
 
 
-
+#first-badge, #second-badge, #third-badge {
+  opacity: 0.3;
+}
 
 
 
@@ -65,29 +154,37 @@ background-color: black;
   border: 2px solid black;
 
 }
-
-
-
+/*----- Keyframe calls -*/
+@keyframes textFade {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+  0% {
+    opacity:0;
+  }
+}
 
 /*------------------------------- All Media Queries --------------------------*/
 /*- < 249px -*/
 @media only screen and (max-width: 249px) {
-  .lock-background-barrel {
-    width: 100%;
-
-    }
+body {
+  font-size: 0.5em;
+}
 }
 
 /*- 250px - 499px -*/
 @media only screen and (min-width: 250px) and (max-width: 499px) {
-body {
-  font-size: 1em;
-}
+  body {
+    font-size: 1em;
+  }
 }
 
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
-  /*Here we snap the background tray to the same dimensions as the container for the combination lock main elements */
+
 
 }
 
@@ -106,8 +203,10 @@ body {
 
 /*- 1201px > -*/
 @media only screen and (min-width: 1201px) {
-.combination-outline {
+.combination-outline-game {
   width: 40%;
 }
-
+.combination-outline-controls {
+  width: 40%;
+}
 }
