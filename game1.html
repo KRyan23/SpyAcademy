@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" type="text/css"/>
   <link rel="stylesheet" href="assets/css/game1.css"/>
   <title>Spy Academy Combination Lock</title>
@@ -14,29 +14,32 @@
   <div class="row justify-content-center">
     <div class="col-10 instructions">
       <br>
-      <p>Your first task is to break the combination on this safe.</p>
+      <p><b>Your first task is to break the combination on this safe.</p>
       <p>The + and - arrows to change the numbers, a correct answer turns the barrel green.</p>
-      <p>Use the "Try Combination" button to guess your answers.</p>
+      <p>Use the "Try Combination" button to guess your answers.</b></p>
     </div>
   </div>
 </div>
 
+
 <!-- These rules represent the 'Control' peice or the top div that controls the game -->
 <div class= "container-fluid combination-outline-controls">
-  <div class="row">
+  <div class="row d-flex">
     <div class="col-12 ">
-    <span id="try-button">Try Combination </span>
+    <button type="button" class="btn btn-secondary btn-lg">Try<br> Combination</button>
+    <div class="col-12">
+    <button type="button" class="btn btn-primary">Start</button>
     </div>
   </div>
-
+</div>
   <div class="row d-flex justify-content-between">
-    <div class="col-xm-4">
-Time left<br><span>02:30</span>
+    <div class="col-xm-4 time-trys-left">
+<span class="time-trys-left ">Time left</span><br><span id="time">02:30</span>
     </div>
 
 
-    <div class="col-xm-4">
-Trys left<br><span>20</span>
+    <div class="col-xm-4 time-trys-left">
+<span class="time-trys-left">Attempts left</span><br><span id="trys">0020</span>
     </div>
   </div>
   <div class="row d-flex justify-content-center">
@@ -44,22 +47,18 @@ Trys left<br><span>20</span>
     <img src="assets/images/home_page/spy.png" class="spy-image" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
  <img src="assets/images/home_page/spy.png" class="spy-image" id="second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
   <img src="assets/images/home_page/spy.png" class="spy-image" id="third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
-  </div>
-</div>
-  </div>
+
 
 <!--  This Div visually joins the top and bottom parts of the game its the 2 black bars-->
-<div class="container-fluid">
-    <div class="row">
-      <div class="combination-game-center">
-        <img src="assets/images/combination_lock/abortbutton.png" class="abort-button" alt="abort button" aria-label="abort button yellow" title="abort button"/>
-      </div>
-      </div>
-      </div>
 
-<!-- These rules represent the 'Game' peice or the bottom div that control all 6 barrels -->
 <div class="container-fluid">
-    <div class="row">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12">
+
+
+<!-- These rules represent the bottom divs that control all 6 barrels -->
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
       <div class="combination-outline-game">
     <div class="col-2 barrel">
       <i class="fas fa-plus plus-minus-symbol"></i>
@@ -101,13 +100,16 @@ Trys left<br><span>20</span>
 
 </div> <!-- container fluid -->
 
-<div class="container-fluid">
-  <div class="row d-flex justify-content-center">
-    <div class="col-6">
 
-    </div>
-  </div>
+
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
 
 
 <!-- <p>This is the Combination lock Challenge</p>

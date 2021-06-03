@@ -26,49 +26,36 @@ body {
   font-size: 1.75em;
   }
 
-
-
-.combination-outline-game {
-position: fixed;
-width: 80%;
-height: 20%;
-top: 78%;
-left: 50%;
-transform: translate(-50%, -78%);
-display: inline-flex;
-background-color: darkgray;
-border: 2px solid black;
-border-radius: 15%;
-
-
-}
-
-.combination-outline-controls {
-padding-top: 0.2em;
-position: fixed;
-width: 80%;
-height: 20%;
-top: 45%;
-left: 50%;
-transform: translate(-50%, -45%);
-border: 3px solid black;
-display: block;
-background-color: darkgray;
-}
-
-.combination-time {
+/* This is the outline div that holds the controls + combination barrels*/
+  .combination-outline-controls {
+  padding-top: 0.2em;
   position: fixed;
-  width: 80%;
-  height: 25%;
-  top: 55%;
+  max-height: auto;
+  min-width: 55%;
+  min-height: 40%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -60%);
+  border: 3px solid black;
   display: block;
-  background-color:darkgray;
-}
+  background-color: darkgray;
+  }
+  /* This is the inner div that holds the combination barrels*/
+
+ .combination-outline-game {
+ text-align: center;
+ min-width: 85%;
+ min-height: 20%;
+ padding: 0;
+ margin: 8%;
+ display: inline-flex;
+ background-color: darkgray;
+ border: 2px solid black;
+ }
 
 .barrel {
-  border: 1px solid silver;
+  border: 2px solid silver;
+  border-radius: 15%;
   text-align: center;
   align-self: center;
 
@@ -82,7 +69,7 @@ background-color: darkgray;
 }
 
 .spy-badges {
-  border: 1px;
+  border: 1px solid white;
   text-align: center;
 
 }
@@ -93,22 +80,6 @@ background-color: darkgray;
   text-align: center;
 }
 
-.abort-button {
-  text-align: center;
-
-  width: 50%;
-  height: auto;
-
-}
-
-#try-button {
-padding: 0.1em 0.2em 0.1em 0.2em;
-color: white;
-border: 1px solid red;
-opacity: 0.9;
-border-radius: 5%;
-background-color: black;
-}
 
 .instructions {
 position: fixed;
@@ -120,18 +91,22 @@ animation: textFade ease 15s;
  -moz-animation: textFade ease 15s;
 
 }
-/* This rule puts the 2 black bars that connects the top an borrom game peices */
-.combination-game-center {
-  position: fixed;
-  text-align: center;
-  color: darkgray;
-  width: 20%;
-  height: 14%;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -65%);
-  border-left: 5px solid black;
-  border-right: 5px solid black;
+/*
+#time {
+  padding: 0;
+  border: 1px solid white;
+
+}
+
+#trys {
+  padding: 0;
+  border: 1px solid white;
+  height: 20%;
+}
+*/
+.time-trys-left {
+  margin-left: 1%;
+  padding: 0;
 }
 
 
@@ -140,20 +115,6 @@ animation: textFade ease 15s;
   opacity: 0.3;
 }
 
-
-
-
-.lock-barrel-image {
-  position:inherit;
-  width: 100%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  display: inline;
-  transform: translate(-50%, -50%);
-  border: 2px solid black;
-
-}
 /*----- Keyframe calls -*/
 @keyframes textFade {
   0% {
