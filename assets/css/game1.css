@@ -26,6 +26,29 @@ body {
   font-size: 1.75em;
   }
 
+/*This rule is targetted once the abort sequence in the game is executed*/
+.abort-message {
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  font-weight: 300;
+  color: white;
+  position: absolute;
+  
+}
+
+.start-over-button{
+  margin-top:10%;
+  height: 6em;
+  width: 6em;
+  opacity: 0.75;
+  padding: 0;
+}
+
+
+
+
+
 /* This is the outline div that holds the controls + combination barrels*/
   .combination-outline-controls {
   padding-top: 0.2em;
@@ -82,6 +105,7 @@ body {
 
 
 .instructions {
+font-weight: 100;
 position: fixed;
 text-align: center;
 color: white;
@@ -91,19 +115,7 @@ animation: textFade ease 15s;
  -moz-animation: textFade ease 15s;
 
 }
-/*
-#time {
-  padding: 0;
-  border: 1px solid white;
 
-}
-
-#trys {
-  padding: 0;
-  border: 1px solid white;
-  height: 20%;
-}
-*/
 .time-trys-left {
   margin-left: 1%;
   padding: 0;
@@ -115,18 +127,21 @@ animation: textFade ease 15s;
   opacity: 0.3;
 }
 
+#start {
+  background: green;
+}
+
+
+
+
+
 /*----- Keyframe calls -*/
 @keyframes textFade {
-  0% {
-    opacity:0;
+  0% {opacity:0;}
+  100% {opacity:1;}
   }
-  100% {
-    opacity:1;
-  }
-  0% {
-    opacity:0;
-  }
-}
+/////////////////////////
+
 
 /*------------------------------- All Media Queries --------------------------*/
 /*- < 249px -*/
@@ -169,5 +184,8 @@ body {
 }
 .combination-outline-controls {
   width: 40%;
+}
+.start-over-button{
+  margin-top:1%;
 }
 }

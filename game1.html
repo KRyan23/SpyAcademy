@@ -12,23 +12,54 @@
 <body>
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div class="col-10 instructions">
+    <div class="col-10 instructions" id="game-instructions">
       <br>
       <p><b>Your first task is to break the combination on this safe.</p>
-      <p>The + and - arrows to change the numbers, a correct answer turns the barrel green.</p>
+      <p>Use the + and - to change the numbers, a correct answer turns the barrel green.</p>
       <p>Use the "Try Combination" button to guess your answers.</b></p>
     </div>
   </div>
 </div>
 
+<div class="abort-message" id="abort-message-show" style="display: none;">
+
+<div class="container-fluid">
+  <div class="row d-flex justify-content-end">
+    <div class="col-sm-8 col-md-8">
+
+      <div class="speach-bubble">
+      <p class="speach-bubble-text"><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, Why not have another try? <i class="fas fa-quote-right"></i></p>
+      </div>
+
+    </div>
+  </div>
+  <div class="row d-flex">
+    <div class="col-sm-4 col-md-4">
+      <img src="assets/images/combination_lock/spy.png" class="" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+    </div>
+  </div>
+
+<div class="row d-flex justify-content-center">
+  <div class="col-sm-12 col-md-12">
+    <a href="index.html">
+    <img src="assets/images/combination_lock/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
+    </a>
+    </div>
+</div>
+
+</div>
+
+</div> <!-- end div for abort-message -->
+
+
 
 <!-- These rules represent the 'Control' peice or the top div that controls the game -->
-<div class= "container-fluid combination-outline-controls">
+<div class= "container-fluid combination-outline-controls border-success">
   <div class="row d-flex">
     <div class="col-12 ">
     <button type="button" class="btn btn-secondary btn-lg">Try<br> Combination</button>
     <div class="col-12">
-    <button type="button" class="btn btn-primary">Start</button>
+    <button type="button" class="btn btn-primary" id="start">Start</button>
     </div>
   </div>
 </div>
@@ -44,9 +75,9 @@
   </div>
   <div class="row d-flex justify-content-center">
   <div class="col-sm-6 col-md-6 spy-badges">
-    <img src="assets/images/home_page/spy.png" class="spy-image" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
- <img src="assets/images/home_page/spy.png" class="spy-image" id="second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
-  <img src="assets/images/home_page/spy.png" class="spy-image" id="third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+    <img src="assets/images/combination_lock/spy.png" class="spy-image" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+ <img src="assets/images/combination_lock/spy.png" class="spy-image" id="second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+  <img src="assets/images/combination_lock/spy.png" class="spy-image" id="third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
 
 
 <!--  This Div visually joins the top and bottom parts of the game its the 2 black bars-->
