@@ -28,8 +28,9 @@ It is designed to be challenging yet fun and reponsive on a range of devices.
 
 *   ### Wireframes
 
-    -   Desktop Wireframes - [View](assets/wireframes/Spy-Academy-Desktop-and-Site-Map.pdf)
-
+    -   Desktop Wireframes - [View here](assets/wireframes/Spy_Academy_Desktop_and_Site_Map.pdf)
+    -  Tablet Wireframes - [View here](assets/wireframes/Spy_Academy_Tablet_and_Site_Map.pdf)
+    - Mobile Wireframes - [View here](assets/wireframes/Spy_Academy_Tablet_and_Site_Map.pdf)
 
 
     *   ### Screenshots
