@@ -8,7 +8,7 @@ The game has 3 spy themed challenges with 3 levels of difficulty based on age.
 
 It is designed to be challenging yet fun and reponsive on a range of devices.
 <p align="center">
-  <img width="30%" height="30%" src="assets/images/home_page/SpyAcademyFrontPage.png">
+  <img width="30%" height="30%" src="/assets/images/home_page/SpyAcademyFrontPage.png">
 </p>
 
 
@@ -30,7 +30,7 @@ It is designed to be challenging yet fun and reponsive on a range of devices.
 
     -   Desktop Wireframes - [View here](assets/wireframes/Spy_Academy_Desktop_and_Site_Map.pdf)
     -  Tablet Wireframes - [View here](assets/wireframes/Spy_Academy_Tablet_and_Site_Map.pdf)
-    - Mobile Wireframes - [View here](assets/wireframes/Spy_Academy_Tablet_and_Site_Map.pdf)
+    - Mobile Wireframes - [View here](assets/wireframes/Spy_Academy_Mobile_and_Site_Map.pdf)
 
 
     *   ### Screenshots
