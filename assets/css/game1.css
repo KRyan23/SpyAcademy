@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
-/*This rule is to set up the background image to make it responsive and centered*/
+/*This rule is to set up the background image to make it responsive and centered */
 html {
   background: url(/assets/images/combination_lock/background4.jpg) center;
   background-repeat:no-repeat;
@@ -26,7 +26,7 @@ body {
   font-size: 1.75em;
   }
 
-/*This rule is targetted once the abort sequence in the game is executed*/
+/*This rule is targetted by game1.js once the abort sequence in the game is executed*/
 .abort-message {
   margin: 50px auto;
   padding: 20px;
@@ -34,7 +34,7 @@ body {
   font-weight: 300;
   color: white;
   position: absolute;
-  
+
 }
 
 .start-over-button{
@@ -44,10 +44,6 @@ body {
   opacity: 0.75;
   padding: 0;
 }
-
-
-
-
 
 /* This is the outline div that holds the controls + combination barrels*/
   .combination-outline-controls {
@@ -73,7 +69,8 @@ body {
  margin: 8%;
  display: inline-flex;
  background-color: darkgray;
- border: 2px solid black;
+ border: 3px solid silver;
+ border-radius: 5px;
  }
 
 .barrel {
@@ -92,17 +89,18 @@ body {
 }
 
 .spy-badges {
-  border: 1px solid white;
   text-align: center;
-
 }
 
 .spy-image {
   width: 1.4em;
   height: auto;
   text-align: center;
+  opacity: 0.3;
+  animation: spyFade ease 3s;
+  -webkit-animation: spyFade ease 3s;
+   -moz-animation: spyFade ease 3s;
 }
-
 
 .instructions {
 font-weight: 100;
@@ -117,20 +115,25 @@ animation: textFade ease 15s;
 }
 
 .time-trys-left {
+  opacity: 0.3;
+}
+
+.time-trys-left span {
   margin-left: 1%;
   padding: 0;
 }
 
-
-
-#first-badge, #second-badge, #third-badge {
-  opacity: 0.3;
-}
-
 #start {
   background: green;
+  width: auto;
 }
 
+#try {
+  font-size: 1em;
+  color:black;
+  width: auto;
+  opacity: 0.25;
+}
 
 
 
@@ -140,8 +143,12 @@ animation: textFade ease 15s;
   0% {opacity:0;}
   100% {opacity:1;}
   }
-/////////////////////////
 
+
+@keyframes spyFade {
+  0% {opacity:0.3;}
+  100% {opacity:1;}
+}
 
 /*------------------------------- All Media Queries --------------------------*/
 /*- < 249px -*/
