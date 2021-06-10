@@ -1,35 +1,48 @@
 //////Start game
 startGame();
 
-/* Sets the difficuly based on the age of the participant and calls the tryCombination
-function that monitors the remaining attempts, if the attempts reach 0 it calls stopGame.*/
-function setDifficulty(){
-let level = localStorage.getItem("age");
-  let trys;
-  if (level >= 6 && level <= 8){
-    trys = 37; // 36 attempts after 1st click
-  }else if (level >= 9 && level <= 12) {
-    trys = 31; // 30 attempts after 1st click
-  }else{
-    trys = 25; // 24 attempts after 1st click
-  }
+
+
+
 /*tryCombination only executes after the start game function is
    running this is to ensure the Try Combination button is not active.*/
-tryCombination();
+//tryCombination();
   function tryCombination(){
-    document.getElementById("try").onclick = function (){
+    //document.getElementById("try").onclick = function (){
     trys--;
     console.log(trys);
     if (trys == 0){
       stopGame();
+    }else if(trys <20 && trys >10){
+      document.getElementById("attempts").innerHTML = "00" + trys;
+      document.getElementById("attempts").style.cssText = "color:orange; opacity: 0.75";
     }else if(trys <10){
       document.getElementById("attempts").innerHTML = "000" + trys;
+      document.getElementById("attempts").style.cssText = "color:red; opacity: 0.85";
     }else{
       document.getElementById("attempts").innerHTML = "00" + trys;
     }
 
-};
 }
+var trys;
+/* Sets the difficuly based on the age of the participant and calls the tryCombination
+function that monitors the remaining attempts, if the attempts reach 0 it calls stopGame.*/
+function setDifficulty(){
+let level = localStorage.getItem("age");
+
+  if (level >= 6 && level <= 8){
+    trys = 51; // 36 attempts after 1st click
+  }else if (level >= 9 && level <= 12) {
+    trys = 46; // 30 attempts after 1st click
+  }else if (level > 12){
+     trys = 40; // 24 attempts after 1st click
+  }else{
+
+  }
+
+
+
+
 }
 
 ////////////////////////Start Game/////////////////////////////////////////////////////
@@ -43,11 +56,11 @@ tryCombination();
   setlevel();
   setDifficulty();
   generateCombination();
+
   //incrementDecrement(i);
   document.querySelector("#start").innerHTML = "Abort!";
   document.getElementById("start").style.cssText = "background:yellow; color:black; opacity:0.6";
-  document.getElementById("try").style.cssText = "background:green; color:white; opacity: 1; border: 1px solid white;" ;
-  document.getElementsByClassName("combination-outline-game")[0].style.cssText = "border: 7.5px solid white;";
+  document.getElementsByClassName("combination-outline-game")[0].style.cssText = "border: 3px solid green; opacity:1";
   document.getElementsByClassName("time-trys-left")[0].style.cssText = "opacity:1;";
 
 };
@@ -62,11 +75,11 @@ function setlevel(){
 let level = localStorage.getItem("age");
 let time;
 if (level >= 6 && level <= 8){
-  time = 362; // 362 - 6minutes
-}else if (level >= 9 && level <= 12) {
-  time = 302; // 302 - 5minutes
-}else{
   time = 242; // 242 - 4minutes
+}else if (level >= 9 && level <= 12) {
+  time = 182; // 182 - 3minutes
+}else{
+  time = 122; // 242 - 2minutes
 }
 countdown(time); //Calls the timer function to run for example (180 times), countdown(180)
 }
@@ -83,16 +96,22 @@ function countdown(seconds) {
     counter--;
     x--;
     //Display minutes
-    if (counter > 302 && counter <= 361){minutes = 5;}
-    else if (counter < 302 && counter >= 242){minutes = 4;}
-    else if (counter < 242 && counter >= 182){minutes = 3;}
-    else if (counter < 182 && counter >= 122){minutes = 2;}
-    else if (counter < 122 && counter >= 62){minutes = 1;}
-    else{minutes = 0;}
+    if (counter < 242 && counter >= 182){minutes = 3;}
+    else if (counter < 182 && counter >= 122){
+      minutes = 2;}
+    else if (counter < 122 && counter >= 62){
+      minutes = 1;
+          document.getElementById("time-remaining").style.cssText = "color:orange; opacity:0.75;";
+    }else{ minutes = 0;
+          document.getElementById("time-remaining").style.cssText = "color:red; opacity:0.75;";
+        }
     //Display seconds
     if(x < 0){x = 59;}
     //Update the time on the page, the first condition pads the number with a "0" if the seconds are < 10.
-    if (x < 10){document.getElementById("time-remaining").innerHTML = "0" + minutes + ":" + y + x; }
+    if (x < 10){
+      document.getElementById("time-remaining").innerHTML = "0" + minutes + ":" + y + x;
+
+    }
     else{document.getElementById("time-remaining").innerHTML = "0" + minutes + ":" + x;}
     //Terminate the game when the counter reaches 0;
     if(counter == 1){stopGame();}
@@ -145,86 +164,166 @@ let combo = []; /////////////////// Moved the combo array outside the function s
 }
 
 
-///////////////////////////////Increment-Decrement/////////////////////////////////////////////////////
-/* */
+ ///////////////////////////////Increment-Decrement/////////////////////////////////////////////////////
+/* Target the font awesome <i> elements as a means to get the ids to determine which button was clicked
+*/
+
 
 function incrementDecrement(i){
 
-  let y = i.id;
-  console.log(y);
-  switch (y) {
-      case '0':
-      //incrementDecrement0(y);   //Barrel 0 "+" increment
-      break;
-      case '1':                 //Barrel 1 "+" increment
-      incrementDecrement1(y);
-      break;
-      case '2':                 //Barrel 2 "+" increment
-      incrementDecrement2(y);
-      break;
-      case '3':                 //Barrel 3 "+" increment
-      incrementDecrement3(y);
-      break;
-      case '4':                 //Barrel 4 "+" increment
-      incrementDecrement4(y);
-      break;
-      case '5':                 //Barrel 5 "+" increment
-      incrementDecrement5(y);
-      break;
-      case '6':                 //Barrel 0 "-" decrement
-      incrementDecrement6(y);
-      break;
-      case '7':                 //Barrel 1 "-" decrement
-      incrementDecrement7(y);
-      break;
-      case '8':                 //Barrel 2 "-" decrement
-      incrementDecrement8(y);
-      break;
-      case '9':                 //Barrel 3 "-" decrement
-      incrementDecrement9(y);
-      break;
-      case '10':                 //Barrel 4 "-" decrement
-      incrementDecrement10(y);
-      break;
-      case '11':                 //Barrel 5 "-" decrement
-      incrementDecrement11(y);
-      break;
+  let upAndDown = i.id;
+
+  console.log(combo);
+  switch (upAndDown) {
+    case 'barrel-0-plus':                                         //Barrel 0 "+" increment
+    tryCombination();
+    if(combo[6] === 9){combo[6] = 9;}else{combo[6]++;}            //If number is > 9 freeze it at 9
+    document.getElementById("barrel-0").innerHTML = combo[6];     //Set innerhtml to the contents of combo[6]
+    if (combo[0] === combo[6]){                                   //if the first entry in the array matches the 6th set he background to green and the text to white.
+    document.getElementById("a").style.cssText = "background:green; color:white; opacity:0.75;"
+    document.getElementById('barrel-0-plus').setAttribute('id', 'inactive');};
+    break
+    case 'barrel-1-plus':                  //Barrel 1 "+" increment
+    tryCombination();
+    if(combo[7] === 9){combo[7] = 9;}else{combo[7]++;}
+    document.getElementById("barrel-1").innerHTML = combo[7];
+    if (combo[1] === combo[7]){
+      document.getElementById("b").style.cssText = "background:green; color:white; opacity:0.75;"
+      document.getElementById('barrel-1-plus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-2-plus':                  //Barrel 2 "+" increment
+    tryCombination();
+    if(combo[8] === 9){combo[8] = 9;}else{combo[8]++;}
+    document.getElementById("barrel-2").innerHTML = combo[8];
+    if (combo[2] === combo[8]){
+    document.getElementById("c").style.cssText = "background:green; color:white; opacity:0.75;"
+    document.getElementById('barrel-2-plus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-3-plus':                  //Barrel 3 "+" increment
+    tryCombination();
+    if(combo[9] === 9){combo[9] = 9;}else{combo[9]++;}
+    document.getElementById("barrel-3").innerHTML = combo[9];
+    if (combo[3] === combo[9]){
+    document.getElementById("d").style.cssText = "background:green; color:white; opacity:0.75;"
+    document.getElementById('barrel-3-plus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-4-plus':                  //Barrel 4 "+" increment
+    tryCombination();
+    if(combo[10] === 9){combo[10] = 9;}else{combo[10]++;}
+    document.getElementById("barrel-4").innerHTML = combo[10];
+    if (combo[4] === combo[10]){
+    document.getElementById("e").style.cssText = "background:green; color:white; opacity:0.75;"
+    document.getElementById('barrel-4-plus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-5-plus':                 //Barrel 5 "+" increment
+    tryCombination();
+    if(combo[11] === 9){combo[11] = 9;}else{combo[11]++;}
+    document.getElementById("barrel-5").innerHTML = combo[11];
+    if (combo[5] === combo[11]){
+    document.getElementById("f").style.cssText = "background:green; color:white; opacity:0.75;"
+    document.getElementById('barrel-5-plus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-0-minus':                //Barrel 0 "-" decrement
+    tryCombination();
+    if(combo[6] === 0){combo[6] = 0;}else{combo[6]--;}
+    document.getElementById("barrel-0").innerHTML = combo[6];
+    if (combo[0] === combo[6]){
+    document.getElementById("a").style.cssText = "background:green; color:white; opacity:0.75;"
+    document.getElementById('barrel-0-minus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-1-minus':                 //Barrel 1 "-" decrement
+    tryCombination();
+    if(combo[7] === 0){combo[7] = 0;}else{combo[7]--;}
+    document.getElementById("barrel-1").innerHTML = combo[7];
+    if (combo[1] === combo[7]){
+      document.getElementById("b").style.cssText = "background:green; color:white; opacity:0.75;"
+      document.getElementById('barrel-1-minus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-2-minus':                 //Barrel 2 "-" decrement
+    tryCombination();
+    if(combo[8] === 0){combo[8] = 0;}else{combo[8]--;}
+    document.getElementById("barrel-2").innerHTML = combo[8];
+    if (combo[2] === combo[8]){
+      document.getElementById("c").style.cssText = "background:green; color:white; opacity:0.75;"
+      document.getElementById('barrel-2-minus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-3-minus':                 //Barrel 3 "-" decrement
+    tryCombination();
+    if(combo[9] === 0){combo[9] = 0;}else{combo[9]--;}
+    document.getElementById("barrel-3").innerHTML = combo[9];
+    if (combo[3] === combo[9]){
+      document.getElementById("d").style.cssText = "background:green; color:white; opacity:0.75;"
+      document.getElementById('barrel-3-minus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-4-minus':                 //Barrel 4 "-" decrement
+    tryCombination();
+    if(combo[10] === 0){combo[10] = 0;}else{combo[10]--;}
+    document.getElementById("barrel-4").innerHTML = combo[10];
+    if (combo[4] === combo[10]){
+    document.getElementById("e").style.cssText = "background:green; color:white; opacity:0.75;"
+    document.getElementById('barrel-4-minus').setAttribute('id', 'inactive');};
+    break;
+    case 'barrel-5-minus':                 //Barrel 5 "-" decrement
+    tryCombination();
+    if(combo[11] === 0){combo[11] = 0;}else{combo[11]--;}
+    document.getElementById("barrel-5").innerHTML = combo[11];
+    if (combo[5] === combo[11]){
+      document.getElementById("f").style.cssText = "background:green; color:white; opacity:0.75;"
+      document.getElementById('barrel-5-minus').setAttribute('id', 'inactive');};
+    break;
     default:
+
     return false;
-  }
 
   }
 
+  }
 
 
 
 /*
-///////////// nice jquery transistion effect for one of the other games
-$(".fa-plus").click(function() {
-      $( this ).slideUp();});
-}
-
-document.getElementById("barrel-0-plus").onclick = function (){
-//  let combo[0];
-  console.log("plus 0 clicked");
-
-}
-
-    let y = 0;
-
-    for(i = 0; i < 6; i++){
-      document.getElementsByClassName("fa-plus")[y].onclick = function() {
-      y++;
-      console.log("first +");
-    };
+function compareCombinations(){
+      console.log("before check" + combo);
+    if (combo[0] === combo[6]){
+      document.getElementById("barrel-div-0").style.cssText = "background:green; color:white; opacity:0.75";
+      console.log("success we have a match");
+      console.log("After check" + combo);
+    }else if (combo[1] === combo[7]){
+      document.getElementById("barrel-div-1").style.cssText = "background:green; color:white; opacity:0.75";
+      console.log("success we have a match");
+      console.log("After check" + combo);
+    }else if(combo[2] === combo[8]){
+      document.getElementById("barrel-div-2").style.cssText = "background:green; color:white; opacity:0.75";
+      console.log("success we have a match");
+      console.log("After check" + combo);
+    }else if(combo[3] === combo[9]){
+      document.getElementById("barrel-div-3").style.cssText = "background:green; color:white; opacity:0.75";
+      console.log("success we have a match");
+      console.log("After check" + combo);
+    }else if(combo[4] === combo[10]){
+      document.getElementById("barrel-div-4").style.cssText = "background:green; color:white; opacity:0.75";
+      console.log("success we have a match");
+      console.log("After check" + combo);
+    }else if(combo[5] === combo[11]){
+      document.getElementById("barrel-div-5").style.cssText = "background:green; color:white; opacity:0.75";
+      console.log("success we have a match");
+      console.log("After check" + combo);
+    }else if(combo[0] === combo[6] && combo[1] == combo[7] && combo[2] == combo[8] && combo[3] == combo[9] && combo[4] == combo[10] && combo[5] == combo[11]){
+        console.log("success............................................................");
+    }else{
+      console.log("no match");
     }
+
+    }
+
 */
 
 
 
 
 
-
-
-
 //
+///////////// nice jquery transistion effect for one of the other games
+//$(".fa-plus").click(function() {
+  //    $( this ).slideUp();});
+//}

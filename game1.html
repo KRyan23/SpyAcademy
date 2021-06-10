@@ -26,11 +26,9 @@
 <div class="container-fluid">
   <div class="row d-flex justify-content-end">
     <div class="col-sm-8 col-md-8">
-
       <div class="speach-bubble">
       <p class="speach-bubble-text"><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, Why not have another try? <i class="fas fa-quote-right"></i></p>
       </div>
-
     </div>
   </div>
   <div class="row d-flex">
@@ -57,9 +55,9 @@
 <div class= "container-fluid combination-outline-controls border-success">
   <div class="row d-flex">
     <div class="col-12 ">
-    <button type="button" class="btn btn-secondary btn-lg" id="try">Try<br> Combination</button>
+    <button type="button" class="btn btn-primary btn-lg" id="start">Start Game</button>
     <div class="col-12">
-    <button type="button" class="btn btn-primary" id="start">Start</button>
+    <span><h1>Combination Lock</h1></span>
     </div>
   </div>
 </div>
@@ -67,8 +65,6 @@
     <div class="col-xm-4">
 <span>Time left</span><br><span id="time-remaining"></span>
     </div>
-
-
     <div class="col-xm-4">
 <span>Attempts left</span><br><span id="attempts"></span>
     </div>
@@ -91,39 +87,39 @@
 <div class="container-fluid">
     <div class="row d-flex justify-content-center">
       <div class="combination-outline-game">
-    <div class="col-2 barrel">
+    <div class="col-2 barrel" id="a">
       <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-0-plus"></i>
-      <span id="barrel-0"><h3></h3></span>
+      <br><span id="barrel-0"><h3></h3></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-0-minus"></i>
       </div>
 
-    <div class="col-2 barrel">
+    <div class="col-2 barrel" id="b">
       <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-1-plus"></i>
-      <span id="barrel-1"><h3></h3></span>
+      <br><span id="barrel-1"><h3></h3></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-1-minus"></i>
     </div>
 
-    <div class="col-2 barrel">
+    <div class="col-2 barrel" id="c">
       <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-2-plus"></i>
-      <span id="barrel-2"><h3></h3></span>
+      <br><span id="barrel-2"><h3></h3></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-2-minus"></i>
     </div>
 
-    <div class="col-2 barrel">
+    <div class="col-2 barrel" id="d">
       <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-3-plus"></i>
-      <span id="barrel-3"><h3></h3></span>
+      <br><span id="barrel-3"><h3></h3></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-3-minus"></i>
     </div>
 
-    <div class="col-2 barrel">
+    <div class="col-2 barrel" id="e">
       <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-4-plus"></i>
-      <span id="barrel-4"><h3></h3></span>
+      <br><span id="barrel-4"><h3></h3></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-4-minus"></i>
       </div>
 
-    <div class="col-2 barrel">
+    <div class="col-2 barrel" id="f">
       <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-5-plus"></i>
-      <span id="barrel-5"><h3></h3></span>
+      <br><span id="barrel-5"><h3></h3></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-5-minus"></i>
     </div> <!-- Col- lock background -->
 
