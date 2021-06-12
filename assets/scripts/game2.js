@@ -52,11 +52,11 @@ function setDifficulty(){
 let level = localStorage.getItem("age");
 
   if (level >= 6 && level <= 8){
-    trys = 51; // 36 attempts after 1st click
+    trys = 30; // 36 attempts after 1st click
   }else if (level >= 9 && level <= 12) {
-    trys = 46; // 30 attempts after 1st click
+    trys = 25; // 30 attempts after 1st click
   }else if (level > 12){
-     trys = 40; // 24 attempts after 1st click
+     trys = 20; // 24 attempts after 1st click
   }else{
 
   }
@@ -72,10 +72,10 @@ let level = localStorage.getItem("age");
   document.getElementById("start").onclick = function() {
   setlevel();
   setDifficulty();
-  generateCombination();
+
   document.querySelector("#start").innerHTML = "Abort!";   //Changes the start button text to abort
   document.getElementById("start").style.cssText = "background:yellow; color:black; opacity:0.6"; //Changes the start button to yellow with black text
-  document.getElementsByClassName("combination-outline-game")[0].style.cssText = "border: 3px solid green; opacity:1; display:contents;"; //Displays the main Div and sets some minor styles
+  
   document.getElementsByClassName("time-trys-left")[0].style.cssText = "opacity:1;"; //changes the 'time' and 'attempts' placeholders to normal opacity
 
 };
@@ -165,159 +165,6 @@ function countdown(seconds) {
 }
 
 
-/////////////////////////////generateCombination///////////////////////////////////////////////////
-/* Here we generate 12 random numbers that are from 0 - 9 into an array called combo.
-   The first 6 numbers are the private combination that we want to guess,
-   and the second 6 numbers are the public combination thats is shown.
-   The second for loop populates the combination lock with the public numbers from the array*/
-let combo = []; // Moved the combo array outside the function so its availible to all function
-
-  function generateCombination(){
-
-      for(let x = 0; x < 12; x++){
- combo.push(Math.floor(Math.random() * 10));
-  }
-    let publicNumber = 5, barrelId = 0;
-    for(let i = 0; i < 6; i++){
-      let name = "barrel-" + barrelId;
-      barrelId++, publicNumber++;
-      document.getElementById(name).innerHTML = combo[publicNumber];
-  }
-
-}
-
- ///////////////////////////////Increment-Decrement/////////////////////////////////////////////////////
-/* Target the font awesome <i> + and - elements as a means to get the ids to determine which button was clicked
-   Compare the public numbers that the users enters vs the private numbers of the combination and set the div to green if they match.
-   */
-
-function incrementDecrement(i){
-
-  let upAndDown = i.id;
-  let correctGuess = "background:green; color:white; opacity:0.75";
-
-    switch (upAndDown) {
-    case 'barrel-0-plus':     //Barrel 0 "+" increment
-
-    if(combo[6] === 9){combo[6] = 9;}else{combo[6]++;}
-    //If number is > 9 freeze it at 9 else increment it
-    document.getElementById("barrel-0").innerHTML = combo[6];
-    //Set innerhtml to the contents of combo[6]
-    if (combo[0] === combo[6]){
-    //If the first entry in the array matches the 6th set
-    document.getElementById("a").style.cssText = correctGuess;
-    //the background to green and the text to white.
-    document.getElementById('barrel-0-plus').setAttribute('id', 'inactive');};
-    //Change the id if the barrel goes green to stop wasting any more attempts.
-    tryCombination();
-    //run the function tryCombination
-    break
-    case 'barrel-1-plus':     //Barrel 1 "+" increment
-
-    if(combo[7] === 9){combo[7] = 9;}else{combo[7]++;}
-    document.getElementById("barrel-1").innerHTML = combo[7];
-    if (combo[1] === combo[7]){
-      document.getElementById("b").style.cssText = correctGuess;
-      document.getElementById('barrel-1-plus').setAttribute('id', 'inactive');};
-      tryCombination();
-    break;
-    case 'barrel-2-plus':     //Barrel 2 "+" increment
-
-    if(combo[8] === 9){combo[8] = 9;}else{combo[8]++;}
-    document.getElementById("barrel-2").innerHTML = combo[8];
-    if (combo[2] === combo[8]){
-    document.getElementById("c").style.cssText = correctGuess;
-    document.getElementById('barrel-2-plus').setAttribute('id', 'inactive');};
-    tryCombination();
-    break;
-    case 'barrel-3-plus':     //Barrel 3 "+" increment
-
-    if(combo[9] === 9){combo[9] = 9;}else{combo[9]++;}
-    document.getElementById("barrel-3").innerHTML = combo[9];
-    if (combo[3] === combo[9]){
-    document.getElementById("d").style.cssText = correctGuess;
-    document.getElementById('barrel-3-plus').setAttribute('id', 'inactive');};
-    tryCombination();
-    break;
-
-    case 'barrel-4-plus':     //Barrel 4 "+" increment
-
-    if(combo[10] === 9){combo[10] = 9;}else{combo[10]++;}
-    document.getElementById("barrel-4").innerHTML = combo[10];
-    if (combo[4] === combo[10]){
-    document.getElementById("e").style.cssText = correctGuess;
-    document.getElementById('barrel-4-plus').setAttribute('id', 'inactive');};
-    tryCombination();
-    break;
-    case 'barrel-5-plus':     //Barrel 5 "+" increment
-
-    if(combo[11] === 9){combo[11] = 9;}else{combo[11]++;}
-    document.getElementById("barrel-5").innerHTML = combo[11];
-    if (combo[5] === combo[11]){
-    document.getElementById("f").style.cssText = correctGuess;
-    document.getElementById('barrel-5-plus').setAttribute('id', 'inactive');};
-    tryCombination();
-    break;
-
-    case 'barrel-0-minus':      //Barrel 0 "-" decrement
-
-    if(combo[6] === 0){combo[6] = 0;}else{combo[6]--;}
-    document.getElementById("barrel-0").innerHTML = combo[6];
-    if (combo[0] === combo[6]){
-    document.getElementById("a").style.cssText = correctGuess;
-    document.getElementById('barrel-0-minus').setAttribute('id', 'inactive');};
-    tryCombination();
-    break;
-    case 'barrel-1-minus':      //Barrel 1 "-" decrement
-
-    if(combo[7] === 0){combo[7] = 0;}else{combo[7]--;}
-    document.getElementById("barrel-1").innerHTML = combo[7];
-    if (combo[1] === combo[7]){
-      document.getElementById("b").style.cssText = correctGuess;
-      document.getElementById('barrel-1-minus').setAttribute('id', 'inactive');};
-      tryCombination();
-    break;
-    case 'barrel-2-minus':      //Barrel 2 "-" decrement
-
-    if(combo[8] === 0){combo[8] = 0;}else{combo[8]--;}
-    document.getElementById("barrel-2").innerHTML = combo[8];
-    if (combo[2] === combo[8]){
-      document.getElementById("c").style.cssText = correctGuess;
-      document.getElementById('barrel-2-minus').setAttribute('id', 'inactive');};
-      tryCombination();
-    break;
-    case 'barrel-3-minus':      //Barrel 3 "-" decrement
-
-    if(combo[9] === 0){combo[9] = 0;}else{combo[9]--;}
-    document.getElementById("barrel-3").innerHTML = combo[9];
-    if (combo[3] === combo[9]){
-      document.getElementById("d").style.cssText = correctGuess;
-      document.getElementById('barrel-3-minus').setAttribute('id', 'inactive');};
-      tryCombination();
-    break;
-    case 'barrel-4-minus':      //Barrel 4 "-" decrement
-
-    if(combo[10] === 0){combo[10] = 0;}else{combo[10]--;}
-    document.getElementById("barrel-4").innerHTML = combo[10];
-    if (combo[4] === combo[10]){
-    document.getElementById("e").style.cssText = correctGuess;
-    document.getElementById('barrel-4-minus').setAttribute('id', 'inactive');};
-    tryCombination();
-    break;
-    case 'barrel-5-minus':      //Barrel 5 "-" decrement
-
-    if(combo[11] === 0){combo[11] = 0;}else{combo[11]--;}
-    document.getElementById("barrel-5").innerHTML = combo[11];
-    if (combo[5] === combo[11]){
-      document.getElementById("f").style.cssText = correctGuess;
-      document.getElementById('barrel-5-minus').setAttribute('id', 'inactive');};
-      tryCombination();
-    break;
-    default:
-    //return false;
-  }
-
-  }
 
 function nextGame() {
   setTimeout(() => {

@@ -10,19 +10,9 @@
   <title>Spy Academy Combination Lock</title>
 </head>
 <body>
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-10 instructions" id="game-instructions">
-      <br>
-      <p><b>Your first task is to break the combination on this safe.</p>
-      <p>Use the + and - to change the numbers, a correct answer turns the barrel green.</p>
-      <p>Use the "Try Combination" button to guess your answers.</b></p>
-    </div>
-  </div>
-</div>
 
+<!-- Abort / unsucessful message displayed if the attempt was unsucessful or if the user aborts the game-->
 <div class="abort-message" id="abort-message-show" style="display: none;">
-
 <div class="container-fluid">
   <div class="row d-flex justify-content-end">
     <div class="col-sm-8 col-md-8">
@@ -43,11 +33,10 @@
     <img src="assets/images/combination_lock/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
     </a>
     </div>
+  </div>
 </div>
-
 </div>
-
-</div> <!-- end div for abort-message -->
+<!-- end div for abort-message -->
 
 
 
@@ -57,10 +46,20 @@
     <div class="col-12 ">
     <button type="button" class="btn btn-primary btn-lg" id="start">Start Game</button>
     <div class="col-12">
-    <span><h1>Combination Lock</h1></span>
+    <h1>Combination Lock</h1>
+    <div class="col-12">
+      <button id="game-instructions">Hide Instructions</button>
+      <div id="text-instructions">
+        <u>Goal</u><br><img src="assets/images/combination_lock/spy.png" class="spy-bullet-point" alt="spy bullet point" aria-label="spy bullet point" title="spy bullet point"/>
+         Turn each barrel green before your<br> 'Time' and 'Attempts' run out.<br><u>How?</u><br>
+        <img src="assets/images/combination_lock/spy.png" class="spy-bullet-point" alt="spy bullet point" aria-label="spy bullet point" title="spy bullet point"/>
+         Use the " + " and " - " buttons to choose a number from " 0 - 9 " <br>
+      </div>
+    </div>
     </div>
   </div>
 </div>
+
   <div class="row d-flex justify-content-between time-trys-left">
     <div class="col-xm-4">
 <span>Time left</span><br><span id="time-remaining"></span>
@@ -76,79 +75,81 @@
   <img src="assets/images/combination_lock/spy.png" class="spy-image" id="third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
 
 
-<!--  This Div visually joins the top and bottom parts of the game its the 2 black bars-->
-
+<!--  -->
+<!-- These rules represent the bottom divs that control all 6 barrels -->
 <div class="container-fluid">
   <div class="row d-flex justify-content-center">
     <div class="col-12">
-
-
-<!-- These rules represent the bottom divs that control all 6 barrels -->
 <div class="container-fluid">
     <div class="row d-flex justify-content-center">
       <div class="combination-outline-game">
     <div class="col-2 barrel" id="a">
       <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-0-plus"></i>
-      <br><span id="barrel-0"><h3></h3></span><br>
+      <br><span id="barrel-0">0</span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-0-minus"></i>
       </div>
 
     <div class="col-2 barrel" id="b">
       <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-1-plus"></i>
-      <br><span id="barrel-1"><h3></h3></span><br>
+      <br><span id="barrel-1"></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-1-minus"></i>
     </div>
 
     <div class="col-2 barrel" id="c">
       <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-2-plus"></i>
-      <br><span id="barrel-2"><h3></h3></span><br>
+      <br><span id="barrel-2"></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-2-minus"></i>
     </div>
 
     <div class="col-2 barrel" id="d">
       <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-3-plus"></i>
-      <br><span id="barrel-3"><h3></h3></span><br>
+      <br><span id="barrel-3"></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-3-minus"></i>
     </div>
 
     <div class="col-2 barrel" id="e">
       <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-4-plus"></i>
-      <br><span id="barrel-4"><h3></h3></span><br>
+      <br><span id="barrel-4"></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-4-minus"></i>
       </div>
 
     <div class="col-2 barrel" id="f">
       <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-5-plus"></i>
-      <br><span id="barrel-5"><h3></h3></span><br>
+      <br><span id="barrel-5"></span><br>
       <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-5-minus"></i>
-    </div> <!-- Col- lock background -->
-
-  </div> <!-- row background -->
-
-</div> <!-- container fluid -->
-
-
-
+    </div>
+  </div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-
-
-
-
-<!-- <p>This is the Combination lock Challenge</p>
-<p>The aim of game is to guess the correct combination within the time allowed</p> -->
-  <!--  <audio controls="controls" id="clunk-sound" autoplay="autoplay">
-  <source src="assets\sounds\clunk-metal-sound.mp3"  type="audio/mp3" preload="auto"/>
-  Your browser does not support the audio element.
-  </audio>-->
+</div>
+</div>
+<!-- This part is the congratulations section for a sucessfull game
+id="game1-success" style="display: none;"-->
+<div >
+<div class="container-fluid" id="game1-success" style="display: none;">
+  <div class="row success-message">
+    <div class="col ">
+      <h1>Well Done Cadet</h1><br>
+      <p>You have passed the Combination Lock challenge and have suceeded in winning your first spy badge.</p>
+      <img src="assets/images/home_page/spy.png" class="spy-image" alt="image of a spy" aria-label="image of a spy" title="image of a spy" style="opacity: 1;"/>
+      <img src="assets/images/home_page/spy.png" class="spy-image" alt="image of a spy" aria-label="image of a spy" title="image of a spy" />
+      <img src="assets/images/home_page/spy.png" class="spy-image" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+        <p>Next you will need to access the mainframe by sucessfully breaking the password</p>
+        <a href="game2.html">
+        <img src="assets/images/intro_page/bigredbuttonstart.png" class="next-game-button" alt="next game button" aria-label="next game button" title="next game button"/>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
   <!-- Script tags put at the bottom of page to ensure a faster page load this.value-->
   <!-- Using the JQuery CDN-v3.6.0  -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-  <script defer async src="assets/scripts/game1.js" type="text/javascript"></script>
+  <script defer async src="assets/scripts/game1.js"></script>
 
 </body>
 </html>
