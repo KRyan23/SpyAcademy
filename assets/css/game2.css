@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+/*This rule is to set up the background image to make it responsive and centered */
+html {
+  background-color: darkgray;
+ }
+
+h1 {
+  margin-top: 1%;
+  padding: 2% 0 2% 0;
+  text-align: center;
+  border-radius: 5px;
+  border: 0.5px solid #fafafa;
+}
+
+h2 {
+  font-size: 0.5em;
+}
+
+/*This rule sets certain common parameters for the body*/
+body {
+
+  font-family: 'Saira Stencil One', cursive, sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 1em;
+  }
+
+/*This rule is targetted by game1.js once the abort sequence in the game is executed*/
+.abort-message {
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  font-weight: 300;
+  color: white;
+  position: absolute;
+
+}
+
+.start-over-button{
+  margin-top:10%;
+  height: 6em;
+  width: 6em;
+  opacity: 0.75;
+  padding: 0;
+}
+
+.container {
+  height: 23px;
+  background-color: #fafafa;
+  border-radius: 0.25em;
+  position:relative;
+  border: 3px solid black;
+  max-width: 154px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.progress-bar {
+  height: 100%;
+  background-color: green;
+  border-radius: 0.15em;
+  animation: progress 2s backwards;
+  max-width: 150px;
+  border: 1px solid darkgray;
+
+}
+
+.hints{
+  padding:0 5px 0 5px;
+  margin-top: 0.1em;
+  margin-left: 0.2em;
+  font-size: 0.9em;
+  background-color: darkgray;
+  border: 1px solid silver;
+  border-radius:0.15em;
+  display:block;
+
+}
+#game-instructions {
+  color: white;
+  background-color: darkgray;
+  font-size: 1em;
+  border:none;
+  padding: 0;
+  margin: 0;
+}
+#game1-success {
+
+  background-color: darkgray;
+  font-family: 'Saira Stencil One', cursive;
+  text-align: center;
+
+}
+
+#text-instructions {
+  background-color: darkgray;
+  font-size: 0.7em;
+  color: black;
+  font-weight: 100;
+  border: 1px solid silver;
+
+}
+
+.spy-bullet-point{
+  width: 0.6em;
+  height: auto;
+  text-align: left;
+}
+
+
+/* This is the outline div that holds the controls + combination barrels*/
+      .combination-outline-controls {
+  padding-top: 0.2em;
+  position: fixed;
+  max-height: auto;
+  min-width: 55%;
+  min-height: 55%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+
+  display: block;
+  background-color: darkgray;
+  margin: 0;
+  }
+
+.next-game-button {
+  margin-top:8%;
+  height: 6em;
+  width: 6em;
+  opacity: 0.75;
+  padding: 0;
+}
+
+.success-message {
+  background-color: darkgrey;
+  padding-top: 30%;
+}
+
+.spy-badges {
+  text-align: center;
+}
+
+.spy-image {
+  width: 1.4em;
+  padding: 0 0 1em 0;
+  margin-top: -6em;
+  height: auto;
+  text-align: center;
+  opacity: 0.3;
+  animation: spyFade ease 3s;
+  -webkit-animation: spyFade ease 3s;
+   -moz-animation: spyFade ease 3s;
+}
+
+#first-badge{
+  opacity: 1;
+}
+
+.instructions {
+font-weight: 100;
+position: fixed;
+text-align: center;
+color: white;
+font-size: 0.75em;
+animation: textFade ease 15s;
+-webkit-animation: textFade ease 15s;
+ -moz-animation: textFade ease 15s;
+
+}
+
+.time-trys-left {
+  opacity: 0.3;
+  margin-top: 1em;
+  padding: 0 1em 0 0;
+}
+
+.time-trys-left span {
+  padding: 0 0 0 0;
+  margin: 0;
+}
+
+#start {
+min-height: 10%;
+opacity:0.9;
+}
+
+#try {
+  font-size: 1em;
+  color:black;
+  width: auto;
+  opacity: 0.25;
+}
+
+.password-form{
+color: black;
+}
+
+/* align placeholder text centrally */
+::-webkit-input-placeholder {
+   text-align: center;
+}
+/* align placeholder text centrally */
+::-moz-placeholder {
+   text-align: center;
+}
+/*----- Keyframe calls -*/
+@keyframes textFade {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+
+
+@keyframes spyFade {
+  0% {opacity:0.3;}
+  100% {opacity:1;}
+}
+
+@keyframes progress {
+  0% {width: 0%;}
+  100% {width: 100%;}
+
+}
+
+/*------------------------------- All Media Queries --------------------------*/
+/*- < 249px -*/
+@media only screen and (max-width: 249px) {
+body {
+  font-size: 0.5em;
+}
+h1 {
+  font-size: 1em;
+  }
+}
+
+/*- 250px - 499px -*/
+@media only screen and (min-width: 250px) and (max-width: 499px) {
+  body {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+/*- 500px - 767px -*/
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+
+  body {
+    font-size: 1.2em;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+
+}
+
+/*- 767px - 991px -*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  body {
+    font-size: 1.2em;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+}
+
+/*- 992px - 1023px -*/
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+   .success-message {
+    padding-top: 10%;
+  }
+
+  body {
+    font-size: 1.2em;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+
+}
+
+/*- 1024px - 1200px -*/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .success-message {
+      padding-top: 20%;
+  }
+
+  body {
+    font-size: 1.3em;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+
+
+}
+
+/*- 1201px > -*/
+@media only screen and (min-width: 1201px) and (max-width: 2000px) {
+
+
+.combination-outline-controls{
+max-width:  98%;
+max-height: 98%;
+}
+
+#game-instructions {
+  font-size: 1em;
+}
+
+.start-over-button{
+  margin-top:1%;
+}
+
+body {
+  font-size: 1.3em;
+}
+h1 {
+  font-size: 1.4em;
+  margin-top: 0.5%;
+  padding: 1% 0 1% 0;
+}
+.success-message {
+  padding-top: 2%;
+
+}
+
+
+}
