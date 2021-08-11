@@ -2,34 +2,33 @@
 
 body {
   background-color: darkgray;
-  font-family: 'Saira Stencil One', cursive;
+  font-family: 'Saira Stencil One', cursive, sans-serif;
   text-align: center;
   color: #fafafa;
 }
-
-/* This rule is for the "Welcome to Text" */
-.game-instructions h1 {
+/* This rule is for the "Cadet Text" */
+.game-introduction h1 {
   padding:0.9em 0 0.9em 0;
   color:black;
   font-size: 1.8em;
 }
-
-.game-instructions {
-  border: 1px solid black;
+/* This rule is for the main div */
+.game-introduction {
   font-size: 1.2em;
   margin: 2em 0 1em 0;
 }
-
+/* This rule is for the 3 small spy images */
 .spy-image {
   width: 1.4em;
   height: auto;
   padding: 0.5em 0 0.5em 0;
 }
-
+/* This rule is for the paragraphs of text */
 p {
-    padding: 0.9em 0 0.9em 0;
+/*  padding: 0.9em 0 0.9em 0;*/
+padding: 1.2em 0 1.2em 0;
 }
-
+/* This rule is for the Big Red Start button */
 .start-button {
   margin: 1em 0 1em 0;
   padding: 0.05em;
@@ -39,11 +38,9 @@ p {
   border-radius: 50%;
   animation: big-red-button 1s infinite;
 }
-
 /*----------------------------- Keyframe calls ---------------------------*/
 
-/* For the big-red-button on the front page */
-
+/* This rule is for pusling effect of the big-red-button */
 @keyframes big-red-button {
   0%   {background: white;}
   50%  {background: red;}
@@ -54,37 +51,25 @@ p {
 /*- 250px - 499px -*/
 @media only screen and (min-width: 250px) and (max-width: 499px) {
 
-  .game-instructions {
-  margin: 0.1em 0 0.1em 0;
-  border: none;
-  }
+  .game-introduction {margin: 0.1em 0 0.1em 0;}
 }
 /* - 320px Just for iphone 5-*/
 @media only screen and (min-width: 320px) and (max-width: 321px) {
-  .game-instructions {
-  margin: 0 0 0 0;
-  border: none;
-  }
 
-p {
-  padding: 0.3em 0 0.3em 0;
-  }
+  .game-introduction {margin: 0 0 0 0;}
 
+p {padding: 0.3em 0 0.3em 0;}
 }
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
-
 }
 
 /*- 767px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-  .game-instructions h1 {
-    padding:1em 0 1em 0;
-  }
+  .game-introduction h1 {padding:1em 0 1em 0;}
 
-  .game-instructions {
-    border: none;
+  .game-introduction {
     font-size: 1.3em;
     margin: 2em 0 1em 0;
   }
@@ -93,30 +78,20 @@ p {
     width: 1.5em;
     height: auto;
     padding: 1.2em 0 1.2em 0;
-  }
-
-  p {
-      padding: 1.2em 0 1.2em 0;
   }
 
   .start-button {
     margin-top: 2em;
     padding: 0.05em;
-
   }
-
-
 }
 
 /*- 992px - 1023px -*/
 @media only screen and (min-width: 992px) and (max-width: 1023px) {
 
-  .game-instructions h1 {
-    padding:1em 0 1em 0;
-  }
+  .game-introduction h1 {padding:1em 0 1em 0;}
 
-  .game-instructions {
-    border: none;
+  .game-introduction {
     font-size: 1.3em;
     margin: 2em 0 1em 0;
   }
@@ -125,29 +100,20 @@ p {
     width: 1.5em;
     height: auto;
     padding: 1.2em 0 1.2em 0;
-  }
-
-  p {
-      padding: 1.2em 0 1.2em 0;
   }
 
   .start-button {
     margin-top:2em;
     padding: 0.05em;
-
   }
-
 }
 
 /*- 1024px - 1200px -*/
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
 
-  .game-instructions h1 {
-    padding:0.1em 0 0.1em 0;
-  }
+  .game-introduction h1 {padding:0.1em 0 0.1em 0;}
 
-  .game-instructions {
-    border: none;
+  .game-introduction {
     font-size: 1.3em;
     margin: 2em 0 1em 0;
   }
@@ -158,28 +124,21 @@ p {
     padding: 1.2em 0 1.2em 0;
   }
 
-  p {
-      padding: 1.2em 0 1.2em 0;
-  }
-
   .start-button {
     margin-top: 3em;
     padding: 0.05em;
-
   }
-
 }
 
 /*- 1201px > -*/
 @media only screen and (min-width: 1201px) {
 
-  .game-instructions h1 {
+  .game-introduction h1 {
     padding:0.1em 0 0.1em 0;
     display:
   }
 
-  .game-instructions {
-    border: none;
+  .game-introduction {
     font-size: 1.3em;
     margin: 2em 0 1em 0;
   }
@@ -190,16 +149,9 @@ p {
     padding: 1.2em 0 1.2em 0;
   }
 
-  p {
-      padding: 1.2em 0 1.2em 0;
-  }
-
   .start-button {
     margin-top: 3em;
     padding: 0.05em;
-
   }
-
-
-
 }
+/* ----------------- End of File -------------------*/
