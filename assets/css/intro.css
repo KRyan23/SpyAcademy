@@ -24,10 +24,8 @@ body {
   padding: 0.5em 0 0.5em 0;
 }
 /* This rule is for the paragraphs of text */
-p {
-/*  padding: 0.9em 0 0.9em 0;*/
-padding: 1.2em 0 1.2em 0;
-}
+p {padding: 1.2em 0 1.2em 0;}
+
 /* This rule is for the Big Red Start button */
 .start-button {
   margin: 1em 0 1em 0;

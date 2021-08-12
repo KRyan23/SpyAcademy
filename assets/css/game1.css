@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
-/*This rule is to set up the background image to make it responsive and centered */
-html {
-  /*background: url(/assets/images/combination_lock/background4.jpg) center; */
+/*This rule sets certain common parameters for the body*/
+body {
   background-color: darkgray;
-  /*background-repeat:no-repeat;
-  background-position: fixed;
-  background-size: cover;
-  height: 100%;
-  overflow: hidden;*/
-
- }
-
+  font-family: 'Saira Stencil One', cursive, sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 1.6em;
+}
+/* This rule is for the H1 elements */
 h1 {
   margin-top: 1%;
   padding: 3% 0 3% 0;
@@ -19,21 +16,10 @@ h1 {
   border-radius: 5px;
   border: 0.5px solid silver;
 }
-
+/* This rule is for the H2 elements */
 h2 {
   font-size: 0.5em;
 }
-
-
-/*This rule sets certain common parameters for the body*/
-body {
-
-  font-family: 'Saira Stencil One', cursive, sans-serif;
-  text-align: center;
-  color: black;
-  font-size: 1.6em;
-  }
-
 /*This rule is targetted by game1.js once the abort sequence in the game is executed*/
 .abort-message {
   margin: 50px auto;
@@ -42,49 +28,45 @@ body {
   font-weight: 300;
   color: white;
   position: absolute;
-
 }
-
-.start-over-button{
+/* This rule is to style the "Start Over" button */
+.start-over-button {
   margin-top:10%;
   height: 6em;
   width: 6em;
   opacity: 0.75;
   padding: 0;
 }
-
-#game-instructions {
-  color: white;
+/* This rule is for the instructions heading */
+.instructions-heading{
+  color: #fafafa;
   background-color: darkgray;
   font-size: 1em;
-  border:none;
   padding: 0;
   margin: 0;
 }
-#game1-success {
-
+/* This is the rule for the background 'Success message' */
+.success {
   background-color: darkgray;
   font-family: 'Saira Stencil One', cursive;
   text-align: center;
-
 }
-
-#text-instructions {
+/* This is the rule for the main text of the instructions */
+.instructions-body {
   background-color: darkgray;
   font-size: 0.7em;
   color: black;
   font-weight: 100;
   border: 1px solid silver;
-
 }
-
+/* This is the rule for the spy bullet points in front of the instructions text */
 .spy-bullet-point{
   width: 0.6em;
   height: auto;
   text-align: left;
 }
 
-
+/*Left off here*/
 /* This is the outline div that holds the controls + combination barrels*/
   .combination-outline-controls {
   padding-top: 0.2em;
