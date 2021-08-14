@@ -1,265 +1,254 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
-/*This rule sets certain common parameters for the body*/
-body {
+html {
   background-color: darkgray;
+ }
+body {
   font-family: 'Saira Stencil One', cursive, sans-serif;
+  background-color: darkgray;
   text-align: center;
   color: black;
   font-size: 1.6em;
-}
-/* This rule is for the H1 elements */
-h1 {
-  margin-top: 1%;
-  padding: 3% 0 3% 0;
-  text-align: center;
-  border-radius: 5px;
-  border: 0.5px solid silver;
-}
-/* This rule is for the H2 elements */
-h2 {
-  font-size: 0.5em;
-}
-/*This rule is targetted by game1.js once the abort sequence in the game is executed*/
-.abort-message {
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center;
-  font-weight: 300;
-  color: white;
-  position: absolute;
-}
-/* This rule is to style the "Start Over" button */
-.start-over-button {
-  margin-top:10%;
-  height: 6em;
-  width: 6em;
-  opacity: 0.75;
-  padding: 0;
-}
-/* This rule is for the instructions heading */
-.instructions-heading{
-  color: #fafafa;
-  background-color: darkgray;
-  font-size: 1em;
-  padding: 0;
-  margin: 0;
-}
-/* This is the rule for the background 'Success message' */
-.success {
-  background-color: darkgray;
-  font-family: 'Saira Stencil One', cursive;
-  text-align: center;
-}
-/* This is the rule for the main text of the instructions */
-.instructions-body {
-  background-color: darkgray;
-  font-size: 0.7em;
-  color: black;
-  font-weight: 100;
-  border: 1px solid silver;
-}
-/* This is the rule for the spy bullet points in front of the instructions text */
-.spy-bullet-point{
-  width: 0.6em;
-  height: auto;
-  text-align: left;
-}
-
-/*Left off here*/
-/* This is the outline div that holds the controls + combination barrels*/
-  .combination-outline-controls {
-  padding-top: 0.2em;
-  position: fixed;
-  max-height: auto;
-  min-width: 55%;
-  min-height: 55%;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  border: 3px solid black;
-  display: block;
-  background-color: darkgray;
-  }
-  /* This is the inner div that holds the combination barrels*/
-
- .combination-outline-game {
- min-width: 90%;
- text-align: center;
- padding: 0;
- margin: 8% 0 1% 0;
- display: flex;
- background-color: darkgray;
- border: 3px solid black;
- border-radius: 5px;
- opacity: 0.5;
- display: none;
  }
+ /* H1 rules */
+ h1 {
 
-.barrel {
-
-  margin: 0;
-  padding: 0;
-  border: 1px solid white;
-  border-radius: 15%;
+ }
+ /* H2 rules */
+ h2 {
+   font-size: 1.3em;
+   padding: 1em 0 1em 0;
+ }
+ /* H3 rules */
+ h3 {
+   font-size: 1.2em;
+ }
+ /* This rule is for the 'Combination Lock' heading */
+ .game-heading {
   text-align: center;
-  align-self: center;
+  padding-top: 0px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
 
-}
-
-.next-game-button {
-  margin-top:8%;
-  height: 6em;
-  width: 6em;
-  opacity: 0.75;
-  padding: 0;
-}
-
-.success-message {
-  background-color: darkgrey;
-  padding-top: 30%;
-}
-
-
-i {
-  color: black;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-}
-
-.spy-badges {
-  text-align: center;
-}
-
-.spy-image {
-  width: 1.4em;
-  padding: 0 0 1em 0;
+ }
+ /* This rule is for the Start over button */
+ .start-over-button {
+   margin-top:10%;
+   height: 6em;
+   width: 6em;
+   opacity: 0.75;
+   padding: 0;
+ }
+ /* This rule is for the border/frame around the content */
+ .outer-screen-border {
+   padding-top: 0.2em;
+   position:fixed;
+   height: auto;
+   width:75vw;
+   top: 80%;
+   left: 50%;
+   transform: translate(-50%, -80%);
+   display: block;
+   background-color: #fafafa;
+   margin:0;
+   border:25px ridge silver;
+   border-radius:15px 15px 15px 15px;
+   color: black;
+   opacity: 0.90;
+ }
+/* This rule is for the 'Spy' image */
+.main-spy-image {
+  width: 90px;
+  height: 90px;
+  padding-right: 0px;
   height: auto;
-  text-align: center;
-  opacity: 0.3;
-  animation: spyFade ease 3s;
-  -webkit-animation: spyFade ease 3s;
-   -moz-animation: spyFade ease 3s;
+  text-align: right;
 }
-
-.instructions {
-font-weight: 100;
-position: fixed;
-text-align: center;
-color: white;
-font-size: 0.75em;
-animation: textFade ease 15s;
--webkit-animation: textFade ease 15s;
- -moz-animation: textFade ease 15s;
-
+/* This rule is for the 'goals' heading */
+.goals-heading {
+  animation: slidein 1s;
+  font-weight: 200;
+  color: green;
 }
-
-.time-trys-left {
-  opacity: 0.3;
+/* This rule is for the 'how' heading */
+.how-heading {
+  animation: slidein 2s;
+  font-weight: 200;
+  color: green;
 }
-
-.time-trys-left span {
-  margin-left: 1%;
-  padding: 0;
-}
-
-#start {
-  background: green;
+/* This rule is for the Big red button div */
+.main-button {
+  background-color:#fafafa;
+  height: 10vh;
   width: auto;
+  border-radius: 50%;
+  opacity: 0.95;
+  animation: fadein 15s;
+  padding-bottom: 3vh;
 }
 
-#try {
-  font-size: 1em;
-  color:black;
-  width: auto;
-  opacity: 0.25;
+.show-after-start{
+  display: none;
 }
+/*----------------------------- Keyframe calls ---------------------------*/
 
-.plus-minus-symbol {
-  font-size: 0.5em;
+/* For the big-red-button 'Enter Game' on the front page */
+@keyframes fadein {
+ 100% {opacity: 1;}
+   0% {opacity: 0;}
+ 100% {opacity: 1;}
+
 }
+/* This rule is for the slide in effect for the 'Goal' and 'How' headings */
+@keyframes slidein {
+ 100% {opacity: 1;border-bottom: 1px solid silver; width: 100%;padding: 0 0 0 0;}
+   0% {opacity: 0;border-bottom: 1px solid black; width: 1%;}
+ 100% {opacity: 1;}
 
-
-/*----- Keyframe calls -*/
-@keyframes textFade {
-  0% {opacity:0;}
-  100% {opacity:1;}
-  }
-
-
-@keyframes spyFade {
-  0% {opacity:0.3;}
-  100% {opacity:1;}
 }
+/* Rules up to this point are for the content when you lan on the page and also for the Abort/Unsuccessful message */
 
-/*------------------------------- All Media Queries --------------------------*/
-/*- < 249px -*/
+/* From this point the Rules are for the actual Game itself */
+
+/* 'FA' Padlock Icon / Abort Button*/
+
+
+.padlock-abort{
+  font-family: 'Saira Stencil One', cursive, sans-serif;
+  font-weight:100;
+  margin-top:16px;
+  font-size:0.2em;
+  display:block;
+  color:yellow;
+}
+/* ------------------------- Media queries ----------------------------- */
+/*- < 250px-*/
 @media only screen and (max-width: 249px) {
-body {
-  font-size: 0.5em;
-}
-h1 {
-  font-size: 1em;
-  }
-}
-
-/*- 250px - 499px -*/
-@media only screen and (min-width: 250px) and (max-width: 499px) {
   body {
+    font-size: 0.8em;
+  }
+  .game-heading h1 {
+    font-size: 1em;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1em;
+    padding: 1em 0 1em 0;
+  }
+  /* H3 rules */
+  h3 {
     font-size: 1em;
   }
-  h1 {
+}
+
+/*- 250px - 320px -*/
+@media only screen and (min-width: 250px) and (max-width: 320px) {
+  body {
+    font-size: 0.8em;
+  }
+  .game-heading h1 {
+    font-size: 1.6em;
+  }
+}
+
+/*- 321px - 499px -*/
+@media only screen and (min-width: 321px) and (max-width: 499px) {
+  body {
+    font-size: 0.9em;
+  }
+  .game-heading h1 {
     font-size: 1.5em;
   }
 }
 
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
+  body {
+    font-size: 1.2em;
+  }
+  .game-heading h1 {
+    font-size: 1.7em;
 
-
+   }
 }
 
-/*- 767px - 991px -*/
+/*- 768px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
+  body {
+    font-size: 1.3em;
+  }
+  .game-heading h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.35em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
 }
 
 /*- 992px - 1023px -*/
 @media only screen and (min-width: 992px) and (max-width: 1023px) {
-   .success-message {
-    padding-top: 10%;
+  body {
+    font-size: 1.8em;
   }
-
+  .game-heading h1 {
+    font-size: 1.75em;
+  }
+  h2 {
+    font-size: 1.45em;
+  }
+  h3 {
+    font-size: 1.35em;
+  }
+  .main-spy-image{
+    height: 200px;
+    width: 200px;
+  }
 }
 
 /*- 1024px - 1200px -*/
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-    .success-message {
-      padding-top: 20%;
+  body {
+    font-size: 1.8em;
   }
-
+  .game-heading h1 {
+    font-size: 1.75em;
+  }
+  h2 {
+    font-size: 1.45em;
+  }
+  h3 {
+    font-size: 1.35em;
+  }
+  .main-spy-image{
+    height: 200px;
+    width: 200px;
+  }
 
 }
 
 /*- 1201px > -*/
-@media only screen and (min-width: 1201px) {
-
-#game-instructions {
-  font-size: 1em;
-}
-
-.start-over-button{
-  margin-top:1%;
-}
-
-h1 {
-  margin-top: 1%;
-  padding: 1% 0 1% 0;
-}
-
-.success-message {
-  padding-top: 2%;
-
-}
+@media only screen and (min-width: 1201px) and (max-width: 2000px) {
+  body {
+    font-size: 1.2em;
+  }
+  .game-heading h1 {
+    font-size: 1.9em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  .main-spy-image{
+    height: 100px;
+    width: 100px;
+  }
 
 }
+/*-------------------------End of File ----------------------------*/
