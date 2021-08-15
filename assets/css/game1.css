@@ -61,10 +61,7 @@ body {
 /* This rule is for the 'Spy' image */
 .main-spy-image {
   width: 90px;
-  height: 90px;
-  padding-right: 0px;
   height: auto;
-  text-align: right;
 }
 /* This rule is for the 'goals' heading */
 .goals-heading {
@@ -113,8 +110,6 @@ body {
 /* From this point the Rules are for the actual Game itself */
 
 /* 'FA' Padlock Icon / Abort Button*/
-
-
 .padlock-abort{
   font-family: 'Saira Stencil One', cursive, sans-serif;
   font-weight:100;
@@ -122,6 +117,32 @@ body {
   font-size:0.2em;
   display:block;
   color:yellow;
+}
+/* The rule for the 'Time remaining' box/heading */
+.time-heading {
+  background-color: darkgrey;
+  border: 5px outset silver;
+  color: black;
+  padding: 25px 35px 35px 35px;
+}
+/* The rule for the 'Attempts box/Heading' */
+.attempts-heading {
+  background-color: darkgrey;
+  border: 5px outset silver;
+  color: black;
+  padding: 25px 40px 35px 40px;
+}
+/* This rule is for the 'Spy' image in the Abort section*/
+.abort-spy-image {
+  width: 150px;
+  height: auto;
+  padding: 10% 0 10% 0;
+}
+/* This rule if form the the abort message text */
+.abort-message {
+  color: #fafafa;
+  font-size: 1.1em;
+  padding-top: 5%;
 }
 /* ------------------------- Media queries ----------------------------- */
 /*- < 250px-*/

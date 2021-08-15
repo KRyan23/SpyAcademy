@@ -10,10 +10,10 @@
   <title>Spy Academy Combination Lock</title>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid hide-game-content">
     <div class="row">
-      <div class="col col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center game-heading">
-    <h1>Combination Lock</h1>
+      <div class="col col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center game-heading">
+    <h1 aria-label="game heading" title="game heading">Combination Lock</h1>
   </div>
   </div>
   </div>
@@ -23,19 +23,19 @@
     <div class="row d-flex justify-content-end">
       <div class="col-sm-8 col-md-8">
         <div class="">
-        <p class=""><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, Why not have another try? <i class="fas fa-quote-right"></i></p>
+        <p class="abort-message"><i class="fas fa-quote-left" alt="large righthand quote" aria-label="large righthand quote" title="large righthand quote"></i> Well Cadet it looks like your mission was unsucessful this time,<br> Why not have another try? <i class="fas fa-quote-right" alt="large righthand quote" aria-label="large righthand quote" title="large righthand quote"></i></p>
         </div>
       </div>
     </div>
     <div class="row d-flex">
       <div class="col-sm-4 col-md-4">
-        <img src="assets/images/combination_lock/spy.png" class="" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+        <img src="assets/images/combination_lock/spy.png" class="abort-spy-image" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
       </div>
     </div>
 
   <div class="row d-flex justify-content-center">
-    <div class="col-sm-12 col-md-12">
-      <a href="game3.html">
+    <div class="col col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <a href="game1.html">
       <img src="assets/images/combination_lock/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
       </a>
       </div>
@@ -44,47 +44,47 @@
   </div>
   <!-- End for Abort / unsucessful message -->
   <!-- Begin, this section is for the outer screen border -->
-  <div class="container-fluid ">
+  <div class="container-fluid hide-game-content">
     <div class="row">
-      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 outer-screen-border text-center">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 outer-screen-border text-center">
         <div class="row" id="instructions-container">
-          <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 hide-after-start text-center">
-          <h2>Instructions</h2>
+          <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 hide-after-start text-center">
+          <h2 aria-label="instructions heading" title="instructions heading">Instructions</h2>
         </div>
         </div>
 
         <div class="row hide-after-start">
-          <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12">
-          <img src="assets/images/combination_lock/spy.png" class="main-spy-image" alt="spy bullet point" aria-label="spy bullet point" title="spy bullet point"/>
+          <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <img src="assets/images/combination_lock/spy.png" class="main-spy-image" alt="spy academy image" aria-label="spy academy image" title="spy academy image"/>
         </div>
-        </div>
+      </div>          <!-- PUT THE FA ICONS ON THE FRONT PAGE TO SHOW WHAT TIME AND ATTEMPTS LOOK LIKE -->
           <br>
           <div class="row hide-after-start">
-            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center">
-            <h3 class="goals-heading text-center"><em>Goal</em></h3>
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+            <h3 class="goals-heading text-center" aria-label="goals heading" title="goals heading"><em>Goal</em></h3>
             <p>Turn all barrels green before your<b> 'Time'</b>and<b> 'Attempts'</b> run out</p>
-            <h3 class="how-heading text-center"><em>How?</em></h3>
-          <p> Use the "<i class="fas fa-plus plus-minus-symbol"></i> " and "<i class="fas fa-minus plus-minus-symbol"></i>" buttons to choose a number from " 0 - 9 "</p>
+            <h3 class="how-heading text-center" aria-label="how heading" title="how heading"><em>How?</em></h3>
+          <p> Use the "<i class="fas fa-plus plus-minus-symbol" alt="minus symbol" alt="plus symbol" aria-label="plus symbol" title="plus symbol"></i> " and "<i class="fas fa-minus plus-minus-symbol" aria-label="minus symbol" title="minus symbol"></i>" buttons to choose a number from " 0 - 9 "</p>
          </div>
          </div>
            <div class="row hide-after-start">
-             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center">
+             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
                <div class="main-button">
-                <img src="assets/images/combination_lock/bigredbuttonstart.png" id="big-red-button" class="main-button" alt="a big red button" aria-label="A big red button" title="big red button"/>
+                <img src="assets/images/combination_lock/bigredbuttonstart.png" id="big-red-button" class="main-button" alt="Start Game Button" aria-label="Start Game Button" title="Start Game Button"/>
               </div>
             </div>
           </div>
           <!-- End, section is for the outer screen border
           - Start the actual game itself-->
-        <div class="container-fluid show-after-start">
+        <div class="container-fluid show-after-start hide-game-content">
           <div class="row">
-            <div id="abort-button"class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center">
+            <div id="abort-button"class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
         <!-- For padlock abort button -->
-              <span class="fa-stack fa-4x">
+              <span class="fa-stack fa-4x" aria-label="abort button" title="abort button">
                 <i class="fas fa-lock fa-stack-1x"></i>
                   <span class="fa fa-stack-1x">
                     <span class="padlock-abort">
-                      <u>Abort!</u>
+                      <u aria-label="abort button text" title="abort button text">Abort!</u>
                     </span>
                   </span>
                 </span>
@@ -92,13 +92,13 @@
             </div>
           </div>
           <!-- For the 'Time remaining' and 'Attempts left' section-->
-          <div class="container-fluid show-after-start">
+          <div class="container-fluid show-after-start hide-game-content">
             <div class="row">
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xm-12">
-                <span>Time left</span><br><span id="time-remaining"></span>
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="countdown timer" title="countdown timer">
+                <span class="time-heading"><i class="fas fa-2x fa-user-clock"></i></span><br><span id="time-remaining"></span>
               </div>
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xm-12">
-                <span>Attempts left</span><br><span id="attempts">0000</span>
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="lives remaining" title="lives remaining">
+                <span class="attempts-heading"><i class="fas fa-2x fa-user-secret"></i></span><br><span id="attempts">0000</span>
               </div>
               </div>
             </div>

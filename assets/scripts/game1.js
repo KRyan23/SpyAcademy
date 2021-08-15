@@ -9,33 +9,41 @@ stopGame();
 
 
 function startGame(){
-  hideContent();                                                   //1. Start Game calls hideContent to clear the screen for the main game.
-  unhideContent();                                                 //2. Calls unhideContent to display main elements of the game.
+  hideIntroContent();                                                   //1. Start Game calls hideContent to clear the screen for the main game.
+  unhideIntroContent();                                                 //2. Calls unhideContent to display main elements of the game.
   setLevel();                                                      //3. Calls setlevel to clear the screen for the main game.
 }
 
 
-function hideContent(){                                           //This function applies a css style to all elements with class 'hide-after-start'
+function hideIntroContent(){                                           //This function applies a css style to all elements with class 'hide-after-start'
   for(i=0;i<4;i++){
     document.getElementsByClassName("hide-after-start")[i].style.cssText = "display:none;";
   }
 }
 
-function unhideContent(){
+function unhideIntroContent(){
 
   for(j=0;j<2;j++){
-    document.getElementsByClassName("show-after-start")[j].style.cssText = "display:contents;";
+    document.getElementsByClassName("show-after-start")[j].style.cssText = "display:contents;";         //Makes all elements with this class visible
     //document.getElementsByClassName("show-after-start")[j].style.cssText = "animation: fadein 3s;";
-    document.getElementsByClassName("outer-screen-border")[0].style.background = "gray";
-
+    document.getElementsByClassName("outer-screen-border")[0].style.background = "gray";                //Changes the background color
+    document.getElementsByClassName("outer-screen-border")[0].style.width = "95vw";                     //Widens the container
+}
 }
 
-}
+function hideGameContent(){
+  document.getElementById("abort-message-show").style.cssText = "display:contents;";                    //Show abort message
 
+  for(j=0;j<2;j++){
+    document.getElementsByClassName("hide-game-content")[j].style.cssText = "display:none;";             //Hides all elements with this class
+}
+  //  document.getElementsByClassName("outer-screen-border")[0].style.cssText = "display:none;";
+}
 
 function stopGame(interval){
-clearInterval(interval);                                                //Stops the timer by clearing it.
-console.log("Game Stopped :-) ");                                       //Just for testing!
+clearInterval(interval);                                                                              //Stops the timer by clearing it.
+console.log("Game Stopped :-) ");                                                                     //Just for testing!
+hideGameContent();
 }
 
 
