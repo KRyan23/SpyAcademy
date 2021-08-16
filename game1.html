@@ -57,12 +57,12 @@
           <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <img src="assets/images/combination_lock/spy.png" class="main-spy-image" alt="spy academy image" aria-label="spy academy image" title="spy academy image"/>
         </div>
-      </div>          <!-- PUT THE FA ICONS ON THE FRONT PAGE TO SHOW WHAT TIME AND ATTEMPTS LOOK LIKE -->
+      </div>
           <br>
           <div class="row hide-after-start">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
             <h3 class="goals-heading text-center" aria-label="goals heading" title="goals heading"><em>Goal</em></h3>
-            <p>Turn all barrels green before your<b> 'Time'</b>and<b> 'Attempts'</b> run out</p>
+            <p>Turn all barrels green before your <em>'Timer'</em> <b><i class="fas fa-user-clock" alt="Countdown Timer" aria-label="Countdown Timer" title="Countdown Timer"></i></b> Or <em>'Spy Lives'</em> <b><i class="fas fa-user-secret border" alt="spy lives" aria-label="spy lives" title="spy lives"></i></b> run out</p>
             <h3 class="how-heading text-center" aria-label="how heading" title="how heading"><em>How?</em></h3>
           <p> Use the "<i class="fas fa-plus plus-minus-symbol" alt="minus symbol" alt="plus symbol" aria-label="plus symbol" title="plus symbol"></i> " and "<i class="fas fa-minus plus-minus-symbol" aria-label="minus symbol" title="minus symbol"></i>" buttons to choose a number from " 0 - 9 "</p>
          </div>
@@ -80,7 +80,7 @@
           <div class="row">
             <div id="abort-button"class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
         <!-- For padlock abort button -->
-              <span class="fa-stack fa-4x" aria-label="abort button" title="abort button">
+              <span class="fa-stack fa-4x padlock-icon" aria-label="abort button" title="abort button">
                 <i class="fas fa-lock fa-stack-1x"></i>
                   <span class="fa fa-stack-1x">
                     <span class="padlock-abort">
@@ -91,18 +91,89 @@
               </div>
             </div>
           </div>
+          <!-- This is just the heading for desktop display resoloution -->
+          <div class="desktop-game-heading show-after-start">
+          <h1 >Combination Lock</h1>
+          </div>
           <!-- For the 'Time remaining' and 'Attempts left' section-->
           <div class="container-fluid show-after-start hide-game-content">
             <div class="row">
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="countdown timer" title="countdown timer">
                 <span class="time-heading"><i class="fas fa-2x fa-user-clock"></i></span><br><span id="time-remaining"></span>
               </div>
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="lives remaining" title="lives remaining">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="spy lives" title="spy lives">
                 <span class="attempts-heading"><i class="fas fa-2x fa-user-secret"></i></span><br><span id="attempts">0000</span>
-              </div>
               </div>
             </div>
           </div>
+          <!-- This is For the 'Spy Badges' section-->
+          <div class="container-fluid show-after-start hide-game-content">
+            <div class="row d-flex justify-content-center">
+              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 spy-badges" aria-label="countdown timer" title="countdown timer">
+                <div class=" spy-image-container">
+                  <h4>Spy Badges</h4>
+                <img src="assets/images/combination_lock/spy.png" class="spy-image-badge" id="first-badge" alt="first spy badge" aria-label="first-badge" title="first-badge"/>
+                <img src="assets/images/combination_lock/spy.png" class="spy-image-badge" id="second-badge" alt="second spy badge" aria-label="second spy badge" title="second spy badge"/>
+                <img src="assets/images/combination_lock/spy.png" class="spy-image-badge" id="third-badge" alt="third spy badge" aria-label="third spy badge" title="third spy badge"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- These rules represent the bottom divs that control all 6 barrels -->
+          <div class="container-fluid show-after-start hide-game-content">
+            <div class="row d-flex justify-content-center">
+              <div class="col-xxl-8 col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+          <div class="container-fluid">
+              <div class="row d-flex justify-content-center">
+                <div class="barrel-game-outer">
+              <div class="col-2 barrel" id="a">
+                <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-0-plus"></i>
+                <br><span id="barrel-0">0</span><br>
+                <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-0-minus"></i>
+                </div>
+
+              <div class="col-2 barrel" id="b">
+                <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-1-plus"></i>
+                <br><span id="barrel-1"></span><br>
+                <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-1-minus"></i>
+              </div>
+
+              <div class="col-2 barrel" id="c">
+                <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-2-plus"></i>
+                <br><span id="barrel-2"></span><br>
+                <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-2-minus"></i>
+              </div>
+
+              <div class="col-2 barrel" id="d">
+                <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-3-plus"></i>
+                <br><span id="barrel-3"></span><br>
+                <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-3-minus"></i>
+              </div>
+
+              <div class="col-2 barrel" id="e">
+                <i class="fas fa-plus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-4-plus"></i>
+                <br><span id="barrel-4"></span><br>
+                <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-4-minus"></i>
+                </div>
+
+              <div class="col-2 barrel" id="f">
+                <i class="fas fa-plus plus-minus-symbol"  onclick="incrementDecrement(this)" id="barrel-5-plus"></i>
+                <br><span id="barrel-5"></span><br>
+                <i class="fas fa-minus plus-minus-symbol" onclick="incrementDecrement(this)" id="barrel-5-minus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
 
 <!-- Left off here, change the icon to this on completion of the game1 using a template literal
 <i class="fas fa-unlock"></i>

@@ -23,7 +23,7 @@ function hideIntroContent(){                                           //This fu
 
 function unhideIntroContent(){
 
-  for(j=0;j<2;j++){
+  for(j=0;j<5;j++){
     document.getElementsByClassName("show-after-start")[j].style.cssText = "display:contents;";         //Makes all elements with this class visible
     //document.getElementsByClassName("show-after-start")[j].style.cssText = "animation: fadein 3s;";
     document.getElementsByClassName("outer-screen-border")[0].style.background = "gray";                //Changes the background color
