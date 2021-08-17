@@ -202,7 +202,7 @@ body {
 .barrel {
   margin: 0;
   padding: 0;
-  border: 3px solid black;
+  border: 10px double black;
   border-radius: 5%;
   text-align: center;
   align-self: center;
@@ -336,7 +336,9 @@ body {
     height: 200px;
     width: 200px;
   }
-
+  .desktop-game-heading {
+    display: contents;
+  }
 }
 
 /*- 1201px > -*/
@@ -352,7 +354,7 @@ h1 {
     display:none;
     }
   .desktop-game-heading {
-    display: content;
+    display:contents;
   }
   h2 {
     font-size: 1.4em;

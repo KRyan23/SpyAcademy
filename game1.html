@@ -92,8 +92,8 @@
             </div>
           </div>
           <!-- This is just the heading for desktop display resoloution -->
-          <div class="desktop-game-heading show-after-start">
-          <h1 >Combination Lock</h1>
+          <div class="desktop-game-heading">
+          <h1>Combination Lock</h1>
           </div>
           <!-- For the 'Time remaining' and 'Attempts left' section-->
           <div class="container-fluid show-after-start hide-game-content">
@@ -109,9 +109,9 @@
           <!-- This is For the 'Spy Badges' section-->
           <div class="container-fluid show-after-start hide-game-content">
             <div class="row d-flex justify-content-center">
-              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 spy-badges" aria-label="countdown timer" title="countdown timer">
-                <div class=" spy-image-container">
-                  <h4>Spy Badges</h4>
+              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 spy-badges" aria-label="Spy Badge Container" title="Spy Badge Container">
+                <div class="spy-image-container">
+                  <h4 aria-label="Spy Badge heading" title="Spy Badge heading">Spy Badges</h4>
                 <img src="assets/images/combination_lock/spy.png" class="spy-image-badge" id="first-badge" alt="first spy badge" aria-label="first-badge" title="first-badge"/>
                 <img src="assets/images/combination_lock/spy.png" class="spy-image-badge" id="second-badge" alt="second spy badge" aria-label="second spy badge" title="second spy badge"/>
                 <img src="assets/images/combination_lock/spy.png" class="spy-image-badge" id="third-badge" alt="third spy badge" aria-label="third spy badge" title="third spy badge"/>
@@ -166,10 +166,26 @@
         </div>
         </div>
         </div>
+      </div>
 
-
-
-
+      <!-- This part is the congratulations section for a sucessfull game -->
+      <div >
+      <div class="container-fluid" id="game1-success" style="display: none;">
+        <div class="row success-message">
+          <div class="col ">
+            <h1>Well Done Cadet</h1><br>
+            <p>You have passed the Combination Lock challenge and have suceeded in winning your first spy badge.</p>
+            <img src="assets/images/home_page/spy.png" class="spy-image-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" style="opacity: 1;"/>
+            <img src="assets/images/home_page/spy.png" class="spy-image-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" />
+            <img src="assets/images/home_page/spy.png" class="spy-image-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+              <p>Next you will need to access the mainframe by sucessfully breaking the password</p>
+              <a href="game2.html">
+              <img src="assets/images/intro_page/bigredbuttonstart.png" class="next-game-button" alt="next game button" aria-label="next game button" title="next game button"/>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
 
 
 
