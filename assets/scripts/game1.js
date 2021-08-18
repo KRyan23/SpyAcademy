@@ -14,7 +14,6 @@ function startGame(){
   setLevel();                                                           //3. Calls setlevel to clear the screen for the main game.
   setDifficulty();
   generateCombination();
-
 }
 
 
@@ -300,17 +299,19 @@ function incrementDecrement(i){
    //return false;
   }
  }
+
+
+
 /*Function next game brings the player to the sucess screen on completion of the game */
  function nextGame() {
+   setTimeout(() => {
+   let remstyles = ["game-heading-mobile","abort-button","desktop-heading","timer-spy-lives","spy-container","game-barrels"]
+   for(s=0;s<6;s++){
+    document.getElementById(remstyles[s]).style.cssText = "display:none;";            //Just hides the elements after game success
+  }
+    document.getElementById("game1-success").style.cssText = "display:contents;";    //shows the whole success message
 
-   for(z=0;z<4;z++){
-     document.getElementsByClassName("hide-game-content")[z].style.cssText = "display:none;";         //Makes all elements with this class visible
-     }
-//LEFT OFF HERE NEED TO FIX BUG IN HIDE/DISPLAY SUCCESS MESSSAGE
-  // setTimeout(() => {
-   document.getElementById("game1-success").style.cssText = "display:contents;"; //shows the success message
 
-
-// }, 2000);/* Wait 2 seconds to display success message*/
+ }, 1000);                                                                          // Wait 1 seconds to display success message
 
  }
