@@ -4,113 +4,181 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css"/>
   <link rel="stylesheet" href="assets/css/game2.css"/>
   <title>Spy Academy Break The Password</title>
 </head>
 <body>
-  <!-- Abort / unsucessful message displayed if the attempt was unsucessful or if the user aborts the game-->
-<div id="abort-message-show" style="display:none;">
-  <div class="abort-message">
   <div class="container-fluid">
-    <div class="row d-flex justify-content-end">
-      <div class="col-sm-8 col-md-8">
-        <div class="speach-bubble">
-        <p class="speach-bubble-text"><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, you still have earned 1 Spy Badge, Why not have another try? <i class="fas fa-quote-right"></i></p>
-        </div>
-      </div>
-    </div>
-    <div class="row d-flex">
-      <div class="col-sm-4 col-md-4">
-        <img src="assets/images/combination_lock/spy.png" class="" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
-      </div>
-    </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-sm-12 col-md-12">
-        <a href="game2.html">
-        <img src="assets/images/combination_lock/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
-        </a>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    </div><!-- end div for abort-message -->
-
-    <!-- These rules represent the 'Control' peice or the top div that controls the game -->
-    <div class= "container-fluid combination-outline-controls border-success">
-      <div class="row d-flex">
-        <div class="col-12">
-        <button type="button" class="btn btn-primary btn-lg btn-block" id="start">Start Game</button>
-        <div class="col-12">
-        <h1>Break The Password</h1>
-        <div class="col-12">
-          <button id="game-instructions">Hide Instructions</button>
-          <div id="text-instructions">
-            <u>Goal</u><br><img src="assets/images/combination_lock/spy.png" class="spy-bullet-point" alt="spy bullet point" aria-label="spy bullet point" title="spy bullet point"/>
-             Guess the correct password before<br>your 'Attempts' reach "0" or the <img src="assets/images/break_the_password/progressbar.png" class=""  alt="image of a progress bar" aria-label="image of a progress bar" title="image of a progress bar"/>runs out.<br><u>How?</u><br>
-            <img src="assets/images/combination_lock/spy.png" class="spy-bullet-point" alt="spy bullet point" aria-label="spy bullet point" title="spy bullet point"/>
-             Use the hints and clues to help you guess the password <br>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="row d-flex justify-content-center">
-    <div class="col-12 container">
-      <div class="progress-bar" id="time-remaining">
-    </div>
-    </div>
-    </div>
-
-
-    <div class="row d-flex justify-content-between time-trys-left">
-      <div class="col-xm-4">
-<u>Hints</u>
-  <button class="hints btn btn-secondary btn-sm" id="hint1">Hint 1.</button><div id="hint-message1"></div>
-  <button class="hints btn btn-secondary btn-sm" id="hint2">Hint 2.</button><div id="hint-message2"></div>
-  <button class="hints btn btn-secondary btn-sm" id="hint3">Hint 3.</button><div id="hint-message3"></div>
-
-          </div>
-      <div class="col-xm-4">
-      <u>Attempts</u><br><span id="attempts">0021</span>
-      </div>
-
-    </div>
-      <div class="row d-flex justify-content-center">
-      <div class="col-sm-6 col-md-6 spy-badges">
-
-        <img src="assets/images/combination_lock/spy.png" class="spy-image" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
-     <img src="assets/images/combination_lock/spy.png" class="spy-image"  alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
-      <img src="assets/images/combination_lock/spy.png" class="spy-image" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
-
-    </div>
+    <div class="row">
+      <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xm-2 text-center game-heading hide-after-abort">
+    <h1>Break The Password</h1>
+  </div>
+</div>
 </div>
 
-<!-- Progress bar displayed centrally
+<!-- Abort / unsucessful message displayed if the attempt was unsucessful or if the user aborts the game-->
+<div class="abort-message" id="abort-message-show" style="display: none;">
+<div class="container-fluid">
+  <div class="row d-flex justify-content-end">
+    <div class="col-sm-8 col-md-8">
+      <div class="speach-bubble">
+      <p class="speach-bubble-text"><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, Why not have another try? <i class="fas fa-quote-right"></i></p>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex">
+    <div class="col-sm-4 col-md-4">
+      <img src="assets/images/combination_lock/spy.png" class="" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+    </div>
+  </div>
+
 <div class="row d-flex justify-content-center">
-<div class="col-12 container">
-  <div class="progress-bar" id="time-remaining">
+  <div class="col-sm-12 col-md-12">
+    <a href="game2.html">
+    <img src="assets/images/combination_lock/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
+    </a>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end div for abort-message -->
+
+
+
+
+<!-- This is for the "computer screen" interface -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xxl-8 col-xl-6 col-lg-10 col-md-12 col-sm-8 col-xm-2 outer-screen-border text-center hide-after-abort">
+<!--  This section is for the instruction div which fades out once Start is pressed -->
+  <div class="row" id="instructions-container">
+    <div class="col-xxl-4 col-xl-4 col-lg-10 col-md-10 col-sm-6 col-xm-2 instructions">
+    <p>Instructions</p>
+    Goal - Using the letters on the keypad guess the correct password order.<br><br>
+    How ? - Select a password box then click one of the letters on the keypad, remember to keep and eye on your spy lives!
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- This is for the mainframe heading -->
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center hide-after-abort">
+        <div class="mainframe-heading"><p>Mainframe Password</p></div>
+        <br>
+        <div id="player-progress" style="display: none;">
+        Attempts left
+        <br>
+        <span id="attempts">00</span>
+
+        <br>
+        <img src="assets/images/break_the_password/spy.png" class="spy-image" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" style="opacity: 1;"/>
+        <img src="assets/images/break_the_password/spy.png" class="spy-image" id="second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+        <img src="assets/images/break_the_password/spy.png" class="spy-image" id="third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+</div>
+</div>
+      </div>
+</div>
+</div>
+<!-- This is the section for the password boxes -->
+<div class="container-fluid">
+<div class="row">
+   <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center hide-after-abort">
+    <div class="boxes-spyimage-trys" id="password-boxes" style="display: none;">
+
+<!-- The character boxes get dynamically added into this section -->
+
+
+
 </div>
 </div>
 </div>
- end progress bar -->
 
-<!-- Start password input box -->
+ <!-- These is for the keyboard -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xxl-4 col-xl-4 col-lg-8 col-md-8 col-sm-6 col-xm-2 outer-keyboard-border text-center hide-after-abort">
+      <div class="keyboard-surround">
+        <div class="start-abort-key text-center" id="start">
+        Start
+        </div>
+      <div class="keyboard-keys text-center" id="key-0">
+        .
+      </div>
+      <div class="keyboard-keys text-center" id="key-1">
+        .
+      </div>
+      <div class="keyboard-keys text-center" id="key-2">
+        .
+      </div>
+      <div class="keyboard-keys text-center" id="key-3">
+        .
+      </div>
+      <div class="keyboard-keys text-center" id="key-4">
+        .
+      </div>
+        <div class="keyboard-keys text-center" id="key-5">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-6">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-7">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-8">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-9">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-10">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-11">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-12">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-13">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-14">
+        .
+        </div>
+        <div class="keyboard-keys text-center" id="key-15">
+        .
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End div for combination control container -->
+<!-- This part is the congratulations section for a sucessfull game-->
 
 
-
-<form name="form1" action="#" class="password-form">
-<input type="text" id="lname" name="lname" placeholder="Your Guess"><br><br>
-<input class="btn btn-outline-success password-form" type="submit" role="button" name="submit" value="Submit" onclick="allLetter(document.form1.text1)"/>
-
-</form>
-<br>
-<!-- end of password input box -->
-
-</div> <!-- End div for combination control container -->
+<div>
+<div class="container-fluid" id="game2-success" style="display: none;">
+  <div class="row success-message">
+    <div class="col text-center">
+      <h1>Well Done Cadet</h1><br>
+      <p>You have correctly guessed the Mainframe Password and now have suceeded in winning your second spy badge.</p>
+      <img src="assets/images/home_page/spy.png" class="spy-image" id="success-first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+      <img src="assets/images/home_page/spy.png" class="spy-image" id="success-second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" />
+      <img src="assets/images/home_page/spy.png" class="spy-image" id="success-third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+        <p>Lastly you will need to diffuse a bomb to earn your last spy badge and graduate the Academy, Good Luck!</p>
+        <a href="game3.html">
+        <img src="assets/images/intro_page/bigredbuttonstart.png" class="next-game-button" alt="next game button" aria-label="next game button" title="next game button"/>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+  <!-- Script tags put at the bottom of page to ensure a faster page load this.value-->
   <!-- Script tags put at the bottom of page to ensure a faster page load this.value-->
   <!-- Using the JQuery CDN-v3.6.0  -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
