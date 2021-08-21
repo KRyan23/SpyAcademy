@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+html {
+  background-color: darkgray;
+ }
+body {
+  font-family: 'Saira Stencil One', cursive, sans-serif;
+  background-color: darkgray;
+  text-align: center;
+  color: black;
+  font-size: 1.6em;
+ }
+ /* This rule is for the 'Diffuse the bomb' heading */
+ .game-heading {
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+
+ }
+ /* This rule is for the Start over button */
+ .start-over-button {
+   margin-top:10%;
+   height: 6em;
+   width: 6em;
+   opacity: 0.75;
+   padding: 0;
+ }
+ /* This rule is for the border or fram around the content */
+ .outer-screen-border {
+   padding-top: 0.2em;
+   position:fixed;
+   height: 75vh;
+   width:75vw;
+   top: 90%;
+   left: 50%;
+   transform: translate(-50%, -90%);
+   display: block;
+   background-color: #fafafa;
+   margin:0;
+   border:25px ridge silver;
+   border-radius:15px 15px 15px 15px;
+   color: black;
+   opacity: 0.90;
+ }
+/* This rule is for the 'Spy' image */
+.main-spy-image {
+  width: 90px;
+  height: 90px;
+  padding-right: 0px;
+  height: auto;
+  text-align: right;
+}
+/* This rule is for the 'goals' heading */
+.goals-heading {
+  animation: slidein 1s;
+  font-weight: 200;
+  color: green;
+}
+/* This rule is for the 'how' heading */
+.how-heading {
+  animation: slidein 2s;
+  font-weight: 200;
+  color: green;
+}
+/* This rule is for the Big red button div */
+.main-button {
+  background-color:#fafafa;
+  height: 10vh;
+  width: auto;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: fadein 3s;
+}
+
+/*----------------------------- Keyframe calls ---------------------------*/
+
+/* For the big-red-button 'Enter Game' on the front page */
+@keyframes fadein {
+ 100% {opacity: 1;}
+   0% {opacity: 0;}
+ 100% {opacity: 1;}
+
+}
+/* This rule is for the slide in effect for the 'Goal' and 'How' headings */
+@keyframes slidein {
+ 100% {opacity: 1;border-bottom: 1px solid silver; width: 100%;padding: 0 0 0 0;}
+   0% {opacity: 0;border-bottom: 1px solid black; width: 1%;}
+ 100% {opacity: 1;}
+
+}
+/* Rules up to this point are for the content when you lan on the page and also for the Abort/Unsuccessful message */
+
+/* From this point the Rules are for the actual Game itself */
+
+.clock-digits {
+  font-size: 1.6em;
+  background-color: black;
+  color: #00FF00;     //The color is lime! #00FF00
+  opacity: 1;
+  padding: 0 0 0 0;
+  margin: 10px 10px 10px 10px;
+ }
+
+.outer-clock-border{
+  background-color: black;
+  border: 10px outset grey;
+  padding: 0 0 0 0;
+  margin: -34px 0 0 0;
+}
+/*Bomb*/
+.bomb {
+  opacity:0.1;
+  border:10px solid silver;
+  width: 50%;
+  border-radius: 50%;
+  opacity: 0.9;
+  line-height: 0;
+	background-color: black;
+  color: #fafafa;
+  position: relative;
+  margin-left: 25%;
+}
+/*Bomb*/
+.bomb::after{
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+/*Bomb*/
+.bomb-text {
+  position:absolute;
+  bottom:50%;
+  width: 100%;
+  text-align: center;
+  font-size: auto;
+  opacity: 0.5;
+}
+
+/* ------------------------- Media queries ----------------------------- */
+/*- < 250px -*/
+@media only screen and (max-width: 249px) {
+  body {
+    font-size: 0.8em;
+  }
+  .game-heading h1 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+.outer-clock-border{
+  margin: -30px 0 0 0;
+}
+.outer-clock-border{
+  margin: -23px 0 0 0;
+}
+}
+
+/*- 250px - 320px -*/
+@media only screen and (min-width: 250px) and (max-width: 320px) {
+  body {
+    font-size: 0.8em;
+  }
+  .game-heading h1 {
+    font-size: 1em;
+  }
+
+.outer-clock-border{
+  margin: -26px 0 0 0;
+}
+}
+/*- 321px - 499px -*/
+@media only screen and (min-width: 321px) and (max-width: 499px) {
+  body {
+    font-size: 0.9em;
+  }
+  .game-heading h1 {
+    font-size: 1.25em;
+  }
+  .outer-clock-border{
+    margin: -28px 0 0 0;
+  }
+}
+
+/*- 500px - 767px -*/
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  body {
+    font-size: 1.1em;
+  }
+  .game-heading h1 {
+    font-size: 1.5em;
+    text-align: center;
+   }
+}
+
+/*- 768px - 991px -*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 1.2em;
+  }
+  .game-heading h1 {
+    font-size: 1.5em;
+  }
+  .bomb {
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+
+/*- 992px - 1023px -*/
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+  body {
+    font-size: 1.3em;
+  }
+  .game-heading h1 {
+    font-size: 1.6em;
+  }
+  .bomb {
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+
+/*- 1024px - 1200px -*/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  body {
+    font-size: 1.1em;
+  }
+}
+
+/*- 1201px > -*/
+@media only screen and (min-width: 1201px) and (max-width: 2000px) {
+  body {
+    font-size: 1.1em;
+  }
+  .game-heading h1 {
+    font-size: 1.4em;
+  }
+  .bomb {
+    width: 30%;
+    margin-left: 35%;
+  }
+}
+/*-------------------------End of File ----------------------------*/
