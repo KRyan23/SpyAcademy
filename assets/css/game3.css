@@ -82,15 +82,16 @@ body {
  100% {opacity: 1;}
    0% {opacity: 0;}
  100% {opacity: 1;}
-
 }
 /* This rule is for the slide in effect for the 'Goal' and 'How' headings */
 @keyframes slidein {
  100% {opacity: 1;border-bottom: 1px solid silver; width: 100%;padding: 0 0 0 0;}
    0% {opacity: 0;border-bottom: 1px solid black; width: 1%;}
  100% {opacity: 1;}
-
 }
+@keyframes flashdiv {
+    50%{opacity: 0.5;}
+  }
 /* Rules up to this point are for the content when you lan on the page and also for the Abort/Unsuccessful message */
 
 /* From this point the Rules are for the actual Game itself */
@@ -101,7 +102,6 @@ body {
   color: #00FF00;     //The color is lime! #00FF00
   opacity: 1;
   padding: 0 0 0 0;
-  margin: 10px 10px 10px 10px;
  }
 
 .outer-clock-border{
@@ -116,12 +116,12 @@ body {
   border:10px solid silver;
   width: 50%;
   border-radius: 50%;
-  opacity: 0.9;
   line-height: 0;
 	background-color: black;
   color: #fafafa;
   position: relative;
   margin-left: 25%;
+  opacity: 1;
 }
 /*Bomb*/
 .bomb::after{
@@ -136,7 +136,7 @@ body {
   width: 100%;
   text-align: center;
   font-size: auto;
-  opacity: 0.5;
+  animation: flashdiv 2s infinite;
 }
 
 /* ------------------------- Media queries ----------------------------- */

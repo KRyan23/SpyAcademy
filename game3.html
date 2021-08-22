@@ -28,15 +28,15 @@
       </div>
     </div>
     <div class="row d-flex">
-      <div class="col-sm-4 col-md-4">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <img src="assets/images/diffuse_the_bomb/spy.png" class="" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
       </div>
     </div>
 
   <div class="row d-flex justify-content-center">
-    <div class="col-sm-12 col-md-12">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
       <a href="game3.html">
-      <img src="assets/images/combination_lock/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
+      <img src="assets/images/diffuse_the_bomb/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
       </a>
       </div>
     </div>
@@ -46,28 +46,28 @@
   <!-- Begin, this section is for the outer screen border -->
   <div class="container-fluid ">
     <div class="row">
-      <div class="col-xxl-8 col-xl-6 col-lg-10 col-md-12 col-sm-8 col-xm-8 outer-screen-border text-center">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 outer-screen-border text-center">
         <div class="row" id="instructions-container">
-          <div class="col-xxl-4 col-xl-4 col-lg-10 col-md-10 col-sm-6 col-xm-2 hide-after-start">
+          <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 hide-after-start">
           <p>Instructions</p>
         </div>
         </div>
 
         <div class="row hide-after-start">
           <div class="col-12 text-center">
-          <img src="assets/images/break_the_password/spy.png" class="main-spy-image" alt="spy bullet point" aria-label="spy bullet point" title="spy bullet point"/>
+          <img src="assets/images/diffuse_the_bomb/spy.png" class="main-spy-image" alt="spy bullet point" aria-label="spy bullet point" title="spy bullet point"/>
         </div>
         </div>
           <br>
           <div class="row hide-after-start">
-            <div class="col-xxl-4 col-xl-4 col-lg-10 col-md-10 col-sm-6 col-xm-2">
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <p class="goals-heading"><em>Goal</em></p>Diffuse the bomb before the timer runs out<br>
             <p class="how-heading"><em>How?</em></p>
            Guess the correct sequence of wires by clicking on them.
          </div>
          </div>
            <div class="row hide-after-start">
-             <div class="col-12 text-center">
+             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
                <div>
                  <br>
                  <img src="assets/images/diffuse_the_bomb/bigredbuttonwithtext.jpg" id="big-red-button" class="main-button" alt="a big red button" aria-label="A big red button" title="big red button"/>
@@ -77,8 +77,8 @@
           <!-- End, section is for the outer screen border -->
           <!-- Start the actual game itself -->
           <div class="container-fluid show-after-start" style="display: none;">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row d-flex">
+              <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="outer-clock-border">
                 <span class="clock-digits" id="time-remaining">00:00</span>
               </div>
@@ -93,7 +93,7 @@
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                 <div class="bomb">
                   <div class="fuse"></div>
-                  <div class="bomb-text">BOMB!</div>
+                  <div class="bomb-text" id="flashing-bomb-text">BOMB!</div>
                 </div>
                 </div>
           </div>

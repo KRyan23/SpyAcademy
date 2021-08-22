@@ -17,7 +17,7 @@ function hideContent(){
 }
 //This function unhides the main game content
 function unhideContent(){
-  for(j=0;j<3;j++){
+  for(j=0;j<2;j++){
     document.getElementsByClassName("show-after-start")[j].style.cssText = "display:contents;";
     document.getElementsByClassName("show-after-start")[j].style.cssText = "animation: fadein 1s;";
     }
@@ -35,11 +35,11 @@ function setlevel(){
 let level = localStorage.getItem("age");
 let time;
 if (level >= 6 && level <= 8){
-  time = 63; // 242 - 4minutes
+  time = 242; // 242 - 4minutes
 }else if (level >= 9 && level <= 12) {
-  time = 62; // 182 - 3minutes
+  time = 182; // 182 - 3minutes
 }else{
-  time = 61; // 242 - 2minutes
+  time = 122; // 242 - 2minutes
 }
 countdown(time); //Calls the timer function to run for example (180 times), countdown(180)
 }
@@ -63,8 +63,10 @@ function countdown(seconds) {
     else if (counter < 122 && counter >= 62){
       minutes = 1;
           document.getElementById("time-remaining").style.cssText = "color:orange; opacity:0.75;"; //Changes the text to orange to signify < 2mins left
+          document.getElementById("flashing-bomb-text").style.cssText = "color:orange; animation:flashdiv 1s infinite;"; //Changes the color of the Bomb! text to orange.
         }else{ minutes = 0;
           document.getElementById("time-remaining").style.cssText = "color:red; opacity:0.75;";   //Changes the text to red to signify < 1mins left
+          document.getElementById("flashing-bomb-text").style.cssText = "color:red; animation:flashdiv 1s infinite;";             //Changes the text to red to signify < 1mins left
         }
     //Display seconds 0 - 59
     if(x < 0){x = seconds;}
@@ -84,10 +86,7 @@ function countdown(seconds) {
         stopGame();
       document.getElementById("abort-message-show").removeAttribute("style");
     }
-    //This function waits for the Abort button to be clicked before running the stopGame().
-
 
 
 },1000); //1000ms
-
 }
