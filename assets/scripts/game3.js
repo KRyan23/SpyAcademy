@@ -17,7 +17,7 @@ function hideContent(){
 }
 //This function unhides the main game content
 function unhideContent(){
-  for(j=0;j<2;j++){
+  for(j=0;j<4;j++){
     document.getElementsByClassName("show-after-start")[j].style.cssText = "display:contents;";
     document.getElementsByClassName("show-after-start")[j].style.cssText = "animation: fadein 1s;";
     }
@@ -62,11 +62,11 @@ function countdown(seconds) {
       minutes = 2;}
     else if (counter < 122 && counter >= 62){
       minutes = 1;
-          document.getElementById("time-remaining").style.cssText = "color:orange; opacity:0.75;"; //Changes the text to orange to signify < 2mins left
-          document.getElementById("flashing-bomb-text").style.cssText = "color:orange; animation:flashdiv 1s infinite;"; //Changes the color of the Bomb! text to orange.
+          document.getElementById("time-remaining").style.cssText = "color:orange; opacity:0.85;"; //Changes the text to orange to signify < 2mins left
+          document.getElementById("flashing-bomb-text").style.cssText = "color:orange; animation:flashdiv 1s infinite; opacity:0.85;"; //Changes the color of the Bomb! text to orange and flashes it every 1s
         }else{ minutes = 0;
-          document.getElementById("time-remaining").style.cssText = "color:red; opacity:0.75;";   //Changes the text to red to signify < 1mins left
-          document.getElementById("flashing-bomb-text").style.cssText = "color:red; animation:flashdiv 1s infinite;";             //Changes the text to red to signify < 1mins left
+          document.getElementById("time-remaining").style.cssText = "color:red; opacity:1;";   //Changes the text to red to signify < 1mins left
+          document.getElementById("flashing-bomb-text").style.cssText = "color:red; animation:flashdiv 500ms infinite; opacity:1;"; //Changes the color of the Bomb! text to red and flashes it every 0.5s
         }
     //Display seconds 0 - 59
     if(x < 0){x = seconds;}

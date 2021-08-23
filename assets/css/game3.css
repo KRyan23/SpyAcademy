@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
-html {
-  background-color: darkgray;
- }
+
 body {
   font-family: 'Saira Stencil One', cursive, sans-serif;
   background-color: darkgray;
   text-align: center;
   color: black;
   font-size: 1.6em;
+ }
+ /* This rule is for the h3 elements*/
+ h3 {
+   font-size: 90%;
+ }
+/* This rule is for the h4 elements*/
+ h4 {
+
  }
  /* This rule is for the 'Diffuse the bomb' heading */
  .game-heading {
@@ -28,17 +34,17 @@ body {
    opacity: 0.75;
    padding: 0;
  }
- /* This rule is for the border or fram around the content */
+ /* This rule is for the border or frame around the content */
  .outer-screen-border {
    padding-top: 0.2em;
    position:fixed;
-   height: 75vh;
+   height: 85vh;
    width:75vw;
    top: 90%;
    left: 50%;
    transform: translate(-50%, -90%);
    display: block;
-   background-color: #fafafa;
+   background-color: #fafafa; //Titanium #878681
    margin:0;
    border:25px ridge silver;
    border-radius:15px 15px 15px 15px;
@@ -101,19 +107,19 @@ body {
   background-color: black;
   color: #00FF00;     //The color is lime! #00FF00
   opacity: 1;
-  padding: 0 0 0 0;
+  padding: 0;
  }
 
 .outer-clock-border{
   background-color: black;
-  border: 10px outset grey;
-  padding: 0 0 0 0;
-  margin: -34px 0 0 0;
+  border: 10px inset grey;
+  padding: 1% 0 1% 0;
+  margin: 0 0 0 0;
 }
 /*Bomb*/
 .bomb {
   opacity:0.1;
-  border:10px solid silver;
+  border:9px double green;
   width: 50%;
   border-radius: 50%;
   line-height: 0;
@@ -121,6 +127,8 @@ body {
   color: #fafafa;
   position: relative;
   margin-left: 25%;
+  max-width: 50%;
+
   opacity: 1;
 }
 /*Bomb*/
@@ -136,9 +144,63 @@ body {
   width: 100%;
   text-align: center;
   font-size: auto;
-  animation: flashdiv 2s infinite;
+  color: #00FF00;     //The color is lime! #00FF00
+  opacity: 0.75;
+  }
+  /* This rule is for the 'div' containing the 3 spy badges  */
+.spy-image-container {
+  background-color: darkgrey;
+  border: 5px inset silver;
+  color: black;
+  padding: 5px 0 5px 0;
+  margin:2% 0 2% 0;
+  height: auto;
+  width:auto;
 }
+  /* This rule is for the 3 spy badges in the the center of the screen */
+  .spy-image-badge {
+    width: 1.4em;
+    padding: 0.2em auto 0.2em auto;
+    height: auto;
+    text-align: center;
+    opacity: 0.3;
+    animation: fadein ease 3s;
+    -webkit-animation: fadein ease 3s;
+     -moz-animation: fadein ease 3s;
+  }
+  /* This rule is for the 2 spy badges that the player has already won,in the the center of the screen */
+  .spy-image-badge-won {
+    opacity: 1;
+  }
+/* This rule is for the clickable wires to diffuse*/
 
+/* */
+.wires-container {
+  border: 10px outset grey;
+  padding: 2% 0 2% 0;
+  margin-top: 20%;
+  background-color: grey;
+}
+.spy-container{
+  font-size: 10%;
+}
+/* */
+.wires{
+  border:5px double grey;
+  content: "";
+  opacity: 0.8;
+  font-size: 95%;
+  border-radius: 15px;
+  color:white;
+}
+/* */
+.wire-numbers {
+  font-size: 1.2em;
+  text-align: left;
+  color:white;
+  padding:0;
+  margin:0;
+}
 /* ------------------------- Media queries ----------------------------- */
 /*- < 250px -*/
 @media only screen and (max-width: 249px) {
@@ -193,6 +255,12 @@ body {
     font-size: 1.5em;
     text-align: center;
    }
+   .spy-image-container {
+     margin: 2% 0 0 0;
+   }
+   .wires-container {
+     margin: 5% 0 1% 0;
+   }
 }
 
 /*- 768px - 991px -*/
@@ -221,17 +289,28 @@ body {
     width: 40%;
     margin-left: 30%;
   }
+  .wires{
+    border:10px double grey;
 }
-
+}
 /*- 1024px - 1200px -*/
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   body {
     font-size: 1.1em;
   }
+  .wires{
+    border:10px double grey;
+}
+ .spy-image-container {
+   margin: 5% 0 5% 0;
+ }
+ .wires-container {
+   margin: 10% 0 5% 0;
+ }
 }
 
 /*- 1201px > -*/
-@media only screen and (min-width: 1201px) and (max-width: 2000px) {
+@media only screen and (min-width: 1201px) and (max-width: 3000px) {
   body {
     font-size: 1.1em;
   }
@@ -239,8 +318,17 @@ body {
     font-size: 1.4em;
   }
   .bomb {
-    width: 30%;
-    margin-left: 35%;
+    width: 20%;
+    margin-left: 40%;
   }
+  .wires{
+    border:10px double grey;
+}
+.spy-image-container {
+  margin: 5% 0 5% 0;
+}
+.wires-container {
+  margin: 2% 0 0 0;
+}
 }
 /*-------------------------End of File ----------------------------*/

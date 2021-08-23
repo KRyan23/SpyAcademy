@@ -77,30 +77,88 @@
           <!-- End, section is for the outer screen border -->
           <!-- Start the actual game itself -->
           <div class="container-fluid show-after-start" style="display: none;">
-            <div class="row d-flex">
-              <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="row d-flex justify-content-center">
+              <div class="col-xxl-12 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="outer-clock-border">
-                <span class="clock-digits" id="time-remaining">00:00</span>
+                <span class="clock-digits" id="time-remaining"><h2>00:00</h2></span>
               </div>
               </div>
             </div>
           </div>
+          <!-- This is For the 'Spy Badges' section-->
+                    <div class="container-fluid show-after-start" style="display: none;">
+                      <div class="row d-flex justify-content-center">
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 spy-badges" aria-label="Spy Badge Container" title="Spy Badge Container">
+                          <div class="spy-image-container">
+                            <h3 aria-label="Spy Badge heading" title="Spy Badge heading">Spy Badges</h3>
+                          <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge spy-image-badge-won" id="first-badge" alt="first spy badge" aria-label="first-badge" title="first-badge"/>
+                          <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge spy-image-badge-won" id="second-badge" alt="second spy badge" aria-label="second spy badge" title="second spy badge"/>
+                          <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge" id="third-badge" alt="third spy badge" aria-label="third spy badge" title="third spy badge"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Bomb -->
+                    <br>
+                    <div class="container-fluid show-after-start" style="display: none;">
+                      <div class="row d-flex justify-content-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-6 col-xxl-6 text-center">
+                          <div class="bomb">
+                            <div class="fuse"></div>
+                            <div class="bomb-text" id="flashing-bomb-text">BOMB!</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 'Wires' to diffuse the bomb -->
+                              <!-- Row 1 of 4 -->
+                                <div class="wires-container show-after-start" style="display: none;">
 
-          <!-- Bomb -->
-          <br>
-          <div class="container-fluid show-after-start" style="display: none;">
-            <div class="row d-flex justify-content-center">
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                <div class="bomb">
-                  <div class="fuse"></div>
-                  <div class="bomb-text" id="flashing-bomb-text">BOMB!</div>
-                </div>
-                </div>
-          </div>
-          </div>
+                                <div class="container-fluid">
+                                <div class="row no-gutters">
+                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 " aria-label="wire 1" title="wire 1">
+                                  <div class="wires" id="wire-0" style="background-color:blue;"><span class="wire-numbers" aria-label="number " title="number 1">1 </span></div>
+                                  </div>
+                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 2" title="wire 2">
+                                  <div class="wires" id="wire-1" style="background-color: brown;"><span class="wire-numbers" aria-label="number 2" title="number 2">2</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Row 2 of 4 -->
+                              <div class="container-fluid">
+                                <div class="row no-gutters">
+                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 3" title="wire 3">
+                                  <div class="wires" id="wire-2 " style="background-color:yellow;"><span class="wire-numbers" aria-label="number 3" title="number 3">3</span></div>
+                                  </div>
+                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 4" title="wire 4">
+                                  <div class="wires" id="wire-3" style="background-color:green;"><span class="wire-numbers" aria-label="number 4" title="number 4">4</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Row 3 of 4 -->
+                              <div class="container-fluid">
+                                <div class="row no-gutters">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 5" title="wire 5">
+                                  <div class="wires" id="wire-4" style="background-color:black;"><span class="wire-numbers" aria-label="number 5" title="number 5">5</span></div>
+                                  </div>
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 6" title="wire 6">
+                                  <div class="wires" id="wire-5" style="background-color:orange;"><span class="wire-numbers" aria-label="number 6" title="number 6">6</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Row 4 of 4 -->
+                              <div class="container-fluid">
+                                <div class="row no-gutters">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 7" title="wire 7">
+                                  <div class="wires" id="wire-6" style="background-color:purple;"><span class="wire-numbers" aria-label="number 7" title="number 7">7</span></div>
+                                  </div>
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 7" title="wire 7">
+                                  <div class="wires" id="wire-7" style="background-color:red;"><span class="wire-numbers" aria-label="number 8" title="number 8">8</span></div>
+                                  </div>
+                                </div>
+                              </div>
 
-
-
+</div>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script defer async src="assets/scripts/game3.js"></script>
 </body>
