@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/game3.css"/>
-  <title>Difuse the Bomb</title>
+  <title>Diffuse the Bomb</title>
 </head>
 <body>
   <div class="container-fluid">
@@ -20,19 +20,16 @@
   <!-- Begin,  Abort / unsucessful message displayed if the attempt was unsucessful or if the user aborts the game-->
   <div class="abort-message" id="abort-message-show" style="display: none;">
   <div class="container-fluid">
-    <div class="row d-flex justify-content-end">
-      <div class="col-sm-8 col-md-8">
-        <div class="">
-        <p class=""><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, Why not have another try? <i class="fas fa-quote-right"></i></p>
-        </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+        <p class="abort-message"><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, Why not have another try? <i class="fas fa-quote-right"></i></p>
       </div>
     </div>
     <div class="row d-flex">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <img src="assets/images/diffuse_the_bomb/spy.png" class="" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+        <img src="assets/images/diffuse_the_bomb/spy.png" class="abort-spy-image" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
       </div>
     </div>
-
   <div class="row d-flex justify-content-center">
     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
       <a href="game3.html">
@@ -63,7 +60,7 @@
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <p class="goals-heading"><em>Goal</em></p>Diffuse the bomb before the timer runs out<br>
             <p class="how-heading"><em>How?</em></p>
-           Guess the correct sequence of wires by clicking on them.
+           Guess the correct sequence of the coloured wires by clicking on them, each incorrect choice removes 30s from your time!
          </div>
          </div>
            <div class="row hide-after-start">
@@ -113,14 +110,23 @@
                     <!-- 'Wires' to diffuse the bomb -->
                               <!-- Row 1 of 4 -->
                                 <div class="wires-container show-after-start" style="display: none;">
+                                  <div class="container-fluid">
+                                  <div class="row d-flex justify-content-around">
+                                    <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                      <div class="start-abort-key text-center" id="start-abort" aria-label="The start and the abort button" title="The start and the abort button">
+                                    Start Game
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
 
                                 <div class="container-fluid">
                                 <div class="row no-gutters">
                                   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 " aria-label="wire 1" title="wire 1">
-                                  <div class="wires" id="wire-0" style="background-color:blue;"><span class="wire-numbers" aria-label="number " title="number 1">1 </span></div>
+                                  <div class="wires" id="wire-0"><span class="wire-numbers" aria-label="number 1" title="number 1">1 </span></div>
                                   </div>
                                   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 2" title="wire 2">
-                                  <div class="wires" id="wire-1" style="background-color: brown;"><span class="wire-numbers" aria-label="number 2" title="number 2">2</span></div>
+                                  <div class="wires" id="wire-1"><span class="wire-numbers" aria-label="number 2" title="number 2">2</span></div>
                                   </div>
                                 </div>
                               </div>
@@ -128,10 +134,10 @@
                               <div class="container-fluid">
                                 <div class="row no-gutters">
                                   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 3" title="wire 3">
-                                  <div class="wires" id="wire-2 " style="background-color:yellow;"><span class="wire-numbers" aria-label="number 3" title="number 3">3</span></div>
+                                  <div class="wires" id="wire-2"><span class="wire-numbers" aria-label="number 3" title="number 3">3</span></div>
                                   </div>
                                   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 4" title="wire 4">
-                                  <div class="wires" id="wire-3" style="background-color:green;"><span class="wire-numbers" aria-label="number 4" title="number 4">4</span></div>
+                                  <div class="wires" id="wire-3"><span class="wire-numbers" aria-label="number 4" title="number 4">4</span></div>
                                   </div>
                                 </div>
                               </div>
@@ -139,10 +145,10 @@
                               <div class="container-fluid">
                                 <div class="row no-gutters">
                                   <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 5" title="wire 5">
-                                  <div class="wires" id="wire-4" style="background-color:black;"><span class="wire-numbers" aria-label="number 5" title="number 5">5</span></div>
+                                  <div class="wires" id="wire-4"><span class="wire-numbers" aria-label="number 5" title="number 5">5</span></div>
                                   </div>
                                   <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 6" title="wire 6">
-                                  <div class="wires" id="wire-5" style="background-color:orange;"><span class="wire-numbers" aria-label="number 6" title="number 6">6</span></div>
+                                  <div class="wires" id="wire-5"><span class="wire-numbers" aria-label="number 6" title="number 6">6</span></div>
                                   </div>
                                 </div>
                               </div>
@@ -150,10 +156,10 @@
                               <div class="container-fluid">
                                 <div class="row no-gutters">
                                   <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 7" title="wire 7">
-                                  <div class="wires" id="wire-6" style="background-color:purple;"><span class="wire-numbers" aria-label="number 7" title="number 7">7</span></div>
+                                  <div class="wires" id="wire-6"><span class="wire-numbers" aria-label="number 7" title="number 7">7</span></div>
                                   </div>
                                   <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 7" title="wire 7">
-                                  <div class="wires" id="wire-7" style="background-color:red;"><span class="wire-numbers" aria-label="number 8" title="number 8">8</span></div>
+                                  <div class="wires" id="wire-7"><span class="wire-numbers" aria-label="number 8" title="number 8">8</span></div>
                                   </div>
                                 </div>
                               </div>

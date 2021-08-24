@@ -34,6 +34,18 @@ body {
    opacity: 0.75;
    padding: 0;
  }
+ /* This rule is for the 'Spy' image in the Abort section*/
+.abort-spy-image {
+  width: 150px;
+  height: auto;
+  padding: 10% 0 10% 0;
+}
+/* This rule is for the the abort message text */
+.abort-message {
+  color: #fafafa;
+  font-size: 1.1em;
+  margin-top: 15%;
+}
  /* This rule is for the border or frame around the content */
  .outer-screen-border {
    padding-top: 0.2em;
@@ -119,7 +131,7 @@ body {
 /*Bomb*/
 .bomb {
   opacity:0.1;
-  border:9px double green;
+  border:7px double green;
   width: 50%;
   border-radius: 50%;
   line-height: 0;
@@ -128,7 +140,6 @@ body {
   position: relative;
   margin-left: 25%;
   max-width: 50%;
-
   opacity: 1;
 }
 /*Bomb*/
@@ -172,19 +183,31 @@ body {
   .spy-image-badge-won {
     opacity: 1;
   }
-/* This rule is for the clickable wires to diffuse*/
-
-/* */
+  /* this rule ifs for the Start/Abort button */
+  /* This rule is just for the Start/Abort key */
+ .start-abort-key {
+   border:5px ridge black;
+   font-weight: 300;
+   border-radius: 15px;
+   color:white;
+   background-color: darkgray;
+   opacity:1;
+ }
+/* This rule is for the Start/Abort key when clicked */
+ .start-abort-key:active {
+   transform: scale(0.90);
+   opacity: 0.75;
+   background-color: yellow;
+   color: black;
+ }
+/* This rule is for the wires container */
 .wires-container {
   border: 10px outset grey;
   padding: 2% 0 2% 0;
   margin-top: 20%;
   background-color: grey;
 }
-.spy-container{
-  font-size: 10%;
-}
-/* */
+/* This rule is for the wires of differnt colors */
 .wires{
   border:5px double grey;
   content: "";
@@ -192,8 +215,14 @@ body {
   font-size: 95%;
   border-radius: 15px;
   color:white;
+  background-color: silver;
 }
-/* */
+/* This rule is for the wires when clicked */
+.wires:active{
+  transform: scale(0.90);
+  opacity: 1;
+}
+/* This rule is for the numbers 1 - 8 on the wires*/
 .wire-numbers {
   font-size: 1.2em;
   text-align: left;
@@ -307,6 +336,10 @@ body {
  .wires-container {
    margin: 10% 0 5% 0;
  }
+ .abort-message {
+   font-size: 1.4em;
+   margin-top: 15%;
+ }
 }
 
 /*- 1201px > -*/
@@ -329,6 +362,14 @@ body {
 }
 .wires-container {
   margin: 2% 0 0 0;
+  padding: 1% 0 1% 0;
+}
+.abort-message {
+  font-size: 1.3em;
+  margin-top: 5%;
+}
+.abort-spy-image {
+ padding: 3% 0 0 0;
 }
 }
-/*-------------------------End of File ----------------------------*/
+/*------------------------End of File ----------------------------*/
