@@ -53,17 +53,17 @@ let level = localStorage.getItem("age");
 let time;
 
 if (level >= 6 && level <= 8){
-  time = 302; // 242 - 4minutes
+  time = 842; // 242 - 4minutes
 }else if (level >= 9 && level <= 12) {
-  time = 242; // 182 - 3minutes
+  time = 742; // 182 - 3minutes
 }else{
-  time = 182; // 242 - 2minutes
+  time = 682; // 242 - 2minutes
 }
 localStorage.setItem("theTime", time);
 console.log(localStorage.getItem("theTime"));
 //countdown(time); //Calls the timer function to run for example (180 times), countdown(180)
 }
-
+var interval;
 /* Countdown  */
 function countdown(seconds) {
   let counter = seconds;
@@ -72,11 +72,32 @@ function countdown(seconds) {
   let y = 0;
 
 
-  let interval = setInterval(() => {
+  interval = setInterval(() => {
     counter--;
     x--;
     //Display minutes 4 - 0
-    if (counter < 242 && counter >= 182){minutes = 3;}
+    if (counter < 842 && counter >= 782){
+      minutes = 13;}
+    else if (counter < 782 && counter >= 722){
+      minutes = 12;}
+    else if (counter < 722 && counter >= 662){
+      minutes = 11;}
+    else if (counter < 662 && counter >= 602){
+      minutes = 10;}
+    else if (counter < 602 && counter >= 542){
+      minutes = 9;}
+    else if (counter < 542 && counter >= 482){
+      minutes = 8;}
+    else if (counter < 482 && counter >= 422){
+      minutes = 7;}
+    else if (counter < 422 && counter >= 362){
+      minutes = 6;}
+    else if (counter < 362 && counter >= 302){
+      minutes = 5;}
+    else if (counter < 302 && counter >= 242){
+      minutes = 4;}
+    else if (counter < 242 && counter >= 182){
+      minutes = 3;}
     else if (counter < 182 && counter >= 122){
       minutes = 2;}
     else if (counter < 122 && counter >= 62){
@@ -84,26 +105,20 @@ function countdown(seconds) {
           document.getElementById("time-remaining").style.cssText = "color:orange; opacity:0.85;"; //Changes the text to orange to signify < 2mins left
           document.getElementById("flashing-bomb-text").style.cssText = "color:orange; animation:flashdiv 2s infinite; opacity:0.85;"; //Changes the color of the Bomb! text to orange and flashes it every 1s
           document.getElementsByClassName("bomb")[0].style.cssText = "border:9px double orange;"; //Increase the border size and sets the border the same color as the clock
-          }else{ minutes = 0;
+        }else{ minutes = 0;
           document.getElementById("time-remaining").style.cssText = "color:red; opacity:1;";   //Changes the text to red to signify < 1mins left
           document.getElementById("flashing-bomb-text").style.cssText = "color:red; animation:flashdiv 500ms infinite; opacity:1;"; //Changes the color of the Bomb! text to red and flashes it every 0.5s
           document.getElementsByClassName("bomb")[0].style.cssText = "border:12px double red;"; //Further Increases the border size and sets the border the same color as the clock
         }
     //Display seconds 0 - 59
-    if(x < 0 ){
-      x = 59;
-    }
+    if(x < 0 ){x = 59;}
     //This condition pads the number with a "0" if the seconds are < 10.
-    if (x < 10){
-      document.getElementById("time-remaining").innerHTML = "0" + minutes + ":" + y + x;
-      }
+    if (x < 10){document.getElementById("time-remaining").innerHTML = "0" + minutes + ":" + y + x;}
     //This condition does not pad the number with a "0" if the seconds are > 10.
-    else{
-      document.getElementById("time-remaining").innerHTML = "0" + minutes + ":" + x;}
+    else{document.getElementById("time-remaining").innerHTML =  minutes + ":" + x;}
     //Terminate the game when counter reaches 1 second left and when winflags value is set to "1"
     if(counter == 1){
       stopGame();
-      //nextGame();
     //Terminate the game when counter reaches 1 second left and when winflags value is set to "0", then display the abort/loose message.
   }else if (counter == 1 ){
         stopGame();
@@ -179,10 +194,11 @@ if(indexNumber == wiresarray[0]){                                       // Check
 }else{
   console.log("you loose time");
   let wronganswer = localStorage.getItem("theTime");
-  wronganswer = (wronganswer -30);
+  wronganswer = (wronganswer -60);
   localStorage.setItem("theTime", wronganswer);
   //console.log(localStorage.getItem("theTime"));
   console.log(wronganswer);
+  clearInterval(interval);
   countdown(localStorage.getItem("theTime"));
 } //////////////Left off here just need to figure out a way of stopping the current counter before calling an new instance
 }
