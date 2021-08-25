@@ -3,29 +3,26 @@
 document.getElementById("big-red-button").onclick = function() {
 startGame();
 }
-//This function waits for the player to click the Start/Abort button then runs setLevel to begin the game
+//This function handles the player to clicking eitheer the Start or Abort fucntions of the button
 document.getElementById("start-abort").onclick = function() {
-
-let quitGame = document.querySelector('#start-abort').innerHTML;          //Queries the text of the button if it matches 'Abort', then it runs stopGame.
+let quitGame = document.querySelector('#start-abort').innerHTML;         //Queries the text of the button if it matches 'Abort', then it runs stopGame.
 if(quitGame=="Abort!"){
   console.log(quitGame);
   stopGame();
 }
 setlevel();                                                             //Calls setlevel which calculate the allowed time based on age, this is then passed to function 'countdown'
-document.querySelector("#start-abort").innerHTML = "Abort!";            //Changes the start button text to abort
+countdown(localStorage.getItem("theTime"));                             //Calls the countdown function using the variable stored in 'theTime'
+document.querySelector("#start-abort").innerText = "Abort!";            //Changes the start button text to abort
 document.getElementById("start-abort").style.cssText = "background:black; color:yellow; opacity:1;"; //Changes the start button to yellow with black tex
+}
+//This is the main function that runs the game sequence
+function startGame(){
+  hideContent();                                                        //1. Calls hideContent which hides the front page.
+  unhideContent();                                                      //2. Calls unhideContent which displays the contents of the main game.
+  assignButtonColours();                                                //3. Assigns the 'Wire' colors as opposed to using inline styling or multiple classes.
+  generateDiffuseOrder()                                                //4. This function randomises the number 1 - 8 in an array.
 
 }
-//This function scan for the text 'abort' and runs stopGame if the button is clicked
-
-
-function startGame(){                                              //1. Start Game calls hideContent to clear the screen for the main game.
-  hideContent();                                                   //2. Calls hideContent which hides the front page.
-
-  unhideContent();                                                 //4. Calls unhideContent which displays the contents of the main game.
-  assignButtonColours();                                           //5. Assigns the 'Wire' colors as opposed to using inline styling or multiple classes.
-}
-
 //This function applies a css rule to hide all elements with class 'hide-after-start'
 function hideContent(){
   for(i=0;i<4;i++){
@@ -39,9 +36,7 @@ function unhideContent(){
     document.getElementsByClassName("show-after-start")[j].style.cssText = "animation: fadein 1s;";
     }
 }
-//
-
-/* This function displays the 'Unsuccessful' message when either the player runs out of time or hits the 'abort' button */
+// This function displays the 'Unsuccessful' message when either the player runs out of time or hits the 'abort' button
 function stopGame(){
 for(k=0;k<4;k++){
   document.getElementsByClassName("show-after-start")[k].style.cssText = "display:none;";     // This reverses the action of the unhidecontent function and hides all game content when stopGame is called..
@@ -54,6 +49,7 @@ for(k=0;k<4;k++){
 //This function sets the allowed time based on age
 function setlevel(){
 let level = localStorage.getItem("age");
+
 let time;
 
 if (level >= 6 && level <= 8){
@@ -63,7 +59,9 @@ if (level >= 6 && level <= 8){
 }else{
   time = 182; // 242 - 2minutes
 }
-countdown(time); //Calls the timer function to run for example (180 times), countdown(180)
+localStorage.setItem("theTime", time);
+console.log(localStorage.getItem("theTime"));
+//countdown(time); //Calls the timer function to run for example (180 times), countdown(180)
 }
 
 /* Countdown  */
@@ -124,3 +122,69 @@ function assignButtonColours(){
     document.getElementsByClassName("wires")[i].style.cssText = `background-color:${colorChoice[i]};`; // Assign a different colour to the each of the wires.
   }
 }
+// Start of the fisherYates function///////////////////////////////////////////////////////////////////////////////////////////
+ /*This function is not my code it uses the fisherYates method to jumble up the contents of an array in this case numbers 1 - 8
+ https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array */
+var wiresarray = [1,2,3,4,5,6,7,8];
+// Use an array to store the numbers 1 - 8
+function generateDiffuseOrder(){
+ var count = wiresarray.length,
+     randomnumber,
+     temp;
+ while( count ){
+  randomnumber = Math.random() * count-- | 0;
+  temp = wiresarray[count];
+  wiresarray[count] = wiresarray[randomnumber];
+  wiresarray[randomnumber] = temp
+ }
+}
+// End of the fisherYates function//////////////////////////////////////////////////////////////////////////////////////////////
+
+//This function listens for a click event on anything with a class of 'wires'
+$(document).on('click', '.wires', function(){
+       let wire = ($(this).attr('id'));                            //Get id of the password box that was clicked on
+       localStorage.setItem("wireId", wire);                       //Commit the value of the password boxes id to local storage
+       checkanswers();                                             //Calls the check answers function
+    });
+
+// This function compares the correct sequence chosen by the user to the sequence in the array.
+function checkanswers(){
+  let theWiresId = localStorage.getItem("wireId");                 //Assigns the current value of local store to the variable theWiresId
+  let indexNumber;
+  console.log(theWiresId);                                         //This section updates the variable indexNumber depending on which id value is chosen
+  if(theWiresId == 'wire-1'){
+     indexNumber = 1;
+  }else if(theWiresId == 'wire-2'){
+     indexNumber = 2;
+  }else if(theWiresId == 'wire-3'){
+     indexNumber = 3;
+  }else if(theWiresId == 'wire-4'){
+     indexNumber = 4;
+  }else if(theWiresId == 'wire-5'){
+     indexNumber = 5;
+  }else if(theWiresId == 'wire-6'){
+     indexNumber = 6;
+  }else if(theWiresId == 'wire-7'){
+     indexNumber = 7;
+  }else if(theWiresId == 'wire-8'){
+     indexNumber = 8;
+  }else{
+    console.log('Invalid Choice');
+  }
+
+if(indexNumber == wiresarray[0]){                                       // Check if index number is equal to the 1st number in the array
+  wiresarray.shift();                                                   // Delete the 1st entry in the array is correctly guessed.
+  document.getElementById(theWiresId).style.cssText = "animation:flashdiv 0.1s 10; background-color: white; color: #00FF00; padding:0 1% 0 1%; font-size: 95%;";
+  document.getElementById(theWiresId).innerText = "Correct!";      //Apply styling and change text on the button after a successful choice
+}else{
+  console.log("you loose time");
+  let wronganswer = localStorage.getItem("theTime");
+  wronganswer = (wronganswer -30);
+  localStorage.setItem("theTime", wronganswer);
+  //console.log(localStorage.getItem("theTime"));
+  console.log(wronganswer);
+  countdown(localStorage.getItem("theTime"));
+} //////////////Left off here just need to figure out a way of stopping the current counter before calling an new instance
+}
+
+//--------------------------------End Of File--------------------------------------------------

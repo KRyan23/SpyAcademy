@@ -101,6 +101,12 @@ body {
    0% {opacity: 0;}
  100% {opacity: 1;}
 }
+/* This rule is for the */
+@keyframes fadeout {
+  100% {opacity: 0.1;}
+   0% {opacity: 0.6;}
+
+}
 /* This rule is for the slide in effect for the 'Goal' and 'How' headings */
 @keyframes slidein {
  100% {opacity: 1;border-bottom: 1px solid silver; width: 100%;padding: 0 0 0 0;}
@@ -109,7 +115,7 @@ body {
 }
 @keyframes flashdiv {
     50%{opacity: 0.5;}
-  }
+}
 /* Rules up to this point are for the content when you lan on the page and also for the Abort/Unsuccessful message */
 
 /* From this point the Rules are for the actual Game itself */
@@ -207,7 +213,7 @@ body {
   margin-top: 20%;
   background-color: grey;
 }
-/* This rule is for the wires of differnt colors */
+/* This rule is for the wires of different colors */
 .wires{
   border:5px double grey;
   content: "";
