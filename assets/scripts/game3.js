@@ -10,6 +10,7 @@ if(quitGame=="Abort!"){
   console.log(quitGame);
   stopGame();
 }
+clearInterval(interval);                                                //Clears and existing running timers from a previous session.
 setlevel();                                                             //Calls setlevel which calculate the allowed time based on age, this is then passed to function 'countdown'
 countdown(localStorage.getItem("theTime"));                             //Calls the countdown function using the variable stored in 'theTime'
 document.querySelector("#start-abort").innerText = "Abort!";            //Changes the start button text to abort
@@ -124,7 +125,7 @@ function countdown(seconds) {
         stopGame();
       document.getElementById("abort-message-show").removeAttribute("style");
     }
-
+      document.getElementsByClassName("outer-clock-border")[0].style.cssText = "border-color:grey;";//Resets the clock face border color back to grey after 1 second
 },1000); //1000ms
 }
 
@@ -159,14 +160,16 @@ function generateDiffuseOrder(){
 $(document).on('click', '.wires', function(){
        let wire = ($(this).attr('id'));                            //Get id of the password box that was clicked on
        localStorage.setItem("wireId", wire);                       //Commit the value of the password boxes id to local storage
+
        checkanswers();                                             //Calls the check answers function
+
     });
 
 // This function compares the correct sequence chosen by the user to the sequence in the array.
 function checkanswers(){
+
   let theWiresId = localStorage.getItem("wireId");                 //Assigns the current value of local store to the variable theWiresId
-  let indexNumber;
-  console.log(theWiresId);                                         //This section updates the variable indexNumber depending on which id value is chosen
+  let indexNumber;                                                //This section updates the variable indexNumber depending on which id value is chosen
   if(theWiresId == 'wire-1'){
      indexNumber = 1;
   }else if(theWiresId == 'wire-2'){
@@ -191,16 +194,18 @@ if(indexNumber == wiresarray[0]){                                       // Check
   wiresarray.shift();                                                   // Delete the 1st entry in the array is correctly guessed.
   document.getElementById(theWiresId).style.cssText = "animation:flashdiv 0.1s 10; background-color: white; color: #00FF00; padding:0 1% 0 1%; font-size: 95%;";
   document.getElementById(theWiresId).innerText = "Correct!";      //Apply styling and change text on the button after a successful choice
+  document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.2s 12;border-color:green;"; //
 }else{
-  console.log("you loose time");
-  let wronganswer = localStorage.getItem("theTime");
+  document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.1s 2;border-color:red;"; //
+  var wronganswer = localStorage.getItem("theTime");
   wronganswer = (wronganswer -60);
   localStorage.setItem("theTime", wronganswer);
-  //console.log(localStorage.getItem("theTime"));
-  console.log(wronganswer);
   clearInterval(interval);
   countdown(localStorage.getItem("theTime"));
-} //////////////Left off here just need to figure out a way of stopping the current counter before calling an new instance
-}
 
+}
+if(wronganswer <= 0){
+  stopGame();}
+}
+// Need write a nextgame function to finish it off
 //--------------------------------End Of File--------------------------------------------------
