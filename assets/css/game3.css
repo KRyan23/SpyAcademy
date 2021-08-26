@@ -3,15 +3,28 @@
 
 body {
   font-family: 'Saira Stencil One', cursive, sans-serif;
-  background-color: darkgray;
+  background-color: grey;
   text-align: center;
   color: black;
   font-size: 1.6em;
  }
+ /* This is the rule for the H1 elements */
+ .success-message h1 {
+   font-size: 2em;
+   padding-top: 10%;
+   color: black;
+   }
+   .success-message p {
+     font-size: 1.4em;
+   }
  /* This rule is for the h3 elements*/
  h3 {
    font-size: 90%;
  }
+ /* This is to remove the bullet point on the list item */
+ ul {
+   list-style-type: none;
+   }
  /* This rule is for the 'Diffuse the bomb' heading */
  .game-heading {
   text-align: center;
@@ -52,7 +65,7 @@ body {
    left: 50%;
    transform: translate(-50%, -90%);
    display: block;
-   background-color: #878681; //Titanium #878681
+   background-color: #fafafa;
    margin:0;
    border:25px ridge silver;
    border-radius:15px 15px 15px 15px;
@@ -80,7 +93,7 @@ body {
   color: green;
 }
 /* This rule is for the Big red button div */
-.main-button {
+.brb-button {
   background-color:#fafafa;
   height: 10vh;
   width: auto;
@@ -119,7 +132,7 @@ body {
 .clock-digits {
   font-size: 1.6em;
   background-color: black;
-  color: #00FF00;     //The color is lime! #00FF00
+  color: #00FF00;
   opacity: 1;
   padding: 0;
  }
@@ -150,14 +163,13 @@ body {
   display: block;
   padding-bottom: 100%;
 }
-/*Bomb*/
+/*This is the text inside of the bomb circle the color is lime! #00FF00*/
 .bomb-text {
   position:absolute;
   bottom:50%;
   width: 100%;
   text-align: center;
-  font-size: auto;
-  color: #00FF00;     //The color is lime! #00FF00
+  color: #00FF00;
   opacity: 0.75;
   }
   /* This rule is for the 'div' containing the 3 spy badges  */
@@ -173,13 +185,16 @@ body {
   /* This rule is for the 3 spy badges in the the center of the screen */
   .spy-image-badge {
     width: 1.4em;
-    padding: 0.2em auto 0.2em auto;
+    padding: 0.2em 0 0.2em 0;
     height: auto;
     text-align: center;
     opacity: 0.3;
     animation: fadein ease 3s;
-    -webkit-animation: fadein ease 3s;
-     -moz-animation: fadein ease 3s;
+  }
+  /* This rule is for the 3 spy badges on the last page of the game */
+  .spy-image-endgame {
+    width: 1.8em;
+    padding: 1em 0 1em 0;
   }
   /* This rule is for the 2 spy badges that the player has already won,in the the center of the screen */
   .spy-image-badge-won {
@@ -207,7 +222,7 @@ body {
   border: 10px outset grey;
   padding: 2% 0 2% 0;
   margin-top: 20%;
-  background-color: grey;
+  /*background-color: grey;*/
 }
 /* This rule is for the wires of different colors */
 .wires{
@@ -231,6 +246,11 @@ body {
   color:white;
   padding:0;
   margin:0;
+}
+/* This rule is for the success message */
+.success-message {
+  display: none;
+  color: #fafafa;
 }
 /* ------------------------- Media queries ----------------------------- */
 /*- < 250px -*/

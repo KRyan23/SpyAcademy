@@ -54,11 +54,11 @@ let level = localStorage.getItem("age");
 let time;
 
 if (level >= 6 && level <= 8){
-  time = 842; // 242 - 4minutes
+  time = 1242; // 242 - 4minutes
 }else if (level >= 9 && level <= 12) {
-  time = 742; // 182 - 3minutes
+  time = 1122; // 182 - 3minutes
 }else{
-  time = 682; // 242 - 2minutes
+  time = 1002; // 242 - 2minutes
 }
 localStorage.setItem("theTime", time);
 console.log(localStorage.getItem("theTime"));
@@ -76,8 +76,23 @@ function countdown(seconds) {
   interval = setInterval(() => {
     counter--;
     x--;
-    //Display minutes 4 - 0
-    if (counter < 842 && counter >= 782){
+    //Display minutes 20 - 0
+
+    if (counter < 1242 && counter >= 1182){
+      minutes = 20;}
+    else if (counter < 1182 && counter >= 1122){
+      minutes = 19;}
+    else if (counter < 1122 && counter >= 1062){
+      minutes = 18;}
+    else if (counter < 1062 && counter >= 1002){
+      minutes = 17;}
+    else if (counter < 1002 && counter >= 962){
+      minutes = 16;}
+    else if (counter < 962 && counter >= 902){
+      minutes = 15;}
+    else if (counter < 902 && counter >= 842){
+      minutes = 14;}
+    else if (counter < 842 && counter >= 782){
       minutes = 13;}
     else if (counter < 782 && counter >= 722){
       minutes = 12;}
@@ -191,21 +206,36 @@ function checkanswers(){
   }
 
 if(indexNumber == wiresarray[0]){                                       // Check if index number is equal to the 1st number in the array
-  wiresarray.shift();                                                   // Delete the 1st entry in the array is correctly guessed.
+  wiresarray.shift();                                                   // Delete the 1st entry in the array if correctly guessed.
   document.getElementById(theWiresId).style.cssText = "animation:flashdiv 0.1s 10; background-color: white; color: #00FF00; padding:0 1% 0 1%; font-size: 95%;";
-  document.getElementById(theWiresId).innerText = "Correct!";      //Apply styling and change text on the button after a successful choice
+  document.getElementById(theWiresId).innerText = "Correct!";          //Apply styling and change text on the button after a successful choice
   document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.2s 12;border-color:green;"; //
 }else{
   document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.1s 2;border-color:red;"; //
-  var wronganswer = localStorage.getItem("theTime");
-  wronganswer = (wronganswer -60);
-  localStorage.setItem("theTime", wronganswer);
-  clearInterval(interval);
-  countdown(localStorage.getItem("theTime"));
+  var wronganswer = localStorage.getItem("theTime");                  // Assigns the currently allocated time to the wronganswer variable
+  wronganswer = (wronganswer -60);                                    // If a wrong answer is guessed, remove 60s off the time.
+  localStorage.setItem("theTime", wronganswer);                       // Update 'theTime' entry in local storage - 60s
+  clearInterval(interval);                                            // Clears the current timer.
+  countdown(localStorage.getItem("theTime"));                         // Calls the countdown function to start the timer with the new parameter
+}
+if(wronganswer <= 0){                                                 // If 'theTime' is less than or equal to 0 run stopGame to stop the game with a failure message
+  stopGame();
+}
+finishGame();                                                         // Calls 'finishGame' at the end of the function run
+}
+
+
+function finishGame(){
+  if (wiresarray.length === 0) {                                      // Checks if the array is empty / all answer guess correctly
+  for(k=0;k<4;k++){
+    document.getElementsByClassName("show-after-start")[k].style.cssText = "display:none;";      // This hides all game content when stopGame is called.
+    document.getElementsByClassName("outer-screen-border")[0].style.cssText = "display:none;";   // Hides the Outer Screen border
+    document.getElementsByClassName("game-heading")[0].style.cssText = "display:none;";          // Hides the Game Heading
 
 }
-if(wronganswer <= 0){
-  stopGame();}
+   document.getElementsByClassName("success-message")[0].style.cssText = "display:contents;";                // Shows the success message
 }
+}
+
 // Need write a nextgame function to finish it off
 //--------------------------------End Of File--------------------------------------------------
