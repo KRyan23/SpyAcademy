@@ -41,13 +41,12 @@
 </div>
 </div>
 <!-- end div for abort-message -->
-
-  <!-- This is for the "computer screen" interface -->
+<!-- This is for the "computer screen" interface -->
 <div class="container-fluid">
   <div class="row">
     <div class="col-xxl-8 col-xl-6 col-lg-10 col-md-12 col-sm-8 col-xm-2 outer-screen-border text-center hide-after-abort">
 <!--  This section is for the instruction div which fades out once Start is pressed -->
-  <div class="row" id="instructions-container">
+    <div class="row" id="instructions-container">
     <div class="col-xxl-4 col-xl-4 col-lg-10 col-md-10 col-sm-6 col-xm-2 instructions">
     <p>Instructions</p>
     Goal - Using the letters on the keypad guess the correct password order.<br><br>
@@ -68,96 +67,94 @@
         <br>
         <span id="attempts">00</span>
         <br>
-        <img src="assets/images/break_the_password/spy.png" class="spy-image" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" style="opacity: 1;"/>
-        <img src="assets/images/break_the_password/spy.png" class="spy-image" id="second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
-        <img src="assets/images/break_the_password/spy.png" class="spy-image" id="third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+        <img src="assets/images/break_the_password/spy.png" class="spy-image-badge" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" style="opacity: 1;"/>
+        <img src="assets/images/break_the_password/spy.png" class="spy-image-badge" id="second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+        <img src="assets/images/break_the_password/spy.png" class="spy-image-badge" id="third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
         </div>
-      </div>
-     </div>
-    </div>
-  <!-- This is the section for the password boxes -->
-<div class="container-fluid">
-<div class="row">
-   <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center hide-after-abort">
-    <div class="boxes-spyimage-trys" id="password-boxes" style="display: none;">
-      <!-- The character boxes get dynamically added into this section -->
       </div>
     </div>
   </div>
- </div>
+</div>
+<!-- This is the section for the password boxes -->
+<div class="container-fluid">
+<div class="row d-flex justify-content-center">
+   <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center hide-after-abort">
+    <div class="boxes-spyimage-trys" id="password-boxes" style="display: none;">
+<!-- The character boxes get dynamically added into this section -->
+    </div>
+  </div>
+</div>
  <!-- This is for the keyboard -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xxl-4 col-xl-4 col-lg-8 col-md-8 col-sm-6 col-xm-2 outer-keyboard-border text-center hide-after-abort">
+    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xm-2 outer-keyboard-border text-center hide-after-abort">
       <div class="keyboard-surround">
-        <div class="start-abort-key text-center" id="start">
+        <div class="start-abort-key text-center" aria-label="Start/Abort Button" title="Start/Abort Button" id="start">
         Start
         </div>
-        <div class="keyboard-keys text-center" id="key-0">
+        <div class="keyboard-keys text-center" aria-label="key 0" title="key 0" id="key-0">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-1">
+        <div class="keyboard-keys text-center" aria-label="key 1" title="key 1" id="key-1">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-2">
+        <div class="keyboard-keys text-center" aria-label="key 2" title="key 2" id="key-2">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-3">
+        <div class="keyboard-keys text-center" aria-label="key 3" title="key 3" id="key-3">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-4">
+        <div class="keyboard-keys text-center" aria-label="key 4" title="key 4" id="key-4">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-5">
+        <div class="keyboard-keys text-center" aria-label="key 5" title="key 5" id="key-5">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-6">
+        <div class="keyboard-keys text-center" aria-label="key 6" title="key 6" id="key-6">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-7">
+        <div class="keyboard-keys text-center" aria-label="key 7" title="key 7" id="key-7">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-8">
+        <div class="keyboard-keys text-center" aria-label="key 8" title="key 8" id="key-8">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-9">
+        <div class="keyboard-keys text-center" aria-label="key 9" title="key 9" id="key-9">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-10">
+        <div class="keyboard-keys text-center" aria-label="key 10" title="key 10" id="key-10">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-11">
+        <div class="keyboard-keys text-center" aria-label="key 11" title="key 11" id="key-11">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-12">
+        <div class="keyboard-keys text-center" aria-label="key 12" title="key 12"id="key-12">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-13">
+        <div class="keyboard-keys text-center" aria-label="key 13" title="key 13" id="key-13">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-14">
+        <div class="keyboard-keys text-center" aria-label="key 14" title="key 14" id="key-14">
         .
         </div>
-        <div class="keyboard-keys text-center" id="key-15">
+        <div class="keyboard-keys text-center" aria-label="key 15" title="key 15" id="key-15">
         .
         </div>
       </div>
     </div>
   </div>
 </div>
-  
-<div>
 <!-- End div for combination control container -->
-
 <!-- This part is the congratulations section for a sucessfull game-->
+<div>
 <div class="container-fluid" id="game2-success" style="display: none;">
   <div class="row success-message">
     <div class="col text-center">
-      <h1>Well Done Cadet</h1><br>
+      <h1>Well Done Cadet</h1>
       <p>You have correctly guessed the Mainframe Password and now have suceeded in winning your second spy badge.</p>
-      <img src="assets/images/home_page/spy.png" class="spy-image" id="success-first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
-      <img src="assets/images/home_page/spy.png" class="spy-image" id="success-second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" />
-      <img src="assets/images/home_page/spy.png" class="spy-image" id="success-third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+      <img src="assets/images/home_page/spy.png" class="spy-image-badge" id="success-first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+      <img src="assets/images/home_page/spy.png" class="spy-image-badge" id="success-second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" />
+      <img src="assets/images/home_page/spy.png" class="spy-image-badge" id="success-third-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
         <p>Lastly you will need to diffuse a bomb to earn your last spy badge and graduate the Academy, Good Luck!</p>
         <a href="game3.html">
         <img src="assets/images/intro_page/bigredbuttonstart.png" class="next-game-button" alt="next game button" aria-label="next game button" title="next game button"/>
