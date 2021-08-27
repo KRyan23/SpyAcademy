@@ -12,18 +12,23 @@ It is designed to be challenging yet fun and reponsive on a range of devices.
 </p>
 
 
-
 -   ### Design
     -   #### Colour Scheme
-        -   The 5 main colours used
-            are, DarkGrey, Black, BrightRed, Yellow and White.
-
-
+        -   The colour palette used for the site is listed below.
+            - ![#808080](https://via.placeholder.com/15/808080/000000?text=+) `Darkgray`
+            - ![#00FF00](https://via.placeholder.com/15/00FF00/000000?text=+) `Lime Green`
+            - ![#fafafa](https://via.placeholder.com/15/fafafa/000000?text=+) `Off White`
+            - ![#FF0000](https://via.placeholder.com/15/FF0000/000000?text=+) `Red`
+            - ![#A9A9A9](https://via.placeholder.com/15/A9A9A9/000000?text=+) `Lightgray`
+            - ![#008000](https://via.placeholder.com/15/008000/000000?text=+) `Green`
+            - ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `Black`
+            - ![#C0C0C0](https://via.placeholder.com/15/C0C0C0/000000?text=+) `Silver`
+            - ![#FFFF00](https://via.placeholder.com/15/FFFF00/000000?text=+) `Yellow`
     -   #### Typography
         -   The 'Saira Stencil One' font is used as the main font used throughout the site with Sans Serif as the fall-back font. 'Saira Stencil One' was chosen to enhance the sites content by giving a 'Top Secret' / 'Spy' feel.
 
     -   #### Imagery
-        - The imagery of the website were chosen to have a functional minimal feel to fit in with the overall Spy theme.
+        - The imagery of the website was chosen to convey a functional minimal hard edge feel to fit in with the overall Spy theme.
 
 
 *   ### Wireframes
@@ -52,8 +57,8 @@ It is designed to be challenging yet fun and reponsive on a range of devices.
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-  - [Javascript](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.2.1:](https://getbootstrap.com/docs/4.2/getting-started/introduction/)
@@ -74,8 +79,6 @@ It is designed to be challenging yet fun and reponsive on a range of devices.
     - Paint.net was used for resizing images and editing photos for the website.
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq 4.2.1 was used to create the during the design process.
-1. [Audacity](https://www.audacityteam.org/)
-      - Audacity was used to edit all sounds and music in the project.
 
 
 ## Testing
@@ -95,134 +98,32 @@ The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to val
 ### Media
 
 ####Images
-(For research not yet assigned to invidual pages)
+The images on the index page were chosen from the following sources.
 
+[1 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
 
+[2 - Main Page Spy Face Image](https://images.app.goo.gl/zXfs831NsdFR2UqF7)
 
-
-[1. - Freepick](https://www.freepik.com/free-vector/security-metal-safe-isolated_10601012.htm#page=1&query=combination%20lock&position=11)
-
-[2. - Freepick Vault Door](https://www.freepik.com/free-vector/half-open-bank-vault-door-white-safe-bank-metal-door-safe-lock-security-bank-open-safe-bank-vector-illustration_11054207.htm)
-
-[3. - Freepick Combo6](https://www.freepik.com/premium-vector/combination-lock-design-illustration-isolated-white-background_8190462.htm#page=1&query=combination%20lock&position=33)
-
-[4. - Freepick Vault Door Circuits](https://www.freepik.com/premium-vector/combination-lock-wheel-dark-background_12822268.htm#page=2&query=combination+lock&position=8)
-
-[5. - Freepick Digital Safe with Keypad](https://www.freepik.com/premium-vector/realistic-safe-made-from-bright-glossy-metal-steel-with-electronic-lock-code-panel-white_8454545.htm#page=3&query=combination+lock&position=3)
-
-[6. - Freepick Gift Voucher Lock](https://www.freepik.com/premium-vector/gift-voucher-template-protection-information_5182279.htm#page=3&query=combination+lock&position=49)
-
-[7. - Freepick Valut Door opening](https://www.freepik.com/free-vector/old-round-safe-door-metal-bank-vault-gate-isolated-transparent-background-realistic-set-closed-open-crumpled-steel-circle-door-with-lock-rusty-iron-bunker-gates_10798334.htm#page=1&query=bank%20vault&position=1)
-
-[8. - Background1](https://images.app.goo.gl/7goL1sXVpabstXT66)
-
-[9. - Background2](http://vectorsdll.blogspot.com/2017/02/blog-post_726.html)
-
-[10. - Background3](http://scriptsmarttech.com/about-scriptsmart/attachment/about-us-background/)
-
-
-[11. - Background4](https://pngtree.com/freebackground/tech-data-grid-poster-background-free-download_1052045.html)
-
-
-[12 - Background5 - Credit Markus Spiske ](https://unsplash.com/photos/iar-afB0QQw)
-
-[13 - Main Background](http://clipart-library.com/clipart/yTkr9Xq9c.htm)
-
-[14 - BackgroundTray1](https://www.behance.net/gallery/17202921/Human-Target-Season-2)
-
-[15 - BackgroundTray1](https://www.behance.net/gallery/17202921/Human-Target-Season-2)
-
-[16 - BackgroundTray1](https://www.behance.net/gallery/17202921/Human-Target-Season-2)
-
-[17 - BackgroundTray1](https://www.behance.net/gallery/17202921/Human-Target-Season-2)
-
-[18 - Danger Explosive](https://www.signomatic.ie/signomatic/plasticsign)
-
-[19 - Dangerous Chemicals](https://www.signomatic.ie/signomatic/plasticsign)
-
-[20 - Dangerous Chemicals Red](https://www.signomatic.ie/signomatic/plasticsign)
-
-[21 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
-
-[22 - Barbed Wire 1-3](https://www.filterforge.com/filters/904-seamless.html)
-
-[23 - Main Page barbed-wire-small](https://pixabay.com/photos/barbed-wire-wire-demarcation-limit-3104944/)
-
-[24 - Main Page Spy Face Image](https://images.app.goo.gl/zXfs831NsdFR2UqF7)
-
-[25 - Main Page Ladder](https://images.app.goo.gl/2uo8WUmocN96twcf7)
 
 The images on the first page for challenge 1 "Combination Lock" were chosen from the following sources.
 
-[1 - ]( )
+[1 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
 
-[2 - ]( )
-
-[3 - ]( )
-
-[4 - ]( )
-
-[5 - ]( )
-
-[6 - ]( )
-
-[7 - ]( )
+[2 - Main Page Spy Face Image](https://images.app.goo.gl/zXfs831NsdFR2UqF7)
 
 The images on the second page for challenge 2 "Break the Password" were chosen from the following sources.
 
-[1 - ]( )
+[1 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
 
-[2 - ]( )
-
-[3 - ]( )
-
-[4 - ]( )
-
-[5 - ]( )
-
-[6 - ]( )
-
-[7 - ]( )
+[2 - Main Page Spy Face Image](https://images.app.goo.gl/zXfs831NsdFR2UqF7)
 
 The images on the third page for challenge 3 "Defuse the Bomb" were chosen from the following sources.
 
-[1 - ]( )
+[1 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
 
-[2 - ]( )
-
-[3 - ]( )
-
-[4 - ]( )
-
-[5 - ]( )
-
-[6 - ]( )
-
-[7 - ]( )
-
-####Sounds
-
-The sounds on the main page for game 1 "Combination Lock" were chosen from the following sources.
-**All 'speach sounds' were generated using the online resource [TTSMP3](assets/images/ttsmp3.png)
-
-[1 - Speech sound A](https://ttsmp3.com/)
-
-[2 - Speech sound B](https://ttsmp3.com/)
-
-[3 - Speech sound C](https://ttsmp3.com/)
-
-[4 - Speech sound D](https://ttsmp3.com/)
-
-[5 - Speech sound E](https://ttsmp3.com/)
-
-[6 - Speech sound F](https://ttsmp3.com/)
-
-[7 - Background Music for game 1 Combination Lock](not yet sourced )
-
-[8 - Clunk metal sound ](https://freesound.org/people/BMacZero/sounds/94130/)
-
+[2 - Main Page Spy Face Image](https://images.app.goo.gl/zXfs831NsdFR2UqF7)
 
 ### Acknowledgements
-
-
+- My Mentor
+- Friends and family for input and game testing.
 - This readme.md was written using Atoms Markdown Preview Enhanced package.
