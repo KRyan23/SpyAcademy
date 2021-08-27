@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/game3.css"/>
+  <title>Diffuse the Bomb</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center game-heading">
+    <h1>Diffuse the bomb</h1>
+  </div>
+  </div>
+  </div>
+  <!-- Begin,  Abort / unsucessful message displayed if the attempt was unsucessful or if the user aborts the game-->
+  <div class="abort-message" id="abort-message-show" style="display: none;">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+        <p class="abort-message"><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, Why not have another try? <i class="fas fa-quote-right"></i></p>
+      </div>
+    </div>
+    <div class="row d-flex">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <img src="assets/images/diffuse_the_bomb/spy.png" class="abort-spy-image" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+      </div>
+    </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <a href="game3.html">
+      <img src="assets/images/diffuse_the_bomb/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
+      </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- End for Abort / unsucessful message -->
+  <!-- Begin, this section is for the outer screen border -->
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 outer-screen-border text-center">
+        <div class="row" id="instructions-container">
+          <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 hide-after-start">
+          <p>Instructions</p>
+        </div>
+        </div>
+
+        <div class="row hide-after-start">
+          <div class="col-12 text-center">
+          <img src="assets/images/diffuse_the_bomb/spy.png" class="main-spy-image" alt="spy bullet point" aria-label="spy bullet point" title="spy bullet point"/>
+        </div>
+        </div>
+          <br>
+          <div class="row hide-after-start">
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <p class="goals-heading"><em>Goal</em></p>Diffuse the bomb before the timer runs out<br>
+            <p class="how-heading"><em>How?</em></p>
+           Guess the correct sequence of the coloured wires by clicking on them, each incorrect choice removes <u>1min</u> from your time!
+         </div>
+         </div>
+           <div class="row hide-after-start">
+             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+               <div>
+                 <br>
+                 <img src="assets/images/diffuse_the_bomb/bigredbuttonwithtext.jpg" id="big-red-button" class="brb-button" alt="a big red button" aria-label="A big red button" title="big red button"/>
+              </div>
+            </div>
+          </div>
+          <!-- End, section is for the outer screen border -->
+          <!-- Start the actual game itself -->
+          <div class="container-fluid show-after-start" style="display: none;">
+            <div class="row d-flex justify-content-center">
+              <div class="col-xxl-12 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="outer-clock-border">
+                <span class="clock-digits" id="time-remaining"><h2>0:00</h2></span>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- This is For the 'Spy Badges' section-->
+                    <div class="container-fluid show-after-start" style="display: none;">
+                      <div class="row d-flex justify-content-center">
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 spy-badges" aria-label="Spy Badge Container" title="Spy Badge Container">
+                          <div class="spy-image-container">
+                            <h3 aria-label="Spy Badge heading" title="Spy Badge heading">Spy Badges</h3>
+                          <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge spy-image-badge-won" id="first-badge" alt="first spy badge" aria-label="first-badge" title="first-badge"/>
+                          <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge spy-image-badge-won" id="second-badge" alt="second spy badge" aria-label="second spy badge" title="second spy badge"/>
+                          <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge" id="third-badge" alt="third spy badge" aria-label="third spy badge" title="third spy badge"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Bomb -->
+                    <br>
+                    <div class="container-fluid show-after-start" style="display: none;">
+                      <div class="row d-flex justify-content-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-6 col-xxl-6 text-center">
+                          <div class="bomb">
+                            <div class="fuse"></div>
+                            <div class="bomb-text" id="flashing-bomb-text">BOMB!</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 'Wires' to diffuse the bomb -->
+                              <!-- Row 1 of 4 -->
+                                <div class="wires-container show-after-start" style="display: none;">
+                                  <div class="container-fluid">
+                                  <div class="row d-flex justify-content-around">
+                                    <div class="col-xxl-4 col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12">
+                                      <div class="start-abort-key text-center" id="start-abort" aria-label="The start and the abort button" title="The start and the abort button">
+                                    Start Game
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                                <div class="container-fluid">
+                                <div class="row no-gutters">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 " aria-label="wire 1" title="wire 1">
+                                  <div class="wires" id="wire-1"><span class="wire-numbers" aria-label="number 1" title="number 1">1 </span></div>
+                                  </div>
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 2" title="wire 2">
+                                  <div class="wires" id="wire-2"><span class="wire-numbers" aria-label="number 2" title="number 2">2</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Row 2 of 4 -->
+                              <div class="container-fluid">
+                                <div class="row no-gutters">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 3" title="wire 3">
+                                  <div class="wires" id="wire-3"><span class="wire-numbers" aria-label="number 3" title="number 3">3</span></div>
+                                  </div>
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 4" title="wire 4">
+                                  <div class="wires" id="wire-4"><span class="wire-numbers" aria-label="number 4" title="number 4">4</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Row 3 of 4 -->
+                              <div class="container-fluid">
+                                <div class="row no-gutters">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 5" title="wire 5">
+                                  <div class="wires" id="wire-5"><span class="wire-numbers" aria-label="number 5" title="number 5">5</span></div>
+                                  </div>
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 6" title="wire 6">
+                                  <div class="wires" id="wire-6"><span class="wire-numbers" aria-label="number 6" title="number 6">6</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Row 4 of 4 -->
+                              <div class="container-fluid">
+                                <div class="row no-gutters">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 7" title="wire 7">
+                                  <div class="wires" id="wire-7"><span class="wire-numbers" aria-label="number 7" title="number 7">7</span></div>
+                                  </div>
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 7" title="wire 7">
+                                  <div class="wires" id="wire-8"><span class="wire-numbers" aria-label="number 8" title="number 8">8</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+ <!-- This part is the congratulations section for a sucessfull game-->
+<div class="container-fluid" id="game3-success" style="display: none;">
+  <div class="row d-flex justify-content-center success-message">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+      <h1>Congratulations Cadet</h1><br>
+      <p><i class="fas fa-quote-left"></i> You have successfully completed Spy Academy and earned your 3 spy badges <i class="fas fa-quote-right"></i></p>
+      <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge spy-image-badge-won" alt="image of a spy" aria-label="first spy badge" title="first spy badge"/>
+      <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge spy-image-badge-won" alt="image of a spy" aria-label="second spy badge" title="second spy badge" />
+      <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge spy-image-badge-won" alt="image of a spy" aria-label="third spy badge" title="third spy badge"/>
+      <br>
+      <p><u>Here is a list of your achievements</u></p>
+        <p>Cracked the code on the combination lock</p>
+        <p>Broke the mainframe password </p>
+        <p>Diffused the Bomb before your time ran out</p>
+      <a href="index.html">
+      <img src="assets/images/diffuse_the_bomb/bigredbuttonstartover.png" class="brb-button" alt="start over button" aria-label="start over button" title="start over button"/>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- Script tags put at the bottom of page to ensure a faster page load this.value-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script defer async src="assets/scripts/game3.js"></script>
+</body>
+</html>
