@@ -15,6 +15,7 @@ setlevel();                                                             //Calls 
 countdown(localStorage.getItem("theTime"));                             //Calls the countdown function using the variable stored in 'theTime'
 document.querySelector("#start-abort").innerText = "Abort!";            //Changes the start button text to abort
 document.getElementById("start-abort").style.cssText = "background:black; color:yellow; opacity:1;"; //Changes the start button to yellow with black tex
+document.getElementsByClassName("start-abort-key")[0].style.cssText = "animation: flashdiv 1s;";    // Stops the start button pulsing after being clicked
 }
 //This is the main function that runs the game sequence
 function startGame(){
@@ -36,6 +37,7 @@ function unhideContent(){
     document.getElementsByClassName("show-after-start")[j].style.cssText = "display:contents;";
     document.getElementsByClassName("show-after-start")[j].style.cssText = "animation: fadein 1s;";
     }
+
 }
 // This function displays the 'Unsuccessful' message when either the player runs out of time or hits the 'abort' button
 function stopGame(){
@@ -50,34 +52,30 @@ for(k=0;k<4;k++){
 //This function sets the allowed time based on age
 function setlevel(){
 let level = localStorage.getItem("age");
-
 let time;
-
 if (level >= 6 && level <= 8){
-  time = 1242; // 242 - 4minutes
+  time = 1242; // 20 minutes
 }else if (level >= 9 && level <= 12) {
-  time = 1122; // 182 - 3minutes
+  time = 1122; // 18 minutes
 }else{
-  time = 1002; // 242 - 2minutes
+  time = 1062; // 17 minutes
 }
-localStorage.setItem("theTime", time);
-console.log(localStorage.getItem("theTime"));
-//countdown(time); //Calls the timer function to run for example (180 times), countdown(180)
+localStorage.setItem("theTime", time); //Puts the time allocation on local storage so it can be manipulated by other functions
 }
+/* This is the main timer function that does 3 thinges
+1. Allocates the timer a user gets based on age.
+2. Updates the onscreen countodwon timer
+3. Terminates the game if certain conditions are met */
 var interval;
-/* Countdown  */
 function countdown(seconds) {
   let counter = seconds;
   let minutes;
   let x = 60;
   let y = 0;
-
-
   interval = setInterval(() => {
     counter--;
     x--;
     //Display minutes 20 - 0
-
     if (counter < 1242 && counter >= 1182){
       minutes = 20;}
     else if (counter < 1182 && counter >= 1122){
@@ -132,23 +130,17 @@ function countdown(seconds) {
     if (x < 10){document.getElementById("time-remaining").innerHTML = "0" + minutes + ":" + y + x;}
     //This condition does not pad the number with a "0" if the seconds are > 10.
     else{document.getElementById("time-remaining").innerHTML =  minutes + ":" + x;}
-    //Terminate the game when counter reaches 1 second left and when winflags value is set to "1"
-    if(counter == 1){
-      stopGame();
     //Terminate the game when counter reaches 1 second left and when winflags value is set to "0", then display the abort/loose message.
-  }else if (counter == 1 ){
+  if (counter == 1 ){
         stopGame();
       document.getElementById("abort-message-show").removeAttribute("style");
     }
       document.getElementsByClassName("outer-clock-border")[0].style.cssText = "border-color:grey;";//Resets the clock face border color back to grey after 1 second
 },1000); //1000ms
 }
-
-
-
-
+/* This function assigns the same colours to the 'wires'/buttons each time the game is started rather than using individual classes*/
 function assignButtonColours(){
-  let colorChoice= ["blue","brown","gold","green","black","red","purple","orange"];                     //Put the preferred colors in an array called 'colorChoice'
+  let colorChoice= ["blue","brown","gold","green","black","red","purple","orange"]; //Put the preferred colors in an array called 'colorChoice'
   for(i=0;i<colorChoice.length;i++){
     document.getElementsByClassName("wires")[i].style.cssText = `background-color:${colorChoice[i]};`; // Assign a different colour to the each of the wires.
   }
@@ -175,9 +167,7 @@ function generateDiffuseOrder(){
 $(document).on('click', '.wires', function(){
        let wire = ($(this).attr('id'));                            //Get id of the password box that was clicked on
        localStorage.setItem("wireId", wire);                       //Commit the value of the password boxes id to local storage
-
        checkanswers();                                             //Calls the check answers function
-
     });
 
 // This function compares the correct sequence chosen by the user to the sequence in the array.
@@ -207,7 +197,7 @@ function checkanswers(){
 
 if(indexNumber == wiresarray[0]){                                       // Check if index number is equal to the 1st number in the array
   wiresarray.shift();                                                   // Delete the 1st entry in the array if correctly guessed.
-  document.getElementById(theWiresId).style.cssText = "animation:flashdiv 0.1s 10; background-color: white; color: #00FF00; padding:0 1% 0 1%; font-size: 95%;";
+  document.getElementById(theWiresId).style.cssText = "animation:flashdiv 0.1s 10; background-color: white; color: #00FF00; font-size: 95%;";
   document.getElementById(theWiresId).innerText = "Correct!";          //Apply styling and change text on the button after a successful choice
   document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.2s 12;border-color:green;"; //
 }else{
@@ -233,7 +223,7 @@ function finishGame(){
     document.getElementsByClassName("game-heading")[0].style.cssText = "display:none;";          // Hides the Game Heading
 
 }
-   document.getElementsByClassName("success-message")[0].style.cssText = "display:contents;";                // Shows the success message
+   document.getElementById("game3-success").style.cssText = "display:contents;";                // Shows the success message
 }
 }
 

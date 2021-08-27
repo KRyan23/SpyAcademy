@@ -60,7 +60,7 @@
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <p class="goals-heading"><em>Goal</em></p>Diffuse the bomb before the timer runs out<br>
             <p class="how-heading"><em>How?</em></p>
-           Guess the correct sequence of the coloured wires by clicking on them, each incorrect choice removes 30s from your time!
+           Guess the correct sequence of the coloured wires by clicking on them, each incorrect choice removes <u>1min</u> from your time!
          </div>
          </div>
            <div class="row hide-after-start">
@@ -77,7 +77,7 @@
             <div class="row d-flex justify-content-center">
               <div class="col-xxl-12 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="outer-clock-border">
-                <span class="clock-digits" id="time-remaining"><h2>00:00</h2></span>
+                <span class="clock-digits" id="time-remaining"><h2>0:00</h2></span>
               </div>
               </div>
             </div>
@@ -112,7 +112,7 @@
                                 <div class="wires-container show-after-start" style="display: none;">
                                   <div class="container-fluid">
                                   <div class="row d-flex justify-content-around">
-                                    <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="col-xxl-4 col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12">
                                       <div class="start-abort-key text-center" id="start-abort" aria-label="The start and the abort button" title="The start and the abort button">
                                     Start Game
                                     </div>
@@ -122,10 +122,10 @@
 
                                 <div class="container-fluid">
                                 <div class="row no-gutters">
-                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 " aria-label="wire 1" title="wire 1">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 " aria-label="wire 1" title="wire 1">
                                   <div class="wires" id="wire-1"><span class="wire-numbers" aria-label="number 1" title="number 1">1 </span></div>
                                   </div>
-                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 2" title="wire 2">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 2" title="wire 2">
                                   <div class="wires" id="wire-2"><span class="wire-numbers" aria-label="number 2" title="number 2">2</span></div>
                                   </div>
                                 </div>
@@ -133,10 +133,10 @@
                               <!-- Row 2 of 4 -->
                               <div class="container-fluid">
                                 <div class="row no-gutters">
-                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 3" title="wire 3">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 3" title="wire 3">
                                   <div class="wires" id="wire-3"><span class="wire-numbers" aria-label="number 3" title="number 3">3</span></div>
                                   </div>
-                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 4" title="wire 4">
+                                  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" aria-label="wire 4" title="wire 4">
                                   <div class="wires" id="wire-4"><span class="wire-numbers" aria-label="number 4" title="number 4">4</span></div>
                                   </div>
                                 </div>
@@ -166,8 +166,8 @@
                             </div>
                         </div>
  <!-- This part is the congratulations section for a sucessfull game-->
-<div class="container-fluid success-message" id="game3-success">
-  <div class="row">
+<div class="container-fluid" id="game3-success" style="display: none;">
+  <div class="row d-flex justify-content-center success-message">
     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
       <h1>Congratulations Cadet</h1><br>
       <p><i class="fas fa-quote-left"></i> You have successfully completed Spy Academy and earned your 3 spy badges <i class="fas fa-quote-right"></i></p>
@@ -176,16 +176,12 @@
       <img src="assets/images/diffuse_the_bomb/spy.png" class="spy-image-badge spy-image-badge-won" alt="image of a spy" aria-label="third spy badge" title="third spy badge"/>
       <br>
       <p><u>Here is a list of your achievements</u></p>
-        <p>Cracking the code on the combination lock</p>
-        <p>Breaking the mainframe password </p>
-        <p>Diffusing the Bomb before your time ran out</p>
+        <p>Cracked the code on the combination lock</p>
+        <p>Broke the mainframe password </p>
+        <p>Diffused the Bomb before your time ran out</p>
       <a href="index.html">
-      <img src="assets/images/diffuse_the_bomb/bigredbuttonstart.png" class="brb-button" alt="next game button" aria-label="next game button" title="next game button"/>
+      <img src="assets/images/diffuse_the_bomb/bigredbuttonstartover.png" class="brb-button" alt="start over button" aria-label="start over button" title="start over button"/>
       </a>
-      <a href="https://www.google.ie/">
-      <img src="assets/images/diffuse_the_bomb/getmeoutofhere.png" class="brb-button" alt="next game button" aria-label="next game button" title="next game button"/>
-      </a>
-
     </div>
   </div>
 </div>
