@@ -1,3 +1,4 @@
+/* Importing Saira Stencil One from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
 /*This rule sets certain common parameters for the body*/
@@ -13,7 +14,16 @@ h1 {
   padding: 2% 0 2% 0;
   text-align: center;
   border-radius: 5px;
-  border-top: 0.5px solid #fafafa;
+}
+/* This is for the success message h1 */
+.success-message h1 {
+  font-size: 1.6em;
+  color: #fafafa;
+  padding: 10% 0 2% 0;
+}
+/* This is for the success message h1 */
+.success-message p {
+  color: #fafafa;
 }
 /* This is a general rule for h2 elements */
 h2 {
@@ -37,6 +47,7 @@ h2 {
    padding: 1em;
    margin-top: 1em;
  }
+/* This rule is for the h3 elements */
 h3 {
   font-size: 90%;
 }
@@ -44,11 +55,11 @@ h3 {
  .outer-screen-border {
    padding-top: 0.2em;
    position:fixed;
-   height: auto;
+   height: 45vh;
    width:95vw;
-   top: 25%;
+   top: 20%;
    left: 50%;
-   transform: translate(-50%, -25%);
+   transform: translate(-50%, -20%);
    display: block;
    background-color: darkgray;
    margin:0;
@@ -59,7 +70,6 @@ h3 {
 .paragraph-instructions {
   color: black;
 }
-/* --- Keyboard rules start --- */
 /* This rule is just for Keyboard border */
    .outer-keyboard-border {
     padding-top: 0.2em;
@@ -73,6 +83,11 @@ h3 {
     display: block;
     background-color:#384242;
     margin: 0;
+  }
+/* This rule is for the Keyboard surround */  
+  .keyboard-surround {
+    background-color: #fafafa;
+    border: 10px ridge #b59233;
   }
 /* This rule is for the Keyboard keys */
    .keyboard-keys {
@@ -100,7 +115,8 @@ h3 {
  .keyboard-boarder-thickness {
    border: 15px double #b59233;
    border-radius: 10px;
-   background-color: darkgray;
+   background-color: #fafafa;
+
  }
 /* This rule is just for the Start/Abort key */
  .start-abort-key {
@@ -124,9 +140,7 @@ h3 {
    opacity: 0.65;
    background-color: #d40606;
  }
- /* --- Keyboard rules end --- */
-
-/* This rule is targetted by game2.js once the abort button is pressed */
+ /* This rule is targetted by game2.js once the abort button is pressed */
 .abort-message {
   margin: 50px auto;
   padding: 20px;
@@ -285,8 +299,6 @@ h3 {
  -webkit-animation: spyFade ease 3s;
  -moz-animation: spyFade ease 3s;
 }
-
-
 /* This rule is for the Big Red button that takes you too the next game */
 .next-game-button {
   margin-top:8%;
@@ -296,31 +308,32 @@ h3 {
   padding: 0;
 }
 /*----------------------------- Keyframe calls -------------------------*/
+/* Used to fade out cetain text */
 @keyframes textFade {
   0% {opacity:0;}
   100% {opacity:1;}
   }
-
+/* Used to fadeout elements */
 @keyframes fadeout {
   0% {opacity: 1;}
   100% {opacity: 0;}
   }
-
+/* Used to fadein elements */
 @keyframes fadein {
   100% {opacity: 1;}
   0% {opacity: 0;}
   100% {opacity: 1;}
   }
-
+/* Used to flash divs */
 @keyframes flashdiv {
   50%{opacity: 0.5;}
   }
-
+/* Used to fadeout certain spy images */
 @keyframes spyFade {
   0% {opacity:0.3;}
   100% {opacity:1;}
   }
-
+/* Used to slide in certain elements */
 @keyframes slidein {
   100% {opacity: 0.1; width: 100%;padding: 0 0 0 0;color:#fafafa;}
   0% {opacity: 0.25; width: 1%;}
@@ -329,7 +342,6 @@ h3 {
 /*------------------------------- All Media Queries --------------------------*/
 /*- < 249px -*/
 @media only screen and (max-width: 249px) {
-
 .game-heading h1 {
   font-size: 1em;
   text-align: center;
@@ -337,14 +349,11 @@ h3 {
   margin: 1em;
 }
 }
-
 /*- 250px - 499px -*/
 @media only screen and (min-width: 250px) and (max-width: 320px) {
-
   body {
     font-size: 0.75em;
   }
-
   h2 {
     padding-top: 0.5em;
   }
@@ -355,14 +364,11 @@ h3 {
     margin: 1.3em;
   }
 }
-
 /*- 250px - 499px -*/
 @media only screen and (min-width: 321px) and (max-width: 499px) {
-
   body {
     font-size: 0.9em;
   }
-
   .instructions-heading {
     padding-top: 1em;
   }
@@ -375,7 +381,6 @@ h3 {
 }
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
-
   body {
     font-size: 1em;
   }
@@ -391,7 +396,6 @@ h3 {
 }
 /*- 767px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
   body {
     font-size: 1.4em;
   }
@@ -401,30 +405,42 @@ h3 {
     padding: 1em;
     margin: 1.5em;
   }
+  .outer-screen-border {
+    height: 45vh;
+    width:95vw;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+  }
 }
 /*- 992px - 1023px -*/
 @media only screen and (min-width: 992px) and (max-width: 1023px) {
-
   body {
     font-size: 1.6em;
   }
   .success-message {
    padding-top: 10%;
   }
+  .outer-screen-border {
+    height: 55vh;
+    width:95vw;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+  }
 }
 /*- 1024px - 1200px -*/
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-
   .success-message {
       padding-top: 20%;
    }
   body {
     font-size: 1.65em;
   }
-  .mainframe-heading{
+  .mainframe-heading {
     margin-top: 5em;
     text-align: center;
-    font-size: 5em;
+    font-size: 1.6em;
     color: black;
     font-weight: 500;
   }
@@ -435,23 +451,26 @@ h3 {
   margin: 0.2em 0.2em 0.2em 0.2em;
   }
 }
-
 /*- 1201px > -*/
-@media only screen and (min-width: 1201px) and (max-width: 2000px) {
-
+@media only screen and (min-width: 1201px) and (max-width: 3000px) {
 body {
   font-size: 1.45em;
   }
-  h1 {
-  font-size: 1.4em;
-  margin-top: 0.5%;
-  padding: 1% 0 1% 0;
+  .game-heading h1 {
+  display: none;
   }
   .outer-screen-border {
-    width:85vw;
+    height: 55vh;
+    width:95vw;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
   }
 .success-message {
   padding-top: 2%;
+  }
+.success-message h1 {
+  padding: 0 0 0 0;
   }
 }
 /* -------------------------- End of file ------------------------*/
