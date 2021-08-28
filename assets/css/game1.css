@@ -1,8 +1,10 @@
+/* Importing Saria Stencil One from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
-
+/* This rule is for the background */
 html {
   background-color: darkgray;
  }
+ /* This rule is for the body */
 body {
   font-family: 'Saira Stencil One', cursive, sans-serif;
   background-color: darkgray;
@@ -10,12 +12,12 @@ body {
   color: black;
   font-size: 1.6em;
  }
-  /* H2 rules */
+/* These are the h2 rules */
  h2 {
    font-size: 1.3em;
    padding: 1em 0 1em 0;
  }
- /* H3 rules */
+ /* These are the h3 rules */
  h3 {
    font-size: 1.2em;
  }
@@ -57,7 +59,7 @@ body {
 .main-spy-image {
   width: 90px;
   height: auto;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
 }
 /* This rule is for the 'goals' heading */
 .goals-heading {
@@ -74,7 +76,7 @@ body {
 /* This rule is for the Big red button div */
 .main-button {
   background-color:#fafafa;
-  height: 10vh;
+  height: 12vh;
   width: auto;
   border-radius: 50%;
   opacity: 0.95;
@@ -92,7 +94,6 @@ body {
  100% {opacity: 1;}
    0% {opacity: 0;}
  100% {opacity: 1;}
-
 }
 /* This rule is for the slide in effect for the 'Goal' and 'How' headings */
 @keyframes slidein {
@@ -292,6 +293,9 @@ body {
   .attempts-heading {
     padding: 20px 30px 25px 30px;
   }
+  .main-spy-image{
+    padding: 0;
+  }
 }
 
 /*- 768px - 991px -*/
@@ -307,6 +311,9 @@ body {
   }
   h3 {
     font-size: 1.25em;
+  }
+  .main-spy-image{
+    padding: 0;
   }
 }
 
@@ -325,8 +332,7 @@ body {
     font-size: 1.35em;
   }
   .main-spy-image{
-    height: 200px;
-    width: 200px;
+    padding: 0;
   }
 }
 
@@ -345,8 +351,7 @@ body {
     font-size: 1.35em;
   }
   .main-spy-image{
-    height: 200px;
-    width: 200px;
+  padding: 0;
   }
   .desktop-game-heading {
     display: contents;
@@ -374,8 +379,7 @@ body {
     font-size: 1.3em;
   }
   .main-spy-image{
-    height: 100px;
-    width: 100px;
+    padding: 0;
   }
   .outer-screen-border {
     height: 98vh;
@@ -396,5 +400,11 @@ body {
   .game-success{
     font-size: 1.8em;
   }
+  .main-button {
+    height: 15vh;
+}
+ .barrel-game-outer {
+    margin: 6% 0 1% 0;
+}
 }
 /*-------------------------End of File ----------------------------*/
