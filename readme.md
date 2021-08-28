@@ -40,9 +40,9 @@
 
 *   ### Wireframes
 
-    -   Desktop Wireframes - [View here](assets/wireframes/Spy_Academy_Desktop_and_Site_Map.pdf)
-    -  Tablet Wireframes - [View here](assets/wireframes/Spy_Academy_Tablet_and_Site_Map.pdf)
-    - Mobile Wireframes - [View here](assets/wireframes/Spy_Academy_Mobile_and_Site_Map.pdf)
+    -   Desktop Wireframes - [View here](assets/docs/SpyAcademy-Desktop&SiteMap.pdf)
+    -  Tablet Wireframes - [View here](assets/docs/SpyAcademy-Tablet&SiteMap.pdf)
+    - Mobile Wireframes - [View here](assets/docs/SpyAcademy-Mobile&SiteMap.pdf)
 
 
     *   ### Screenshots
