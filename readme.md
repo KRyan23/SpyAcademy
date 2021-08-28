@@ -1,15 +1,22 @@
-# Spy Academy
+<h1 align="center">Spy Academy</h1>
 
-[View the live project here(Not yet deployed).](https)
 
-Spy Academy is a browser based game written in Html/Css and Javascript for kids aged 6 - 16yrs.
+<p align="center">Spy Academy is a browser based game written in Html/Css and Javascript for kids aged 6 - 16yrs.</p>
 
-The game has 3 spy themed challenges with 3 levels of difficulty based on age.
+<p align="center">The game has 3 spy themed challenges with 3 levels of difficulty based on age.</p>
 
-It is designed to be challenging yet fun and reponsive on a range of devices.
+<p align="center">It is designed to be challenging yet fun and reponsive on a range of devices.</p>
+&nbsp;  
+&nbsp;  
+
 <p align="center">
-  <img width="30%" height="30%" src="/assets/images/home_page/SpyAcademyFrontPage.png">
+  <img width="30%" height="30%" src="/assets/docs/SpyAcademyFrontPage.png">
 </p>
+  
+  
+  
+[View the live project here ](https://kryan23.github.io/SpyAcademy/)
+
 
 
 -   ### Design
@@ -28,7 +35,7 @@ It is designed to be challenging yet fun and reponsive on a range of devices.
         -   The 'Saira Stencil One' font is used as the main font used throughout the site with Sans Serif as the fall-back font. 'Saira Stencil One' was chosen to enhance the sites content by giving a 'Top Secret' / 'Spy' feel.
 
     -   #### Imagery
-        - The imagery of the website was chosen to convey a functional minimal hard edge feel to fit in with the overall Spy theme.
+        - The imagery of the website was chosen to convey a functional feel to fit in with the overall Spy theme.
 
 
 *   ### Wireframes
