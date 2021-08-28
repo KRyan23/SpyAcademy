@@ -102,9 +102,10 @@ The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to val
 -   All content was written by myself with some minor contributions by family and friends.
 
 
-### Media
+Media
 
-####Images
+Images
+
 The images on the index page were chosen from the following sources.
 
 [1 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
@@ -117,6 +118,12 @@ The images on the first page for challenge 1 "Combination Lock" were chosen from
 [1 - Big Red Button A](https://pixabay.com/photos/button-light-bright-symbol-icon-2816448/)
 
 [2 - Main Page Spy Face Image](https://images.app.goo.gl/zXfs831NsdFR2UqF7)
+
+[3 - Font Awesome Lock Icon](https://fontawesome.com/v5.15/icons/lock?style=solid)
+
+[4 - Font Awesome User Secret Icon](https://fontawesome.com/v5.15/icons/user-secret?style=solid)
+
+[5 - Font Awesome User Clock Icon](https://fontawesome.com/v5.15/icons/user-clock?style=solid)
 
 The images on the second page for challenge 2 "Break the Password" were chosen from the following sources.
 
