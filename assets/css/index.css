@@ -6,6 +6,7 @@ body {
   text-align: center;
   color: #fafafa;
 }
+
 /* This rule is for the "Welcome to Text" */
 .main-page-text-welcome {
   margin: 2em 0 1em 0;
@@ -20,6 +21,7 @@ body {
   font-size: 2em;
   color: #2B303A;
 }
+
 /* This rule is for the Big red button div + its animation */
 .main-button {
   margin: 0 0 0.1em 0;
@@ -33,30 +35,43 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   opacity: 0.9;
+
 }
+
 /* To flash the big red button once an age is chosen.*/
 .main-button-active {
   animation: big-red-button 500ms infinite;
   opacity: 0.8;
+
+
 }
-/* Disable the big red button until the user enters their age.*/
+/* To disable the big red button until the user enters their age.*/
 .button-not-active {
   pointer-events: none;
   cursor: default;
   text-decoration: none;
 }
+
+
 /* This rule is for the "Enter your Age Text" */
 .main-page-text-age {
   margin:0em 0 0em 0;
   animation: slider-age-chooser 9s infinite;
   padding: 0.5em 0 0.5em 0;
 }
-/*This rule is for the slider*/
-.age {
+
+/* Style the slider but needs more work */
+#age-slider {
     font-size: 2em;
     color:red;
     text-align: center;
 }
+
+
+
+
+
+
 /*----------------------------- Keyframe calls ---------------------------*/
 
 /* For the big-red-button on the front page */
@@ -65,7 +80,7 @@ body {
   50%  {background: #2B303A;}
   100% {background: darkgray;}
 }
-/* For the div/outline of the big red button */
+
 @keyframes big-red-button {
   0%   {background: white;}
   50%  {background: red;}
@@ -75,27 +90,33 @@ body {
 
 /*- 250px - 499px -*/
 @media only screen and (min-width: 250px) and (max-width: 499px) {
+
 }
 
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
-   .main-page-text-welcome {
-     margin: 3em 0 3em 0;
+
+  .main-page-text-welcome {
+    margin: 3em 0 3em 0;
   }
+
 }
 
 /*- 767px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-   .main-page-text-welcome {
-     margin: 5em 0 5em 0;
+  .main-page-text-welcome {
+    margin: 5em 0 5em 0;
   }
-   .main-page-text-mission {
-     margin: 3em 0 3em 0;
+
+  .main-page-text-mission {
+    margin: 3em 0 3em 0;
   }
-   .main-page-text-age {
-     margin:2em 0 2em 0;
+
+  .main-page-text-age {
+    margin:2em 0 2em 0;
   }
+
 }
 
 /*- 992px - 1023px -*/
@@ -104,8 +125,9 @@ body {
   .main-page-text-welcome {
     margin: 8em 0 8em 0;
   }
+
   .main-page-text-mission {
-    margin: 4em 0 4em 0;
+  margin: 4em 0 4em 0;
   }
 }
 
@@ -115,16 +137,18 @@ body {
   .main-page-text-welcome {
     margin: 10em 0 10em 0;
   }
+
   .main-page-text-mission {
   margin: 5em 0 5em 0;
   }
+
 }
 
-/*- 1201px     >  -*/
-@media only screen and (min-width: 1201px) {
+/*- 1201px > -*/
+@media only screen and (min-width: 1201px) and (max-width: 2000px){
 
   .main-page-text-welcome {
-    margin: 4em 0 4em 0;
+    margin: 2em 0 2em 0;
   }
+
 }
-/* ----------------- End of File -------------------*/
