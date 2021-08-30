@@ -32,7 +32,7 @@ function hideIntroContent() {
 }
 /* This function unhides the game content */
 function unhideGameContent() {
-  for (var j = 0; j < 4; j++) {
+  for (var j = 0; j < 5; j++) {
     document.getElementsByClassName("show-after-start")[j].style.cssText = "display:contents;";
   }
   document.getElementsByClassName("outer-screen-border")[0].style.background = "gray";
@@ -48,6 +48,7 @@ function hideGameContent() {
 /* This function stops the game and hides the game content */
 function stopGame(interval) {
   clearInterval(interval);
+  localStorage.setItem("age", 0);
   hideGameContent();
 }
 /* This function takes the age entered earlier and gives the player a certain ammount of time to play the game*/
@@ -64,12 +65,13 @@ function setLevel() {
   countdown(time);
 }
 /* This function controls the timing of the game */
+var interval;
 function countdown(seconds) {
   var counter = seconds;
   var minutes;
   var x = 60;
   var y = 0;
-  var interval = setInterval(() => {
+  interval = setInterval(() => {
     counter--;
     x--;
     if (counter < 242 && counter >= 182) {
@@ -129,7 +131,7 @@ function setDifficulty() {
   } else if (level >= 9 && level <= 12) {
     trys = 46;
   } else if (level > 12) {
-    trys = 40;
+    trys = 42;
   } else {
     alert(level + "is not a valid age");
   }
@@ -359,10 +361,11 @@ function checkBarrel5Minus() {
     document.getElementById('barrel-5-minus').setAttribute('id', 'inactive');
   }
 }
-/* This Function next game brings the player to the sucess screen on completion of the game */
+/* This Function next game brings the player to the success screen on completion of the game */
 function nextGame() {
+  clearInterval(interval);
   setTimeout(() => {
-    var remstyles = ["game-heading-mobile", "abort-button", "desktop-heading", "timer-spy-lives", "spy-container", "game-barrels"];
+    var remstyles = ["game-heading-mobile", "abort-button", "timer-spy-lives", "spy-container", "heading-for-barrels", "game-barrels"];
     for (var s = 0; s < 6; s++) {
       document.getElementById(remstyles[s]).style.cssText = "display:none;";
     }
