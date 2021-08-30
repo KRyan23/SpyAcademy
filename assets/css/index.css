@@ -1,3 +1,4 @@
+/* Importing Saria Stencil One from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
 body {
@@ -11,11 +12,13 @@ body {
 .main-page-text-welcome {
   margin: 2em 0 1em 0;
 }
+
 /* This rule is for the "Spy Image" */
 .spy-image {
   width: 10em;
   height: auto;
 }
+
 /* This rule is for the Spy Academy Text" */
 .main-page-text-academy {
   font-size: 2em;
@@ -26,25 +29,23 @@ body {
 .main-button {
   margin: 0 0 0.1em 0;
   padding: 0.25em;
-  background-color:black;
+  background-color: black;
   height: 10em;
   width: 10em;
-  position:relative;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   opacity: 0.9;
-
 }
 
 /* To flash the big red button once an age is chosen.*/
 .main-button-active {
   animation: big-red-button 500ms infinite;
   opacity: 0.8;
-
-
 }
+
 /* To disable the big red button until the user enters their age.*/
 .button-not-active {
   pointer-events: none;
@@ -52,59 +53,71 @@ body {
   text-decoration: none;
 }
 
-
 /* This rule is for the "Enter your Age Text" */
 .main-page-text-age {
-  margin:0em 0 0em 0;
+  margin: 0em 0 0em 0;
   animation: slider-age-chooser 9s infinite;
   padding: 0.5em 0 0.5em 0;
 }
 
-/* Style the slider but needs more work */
-#age-slider {
-    font-size: 2em;
-    color:red;
-    text-align: center;
+/* This rule is for the slider */
+.age {
+  font-size: 2em;
+  color: red;
+  text-align: center;
 }
 
-
-
-
-
+/* This rule if for the social media icons */
+.social-media {
+  color: black;
+  padding: 0 0.4em 0 0.4em;
+  font-size: 1.25em;
+  opacity: 0.8;
+}
 
 /*----------------------------- Keyframe calls ---------------------------*/
-
 /* For the big-red-button on the front page */
 @keyframes slider-age-chooser {
-  0%   {background: darkgray;}
-  50%  {background: #2B303A;}
-  100% {background: darkgray;}
+  0% {
+    background: darkgray;
+  }
+
+  50% {
+    background: #2B303A;
+  }
+
+  100% {
+    background: darkgray;
+  }
 }
 
 @keyframes big-red-button {
-  0%   {background: white;}
-  50%  {background: red;}
-  100% {background: white;}
+  0% {
+    background: white;
+  }
+
+  50% {
+    background: red;
+  }
+
+  100% {
+    background: white;
+  }
 }
+
 /*------------------------------- All Media Queries --------------------------*/
-
 /*- 250px - 499px -*/
-@media only screen and (min-width: 250px) and (max-width: 499px) {
-
-}
+@media only screen and (min-width: 250px) and (max-width: 499px) {}
 
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
-
   .main-page-text-welcome {
     margin: 3em 0 3em 0;
   }
-
 }
 
 /*- 767px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
   .main-page-text-welcome {
     margin: 5em 0 5em 0;
   }
@@ -114,41 +127,35 @@ body {
   }
 
   .main-page-text-age {
-    margin:2em 0 2em 0;
+    margin: 2em 0 2em 0;
   }
-
 }
 
 /*- 992px - 1023px -*/
 @media only screen and (min-width: 992px) and (max-width: 1023px) {
-
   .main-page-text-welcome {
     margin: 8em 0 8em 0;
   }
 
   .main-page-text-mission {
-  margin: 4em 0 4em 0;
+    margin: 4em 0 4em 0;
   }
 }
 
 /*- 1024px - 1200px -*/
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-
   .main-page-text-welcome {
     margin: 10em 0 10em 0;
   }
 
   .main-page-text-mission {
-  margin: 5em 0 5em 0;
+    margin: 5em 0 5em 0;
   }
-
 }
 
 /*- 1201px > -*/
-@media only screen and (min-width: 1201px) and (max-width: 2000px){
-
+@media only screen and (min-width: 1201px) and (max-width: 2000px) {
   .main-page-text-welcome {
     margin: 2em 0 2em 0;
   }
-
 }
