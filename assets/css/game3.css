@@ -8,71 +8,81 @@ body {
   text-align: center;
   color: black;
   font-size: 1.6em;
- }
- /* This is the rule for the H1 elements */
- .success-message h1 {
-   font-size: 2em;
-   padding-top: 10%;
-   color: black;
-   text-align: center;
-   }
- .success-message p {
-   font-size: 1.4em;
-   }
- /* This rule is for the h3 elements*/
- h3 {
-   font-size: 90%;
-   }
- /* This rule is for the h2 elements*/
- h2 {
-   font-size: 90%;
-   }
- /* This rule is for the 'Diffuse the bomb' heading */
- .game-heading {
+}
+
+/* This is the rule for the H1 elements */
+.success-message h1 {
+  font-size: 2em;
+  padding-top: 10%;
+  color: black;
+  text-align: center;
+}
+
+.success-message p {
+  font-size: 1.4em;
+}
+
+/* This rule is for the h3 elements*/
+h3 {
+  font-size: 90%;
+}
+
+/* This rule is for the h2 elements*/
+h2 {
+  font-size: 90%;
+}
+
+/* This rule is for the 'Diffuse the bomb' heading */
+.game-heading {
   text-align: center;
   padding: 0;
   position: absolute;
   top: 5%;
   left: 50%;
   transform: translate(-50%, -5%);
-  }
- /* This rule is for the Start over button */
- .start-over-button {
-   margin-top:10%;
-   height: 6em;
-   width: 6em;
-   opacity: 0.75;
-   padding: 0;
- }
- /* This rule is for the 'Spy' image in the Abort section*/
+}
+
+/* This rule is for the Start over button */
+.start-over-button {
+  margin-top: 10%;
+  height: 6em;
+  width: 6em;
+  opacity: 0.75;
+  padding: 0;
+}
+
+/* This rule is for the 'Spy' image in the Abort section*/
 .abort-spy-image {
   width: 150px;
   height: auto;
   padding: 10% 0 10% 0;
 }
+
 /* This rule is for the the abort message text */
 .abort-message {
   color: #fafafa;
   font-size: 1.1em;
   margin-top: 15%;
 }
- /* This rule is for the border or frame around the content */
- .outer-screen-border {
-   padding-top: 0.2em;
-   position:fixed;
-   height: 85vh;
-   width:75vw;
-   top: 90%;
-   left: 50%;
-   transform: translate(-50%, -90%);
-   display: block;
-   background-color: #fafafa;
-   margin:0;
-   border:25px ridge silver;
-   border-radius:15px 15px 15px 15px;
-   color: black;
-   opacity: 0.90;
- }
+
+/* This rule is for the border or frame around the content */
+.outer-screen-border {
+  padding-top: 0.2em;
+  position: fixed;
+  height: 85vh;
+  width: 75vw;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  display: block;
+  background-color: #fafafa;
+  margin: 0;
+  border: 25px ridge silver;
+  border-radius: 15px 15px 15px 15px;
+  color: black;
+  opacity: 0.90;
+}
+
 /* This rule is for the 'Spy' image */
 .main-spy-image {
   width: 80px;
@@ -80,50 +90,85 @@ body {
   padding-right: 0px;
   height: auto;
   text-align: right;
- }
+}
+
 /* This rule is for the 'goals' heading */
 .goals-heading {
   animation: slidein 1s;
   font-weight: 200;
   color: green;
- }
+}
+
 /* This rule is for the 'how' heading */
 .how-heading {
   animation: slidein 2s;
   font-weight: 200;
   color: green;
 }
+
 /* This rule is for the Big red button div */
 .brb-button {
-  background-color:#fafafa;
+  background-color: #fafafa;
   height: 10vh;
   width: auto;
   border-radius: 50%;
   opacity: 0.9;
   animation: fadein 3s;
 }
+
 /*----------------------------- Keyframe calls ---------------------------*/
 @keyframes fadein {
- 100% {opacity: 1;}
-   0% {opacity: 0;}
- 100% {opacity: 1;}
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 @keyframes fadeout {
-  100% {opacity: 0.1;}
-   0% {opacity: 0.6;}
+  100% {
+    opacity: 0.1;
+  }
+
+  0% {
+    opacity: 0.6;
+  }
 }
+
 /* This rule is for the slide in effect for the 'Goal' and 'How' headings */
 @keyframes slidein {
- 100% {opacity: 1;border-bottom: 1px solid silver; width: 100%;padding: 0 0 0 0;}
-   0% {opacity: 0;border-bottom: 1px solid black; width: 1%;}
- 100% {opacity: 1;}
+  100% {
+    opacity: 1;
+    border-bottom: 1px solid silver;
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  0% {
+    opacity: 0;
+    border-bottom: 1px solid black;
+    width: 1%;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 @keyframes flashdiv {
-    50%{opacity: 0.5;}
+  50% {
+    opacity: 0.5;
+  }
 }
+
 /* Rules up to this point are for the content when you land on the page and also for the Abort/Unsuccessful message */
 /* From this point the Rules are for the actual Game itself */
-
 /* This rule is for the clock digits */
 .clock-digits {
   font-size: 1.6em;
@@ -131,209 +176,239 @@ body {
   color: #00FF00;
   opacity: 1;
   padding: 0;
- }
+}
+
 /* This rule is for the clock border */
-.outer-clock-border{
+.outer-clock-border {
   background-color: black;
   border: 10px inset grey;
   padding: 1% 0 1% 0;
   margin: 0 0 0 0;
 }
+
 /* This rule is for the 'Bomb' */
 .bomb {
-  opacity:0.1;
-  border:7px double green;
+  opacity: 0.1;
+  border: 7px double green;
   width: 50%;
   border-radius: 50%;
   line-height: 0;
-	background-color: black;
+  background-color: black;
   color: #fafafa;
   position: relative;
   margin-left: 30%;
   max-width: 40%;
   opacity: 1;
 }
+
 /* This rule is for 'Bomb' after */
-.bomb::after{
+.bomb::after {
   content: "";
   display: block;
   padding-bottom: 100%;
   margin: 0 0 0 0;
 }
+
 /*This is the text inside of the bomb circle the color is lime #00FF00*/
 .bomb-text {
-  position:absolute;
-  bottom:50%;
+  position: absolute;
+  bottom: 50%;
   width: 100%;
   text-align: center;
   color: #00FF00;
   opacity: 0.75;
-  }
+}
+
 /* This rule is for the 'div' containing the 3 spy badges  */
 .spy-image-container {
   background-color: darkgrey;
   border: 5px inset silver;
   color: black;
   padding: 5px 0 5px 0;
-  margin:2% 0 2% 0;
+  margin: 2% 0 2% 0;
+}
 
-}
 /* This rule is for the 3 spy badges in the the center of the screen */
-  .spy-image-badge {
-    width: 1.4em;
-    padding: 0.2em 0 0.2em 0;
-    height: auto;
-    text-align: center;
-    opacity: 0.3;
-    animation: fadein ease 3s;
+.spy-image-badge {
+  width: 1.4em;
+  padding: 0.2em 0 0.2em 0;
+  height: auto;
+  text-align: center;
+  opacity: 0.3;
+  animation: fadein ease 3s;
 }
+
 /* This rule is for the 3 spy badges on the last page of the game */
-  .spy-image-endgame {
-    width: 1.8em;
-    padding: 1em 0 1em 0;
+.spy-image-endgame {
+  width: 1.8em;
+  padding: 1em 0 1em 0;
 }
+
 /* This rule is for the 2 spy badges that the player has already won,in the the center of the screen */
-  .spy-image-badge-won {
-    opacity: 1;
+.spy-image-badge-won {
+  opacity: 1;
 }
+
 /* This rule ifs for the Start/Abort button */
- .start-abort-key {
-   margin: -10px 0 5px 0;
-   border:5px ridge black;
-   font-weight: 300;
-   border-radius: 15px;
-   color:white;
-   background-color: darkgray;
-   opacity:1;
-   animation: flashdiv 2s infinite;
- }
+.start-abort-key {
+  margin: -10px 0 5px 0;
+  border: 5px ridge black;
+  font-weight: 300;
+  border-radius: 15px;
+  color: white;
+  background-color: darkgray;
+  opacity: 1;
+  animation: flashdiv 2s infinite;
+}
+
 /* This rule is for the Start/Abort key when clicked */
- .start-abort-key:active {
-   transform: scale(0.90);
-   opacity: 0.75;
-   background-color: yellow;
-   color: black;
- }
+.start-abort-key:active {
+  transform: scale(0.90);
+  opacity: 0.75;
+  background-color: yellow;
+  color: black;
+}
+
 /* This rule is for the wires container */
- .wires-container {
+.wires-container {
   border: 10px outset grey;
   padding: 0.5% 0 0.5% 0;
   margin-top: 2%;
 }
+
 /* This rule is for the wires of different colors */
-.wires{
-  border:5px double grey;
+.wires {
+  border: 5px double grey;
   content: "";
   opacity: 0.8;
   font-size: 95%;
   border-radius: 15px;
-  color:white;
+  color: white;
   background-color: silver;
 }
+
 /* This rule is for the wires when clicked */
-.wires:active{
+.wires:active {
   transform: scale(0.90);
   opacity: 1;
 }
+
 /* This rule is for the numbers 1 - 8 on the wires*/
 .wire-numbers {
   font-size: 1.2em;
   text-align: left;
-  color:white;
-  padding:0;
-  margin:0;
+  color: white;
+  padding: 0;
+  margin: 0;
 }
+
 /* This rule is for the success message */
 .success-message {
   display: none;
   color: #fafafa;
 }
+
 /* ------------------------- Media queries ----------------------------- */
 /*- < 250px -*/
 @media only screen and (max-width: 249px) {
   body {
     font-size: 0.6em;
   }
+
   .game-heading h1 {
     font-size: 1em;
     text-align: center;
   }
-  .outer-clock-border{
-  margin: -23px 0 0 0;
+
+  .outer-clock-border {
+    margin: -23px 0 0 0;
   }
+
   .bomb-text {
-  text-align: center;
-  font-size: 20%;
+    text-align: center;
+    font-size: 20%;
   }
+
   .wires-container {
     margin: 70% 0 5% 0;
-   }
-   .bomb {
-     width: 100%;
-     line-height: 0;
-     margin-left: 0;
-     max-width:100%;
+  }
 
-   }
+  .bomb {
+    width: 100%;
+    line-height: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
+
 /*- 250px - 320px -*/
 @media only screen and (min-width: 250px) and (max-width: 320px) {
   body {
     font-size: 0.8em;
   }
+
   .game-heading h1 {
     font-size: 1em;
   }
-  .outer-clock-border{
+
+  .outer-clock-border {
     margin: -26px 0 0 0;
   }
+
   .bomb-text {
     text-align: center;
     font-size: 80%;
   }
-  .main-spy-image{
+
+  .main-spy-image {
     height: 70px;
     width: 70px;
   }
+
   .wires-container {
     margin: 10% 0 5% 0;
-   }
-   .bomb {
-     width: 100%;
-     line-height: 0;
-     margin-left: 0;
-     max-width:100%;
+  }
 
-   }
-
+  .bomb {
+    width: 100%;
+    line-height: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
+
 /*- 321px - 499px -*/
 @media only screen and (min-width: 321px) and (max-width: 499px) {
   body {
     font-size: 0.9em;
   }
+
   .game-heading h1 {
     font-size: 1.25em;
   }
-  .outer-clock-border{
+
+  .outer-clock-border {
     margin: -28px 0 0 0;
   }
+
   .wires-container {
     margin: 10% 0 5% 0;
-   }
-   .bomb {
-     width: 100%;
-     line-height: 0;
-     margin-left: 0;
-     max-width:100%;
+  }
 
-   }
+  .bomb {
+    width: 100%;
+    line-height: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
+
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
   body {
     font-size: 1.1em;
   }
+
   .game-heading h1 {
     font-size: 1.5em;
     text-align: center;
@@ -341,109 +416,130 @@ body {
 
   .wires-container {
     margin: 10% 0 5% 0;
-   }
-   .bomb {
-     width: 45%;
-     line-height: 0;
-     margin-left: 25%;
-     max-width:100%;
+  }
 
-   }
+  .bomb {
+    width: 45%;
+    line-height: 0;
+    margin-left: 25%;
+    max-width: 100%;
+  }
 }
+
 /*- 768px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
     font-size: 1.2em;
   }
+
   .game-heading h1 {
     font-size: 1.5em;
   }
+
   .wires-container {
     margin: 25% 0 5% 0;
-   }
-   .bomb {
-     width: 50%;
-     line-height: 0;
-     margin-top: 10%;
-     margin-left: 25%;
-     max-width:100%;
-   }
+  }
+
+  .bomb {
+    width: 50%;
+    line-height: 0;
+    margin-top: 10%;
+    margin-left: 25%;
+    max-width: 100%;
+  }
+
   .instructions-heading {
     padding-top: 100px;
   }
 }
+
 /*- 992px - 1023px -*/
 @media only screen and (min-width: 992px) and (max-width: 1023px) {
   body {
     font-size: 1.3em;
   }
+
   .game-heading h1 {
     font-size: 1.6em;
   }
+
   .wires-container {
     margin: 25% 0 5% 0;
-   }
-   .bomb {
-     width: 50%;
-     line-height: 0;
-     margin-top: 10%;
-     margin-left: 25%;
-     max-width:100%;
-   }
-  .wires{
-    border:10px double grey;
   }
+
+  .bomb {
+    width: 50%;
+    line-height: 0;
+    margin-top: 10%;
+    margin-left: 25%;
+    max-width: 100%;
+  }
+
+  .wires {
+    border: 10px double grey;
+  }
+
   .instructions-heading {
     padding-top: 100px;
   }
 }
+
 /*- 1024px - 1200px -*/
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   body {
     font-size: 1.3em;
   }
-  .wires{
-    border:10px double grey;
+
+  .wires {
+    border: 10px double grey;
   }
+
   .wires-container {
-    margin:35% 0 5% 0;
-   }
-   .bomb {
-     width: 120%;
-     line-height: 0;
-     margin-top: 30%;
-     margin-left: -25%;
-     max-width:120%;
-   }
- .abort-message {
-   font-size: 1.4em;
-   margin-top: 15%;
+    margin: 35% 0 5% 0;
   }
+
+  .bomb {
+    width: 120%;
+    line-height: 0;
+    margin-top: 30%;
+    margin-left: -25%;
+    max-width: 120%;
+  }
+
+  .abort-message {
+    font-size: 1.4em;
+    margin-top: 15%;
+  }
+
   .instructions-heading {
     padding-top: 100px;
   }
 }
+
 /*- 1201px > -*/
 @media only screen and (min-width: 1201px) and (max-width: 3000px) {
   body {
     font-size: 1.2em;
   }
+
   .game-heading h1 {
-    display:none;
+    display: none;
   }
+
   .outer-screen-border {
     height: 100vh;
-    width:75vw;
+    width: 75vw;
+  }
+
+  .wires-container {
+    margin: 1% 0 1% 0;
+  }
+
+  .bomb {
+    width: 40%;
+    line-height: 0;
+    margin-top: 1%;
+    margin-left: 30%;
+    max-width: 50%;
+  }
 }
-.wires-container {
-  margin:3% 0 5% 0;
- }
- .bomb {
-   width: 50%;
-   line-height: 0;
-   margin-top: 10%;
-   margin-left: 25%;
-   max-width:80%;
- }
-}
-/*------------------------End of File ----------------------------*/
