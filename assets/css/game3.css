@@ -75,8 +75,8 @@ body {
  }
 /* This rule is for the 'Spy' image */
 .main-spy-image {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   padding-right: 0px;
   height: auto;
   text-align: right;
@@ -149,8 +149,8 @@ body {
 	background-color: black;
   color: #fafafa;
   position: relative;
-  margin-left: 25%;
-  max-width: 50%;
+  margin-left: 30%;
+  max-width: 40%;
   opacity: 1;
 }
 /* This rule is for 'Bomb' after */
@@ -176,8 +176,7 @@ body {
   color: black;
   padding: 5px 0 5px 0;
   margin:2% 0 2% 0;
-  height: auto;
-  width:auto;
+
 }
 /* This rule is for the 3 spy badges in the the center of the screen */
   .spy-image-badge {
@@ -218,8 +217,8 @@ body {
 /* This rule is for the wires container */
  .wires-container {
   border: 10px outset grey;
-  padding: 2% 0 2% 0;
-  margin-top: 20%;
+  padding: 0.5% 0 0.5% 0;
+  margin-top: 2%;
 }
 /* This rule is for the wires of different colors */
 .wires{
@@ -253,7 +252,7 @@ body {
 /*- < 250px -*/
 @media only screen and (max-width: 249px) {
   body {
-    font-size: 0.8em;
+    font-size: 0.6em;
   }
   .game-heading h1 {
     font-size: 1em;
@@ -264,12 +263,18 @@ body {
   }
   .bomb-text {
   text-align: center;
-  font-size: 50%;
+  font-size: 20%;
   }
-  .start-abort-key {
-  margin-top: auto;
-  font-size: 80%;
-  }
+  .wires-container {
+    margin: 70% 0 5% 0;
+   }
+   .bomb {
+     width: 100%;
+     line-height: 0;
+     margin-left: 0;
+     max-width:100%;
+
+   }
 }
 /*- 250px - 320px -*/
 @media only screen and (min-width: 250px) and (max-width: 320px) {
@@ -286,10 +291,21 @@ body {
     text-align: center;
     font-size: 80%;
   }
-  .start-abort-key {
-    margin-top: auto;
-    font-size: 80%;
+  .main-spy-image{
+    height: 70px;
+    width: 70px;
   }
+  .wires-container {
+    margin: 10% 0 5% 0;
+   }
+   .bomb {
+     width: 100%;
+     line-height: 0;
+     margin-left: 0;
+     max-width:100%;
+
+   }
+
 }
 /*- 321px - 499px -*/
 @media only screen and (min-width: 321px) and (max-width: 499px) {
@@ -302,6 +318,16 @@ body {
   .outer-clock-border{
     margin: -28px 0 0 0;
   }
+  .wires-container {
+    margin: 10% 0 5% 0;
+   }
+   .bomb {
+     width: 100%;
+     line-height: 0;
+     margin-left: 0;
+     max-width:100%;
+
+   }
 }
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
@@ -312,18 +338,17 @@ body {
     font-size: 1.5em;
     text-align: center;
   }
-   .spy-image-container {
-     margin: 2% 0 0 0;
-  }
-   .wires-container {
-     margin: 0 0 0 0;
-  }
+
+  .wires-container {
+    margin: 10% 0 5% 0;
+   }
    .bomb {
-    height: 15vh;
-    width:20vw;
-    margin-left: 30%;
-    margin-bottom: 5%;
-  }
+     width: 45%;
+     line-height: 0;
+     margin-left: 25%;
+     max-width:100%;
+
+   }
 }
 /*- 768px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -333,9 +358,18 @@ body {
   .game-heading h1 {
     font-size: 1.5em;
   }
-  .bomb {
-    width: 40%;
-    margin-left: 30%;
+  .wires-container {
+    margin: 25% 0 5% 0;
+   }
+   .bomb {
+     width: 50%;
+     line-height: 0;
+     margin-top: 10%;
+     margin-left: 25%;
+     max-width:100%;
+   }
+  .instructions-heading {
+    padding-top: 100px;
   }
 }
 /*- 992px - 1023px -*/
@@ -346,12 +380,21 @@ body {
   .game-heading h1 {
     font-size: 1.6em;
   }
-  .bomb {
-    width: 40%;
-    margin-left: 30%;
-  }
+  .wires-container {
+    margin: 25% 0 5% 0;
+   }
+   .bomb {
+     width: 50%;
+     line-height: 0;
+     margin-top: 10%;
+     margin-left: 25%;
+     max-width:100%;
+   }
   .wires{
     border:10px double grey;
+  }
+  .instructions-heading {
+    padding-top: 100px;
   }
 }
 /*- 1024px - 1200px -*/
@@ -362,15 +405,22 @@ body {
   .wires{
     border:10px double grey;
   }
- .spy-image-container {
-   margin: 5% 0 5% 0;
-  }
- .wires-container {
-   margin: 10% 0 5% 0;
-  }
+  .wires-container {
+    margin:35% 0 5% 0;
+   }
+   .bomb {
+     width: 120%;
+     line-height: 0;
+     margin-top: 30%;
+     margin-left: -25%;
+     max-width:120%;
+   }
  .abort-message {
    font-size: 1.4em;
    margin-top: 15%;
+  }
+  .instructions-heading {
+    padding-top: 100px;
   }
 }
 /*- 1201px > -*/
@@ -379,61 +429,21 @@ body {
     font-size: 1.2em;
   }
   .game-heading h1 {
-    font-size: 1.4em;
-  }
-  .bomb {
-    width: 18%;
-    margin-left: 40%;
-  }
-  .wires{
-    border:10px double grey;
-    font-size: 1em;
-  }
-  .spy-image-container {
-    margin: 5% 0 0 0;
-  }
-  .abort-message {
-    font-size: 1.3em;
-    margin-top: 5%;
-  }
-  .abort-spy-image {
-    padding: 3% 0 0 0;
-  }
-  .wires-container {
-    border: 10px outset grey;
-    padding: 2% 0 2% 0;
-    position:fixed;
-    height: 40vh;
-    width:70vw;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    font-size: 95%;
-  }
-  .wires{
-    font-size:65%;
+    display:none;
   }
   .outer-screen-border {
-    padding-top: 0.2em;
-    position:fixed;
     height: 100vh;
     width:75vw;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -90%);
-  }
-  .game-heading {
-    display: none;
-  }
- .success-message {
-   display: none;
-   color: #fafafa;
-   margin-left: 8%;
-  }
- .brb-button {
-   height: 16vh;
-   animation: fadein 3s;
-   background-color: grey;
-  }
+}
+.wires-container {
+  margin:3% 0 5% 0;
+ }
+ .bomb {
+   width: 50%;
+   line-height: 0;
+   margin-top: 10%;
+   margin-left: 25%;
+   max-width:80%;
+ }
 }
 /*------------------------End of File ----------------------------*/
