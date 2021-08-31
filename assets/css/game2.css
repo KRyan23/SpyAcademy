@@ -7,7 +7,8 @@ body {
   background-color: #384242;
   font-size: 1em;
   font-weight: 100;
- }
+}
+
 /* This is the rule for the h1 elements */
 h1 {
   margin: 1% 0 10% 0;
@@ -15,144 +16,160 @@ h1 {
   text-align: center;
   border-radius: 5px;
 }
+
 /* This is for the success message h1 */
 .success-message h1 {
   font-size: 1.6em;
   color: #fafafa;
   padding: 10% 0 2% 0;
 }
+
 /* This is for the success message h1 */
 .success-message p {
   color: #fafafa;
 }
+
 /* This is a general rule for h2 elements */
 h2 {
   padding-top: 0.1em;
 }
+
 /* This is the rule for the game heading */
-  .game-heading {
-   margin-top: 1em;
-   text-align: center;
-   padding: 0;
-   position: relative;
-   top: 20%;
-   left: 50%;
-   transform: translate(-50%, -20%);
-   color: #fafafa;
-  }
+.game-heading {
+  margin-top: 1em;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  color: #fafafa;
+}
+
 /* This is the rule for the h1 game heading element */
- .game-heading h1 {
-   font-size: 1.5em;
-   text-align: center;
-   padding: 1em;
-   margin-top: 1em;
- }
+.game-heading h1 {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+}
+
 /* This rule is for the h3 elements */
 h3 {
   font-size: 90%;
 }
-/* This is the rule for the outer screen border */
- .outer-screen-border {
-   padding-top: 0.2em;
-   position:fixed;
-   height: 50vh;
-   width:95vw;
-   top: 20%;
-   left: 50%;
-   transform: translate(-50%, -20%);
-   display: block;
-   background-color: darkgray;
-   margin:0;
-   border:15px ridge #b59233; /* Gold-ish yellow */
-   border-radius:30px 30px 15px 15px;
- }
- /* This rule is for the 'goals' heading */
- .goals-heading {
-   animation: slidein 0.5s;
-   font-weight: 200;
-   color: #fafafa;
-   opacity: 1;
-   font-size: 125%;
- }
- /* This rule is for the 'how' heading */
- .how-heading {
-   animation: slidein 1.5s;
-   font-weight: 200;
-   color: #fafafa;
-   opacity: 1;
-   font-size: 125%;
- }
-/* This rule is just for Keyboard border */
-   .outer-keyboard-border {
-    padding-top: 0.2em;
-    position: absolute;
-    max-height: auto;
-    min-width: 20%;
-    min-height: 20%;
-    top: 98%;
-    left: 50%;
-    transform: translate(-50%, -98%);
-    display: block;
-    background-color:#384242;
-    margin: 0;
-  }
-/* This rule is for the Keyboard surround */
-  .keyboard-surround {
-    background-color: #fafafa;
-    border: 10px ridge #b59233;
-  }
-/* This rule is for the Keyboard keys */
-   .keyboard-keys {
-   padding-top: 0.2em;
-   height: 2.2em;
-   width:2.2em;
-   border-radius: 20px;
-   background-color: black;
-   display:inline-block;
-   margin: 0;
-   font-weight: 100;
-   margin: 0.3em 0.3em 0.3em 0.3em;
-   color: #fafafa;
-   box-shadow: 4px 4px grey;
-   border: 1px solid #b59233;
-   text-align: center;
- }
-/* This rule is for the Keyboard keys when clicked */
- .keyboard-keys:active {
-   transform: scale(0.90);
-   opacity: 0.65;
-   background-color: orange;
- }
-/* This rule is for the Keyboard border thickness */
- .keyboard-boarder-thickness {
-   border: 15px double #b59233;
-   border-radius: 10px;
-   background-color: #fafafa;
 
- }
+/* This is the rule for the outer screen border */
+.outer-screen-border {
+  padding-top: 0.2em;
+  position: fixed;
+  height: 50vh;
+  width: 95vw;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  display: block;
+  background-color: darkgray;
+  margin: 0;
+  border: 15px ridge #b59233;
+  /* Gold-ish yellow */
+  border-radius: 30px 30px 15px 15px;
+}
+
+/* This rule is for the 'goals' heading */
+.goals-heading {
+  animation: slidein 0.5s;
+  font-weight: 200;
+  color: #fafafa;
+  opacity: 1;
+  font-size: 125%;
+}
+
+/* This rule is for the 'how' heading */
+.how-heading {
+  animation: slidein 1.5s;
+  font-weight: 200;
+  color: #fafafa;
+  opacity: 1;
+  font-size: 125%;
+}
+
+/* This rule is just for Keyboard border */ 
+.outer-keyboard-border {
+  padding-top: 0.2em;
+  position: absolute;
+  min-width: 20%;
+  min-height: 20%;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -98%);
+  display: block;
+  background-color: #384242;
+  margin: 0;
+}
+
+/* This rule is for the Keyboard surround */
+.keyboard-surround {
+  background-color: #fafafa;
+  border: 10px ridge #b59233;
+}
+
+/* This rule is for the Keyboard keys */
+.keyboard-keys {
+  padding-top: 0.2em;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 20px;
+  background-color: black;
+  display: inline-block;
+  margin: 0;
+  font-weight: 100;
+  margin: 0.3em 0.3em 0.3em 0.3em;
+  color: #fafafa;
+  box-shadow: 4px 4px grey;
+  border: 1px solid #b59233;
+  text-align: center;
+}
+
+/* This rule is for the Keyboard keys when clicked */
+.keyboard-keys:active {
+  transform: scale(0.90);
+  opacity: 0.65;
+  background-color: orange;
+}
+
+/* This rule is for the Keyboard border thickness */
+.keyboard-boarder-thickness {
+  border: 15px double #b59233;
+  border-radius: 10px;
+  background-color: #fafafa;
+}
+
 /* This rule is just for the Start/Abort key */
- .start-abort-key {
-   padding-top: 0.2em;
-   height: 2.2em;
-   width:5em;
-   border-radius: 8px;
-   background-color: green;
-   display:inline-block;
-   margin: 0;
-   font-size: 1.2em;
-   font-weight: 300;
-   margin: 0.3em 0.3em 0.3em 0.3em;
-   color: #fafafa;
-   box-shadow: 5px 5px grey;
-   border: 3px solid black;
- }
+.start-abort-key {
+  padding-top: 0.2em;
+  height: 2.2em;
+  width: 5em;
+  border-radius: 8px;
+  background-color: green;
+  display: inline-block;
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 0.3em 0.3em 0.3em 0.3em;
+  color: #fafafa;
+  box-shadow: 5px 5px grey;
+  border: 3px solid black;
+}
+
 /* This rule is for the Start/Abort key when clicked */
- .start-abort-key:active {
-   transform: scale(0.80);
-   opacity: 0.65;
-   background-color: #d40606;
- }
- /* This rule is targetted by game2.js once the abort button is pressed */
+.start-abort-key:active {
+  transform: scale(0.80);
+  opacity: 0.65;
+  background-color: #d40606;
+}
+
+/* This rule is targetted by game2.js once the abort button is pressed */
 .abort-message {
   margin: 50px auto;
   padding: 20px;
@@ -161,14 +178,16 @@ h3 {
   color: white;
   position: absolute;
 }
+
 /* This rule is for the Start over Big Red Button */
 .start-over-button {
-  margin-top:10%;
+  margin-top: 10%;
   height: 6em;
   width: 6em;
   opacity: 0.75;
   padding: 0;
 }
+
 /* This rule is for the mainframe heading */
 .mainframe-heading {
   text-align: center;
@@ -179,18 +198,19 @@ h3 {
   padding-top: 0.2em;
   position: relative;
 }
+
 /* This rule is for the instructions container */
 .instructions {
   animation: textFade ease 5s;
-  -webkit-animation: textFade ease 5s;
-  -moz-animation: textFade ease 5s;
 }
+
 /* This rule is for the main 'Spy' image */
 .main-spy-image {
   width: 90px;
   height: auto;
   padding-bottom: 1em;
 }
+
 /* The rule for the 'Attempts box/Heading' */
 .attempts-heading {
   background-color: #fafafa;
@@ -198,19 +218,21 @@ h3 {
   color: black;
   padding: 1em 2em 1.5em 2em;
   margin: 0;
-  }
+}
+
 /* This rule is for the 'Spy' image in the Abort section*/
 .abort-spy-image {
   width: 130px;
   height: auto;
   padding: 10% 0 10% 0;
 }
+
 /* This rule is for the square character boxes used to enter the password, they are generated by the js file */
-.charBoxes{
+.charBoxes {
   padding-top: 0.2em;
   padding-left: 0.55em;
   height: 2.0em;
-  width:2.0em;
+  width: 2.0em;
   border-radius: 2px;
   background-color: #fafafa;
   margin: 1em;
@@ -218,14 +240,15 @@ h3 {
   margin: 0.3em 0.3em 0.3em 0.3em;
   color: black;
   border: 2px solid silver;
-  display:inline-flex;
+  display: inline-flex;
 }
+
 /* This rule is used to style a correct answer for the square character boxes used to enter the password */
-.charBoxes-correct{
+.charBoxes-correct {
   padding-top: 0.2em;
   padding-left: 0.55em;
   height: 2.0em;
-  width:2.0em;
+  width: 2.0em;
   border-radius: 2px;
   background-color: green;
   margin: 0;
@@ -233,29 +256,32 @@ h3 {
   margin: 0.3em 0.3em 0.3em 0.3em;
   color: #fafafa;
   border: 1px solid yellow;
-  display:inline-flex;
+  display: inline-flex;
   animation: flashdiv 0.3s 6;
 }
+
 /* This rule is used to style the password boxes when their NOT the selected box */
 .charBoxes:not(:focus) {
   background-color: #fafafa;
 }
+
 /* This rule is used to flash the current selected password box red */
-.charBoxes:focus{
+.charBoxes:focus {
   background-color: red;
   animation: flashdiv 1.5s infinite;
 }
+
 /* This rule is applied afterwards to the password boxes when a correct character is entered */
-.correctAnswer{
+.correctAnswer {
   background-color: green;
-  color: green;
 }
+
 /* This rule is applied to the password boxes during a correct character event */
-.charBoxes-correct-answer{
+.charBoxes-correct-answer {
   padding-top: 0.2em;
   padding-left: 0.55em;
   height: 2.0em;
-  width:2.0em;
+  width: 2.0em;
   border-radius: 2px;
   background-color: yellow;
   margin: 0;
@@ -263,78 +289,125 @@ h3 {
   margin: 0.3em 0.3em 0.3em 0.3em;
   color: #fafafa;
   border: 2px solid white;
-  display:inline-flex;
+  display: inline-flex;
   animation: flashdiv 0.5s 4;
 }
+
 /* This rule is for the 3 spy badges that you win throughout the games */
 .spy-image-badge {
- margin: auto;
- width: 1.4em;
- padding: 0 0 1em 0;
- text-align: center;
- opacity: 0.3;
- animation: spyFade ease 3s;
- -webkit-animation: spyFade ease 3s;
- -moz-animation: spyFade ease 3s;
+  margin: auto;
+  width: 1.4em;
+  padding: 0 0 1em 0;
+  text-align: center;
+  opacity: 0.3;
+  animation: spyFade ease 3s;
 }
+
 /* This rule is for the Big Red button that takes you too the next game */
 .next-game-button {
-  margin-top:8%;
+  margin-top: 8%;
   height: 6em;
   width: 6em;
   opacity: 0.75;
   padding: 0;
 }
+
 /*----------------------------- Keyframe calls -------------------------*/
 /* Used to fade out cetain text */
 @keyframes textFade {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
   }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Used to fadeout elements */
 @keyframes fadeout {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
   }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Used to fadein elements */
 @keyframes fadein {
-  100% {opacity: 1;}
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  100% {
+    opacity: 1;
   }
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Used to flash divs */
 @keyframes flashdiv {
-  50%{opacity: 0.5;}
+  50% {
+    opacity: 0.5;
   }
+}
+
 /* Used to fadeout certain spy images */
 @keyframes spyFade {
-  0% {opacity:0.3;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0.3;
   }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Used to slide in certain elements */
 @keyframes slidein {
-  100% {opacity: 0.1; width: 100%;padding: 0 0 0 0;color:#b59233;}
-  0% {opacity: 0.25; width: 1%;}
-  50% {opacity: 1;}
+  100% {
+    opacity: 0.1;
+    width: 100%;
+    padding: 0 0 0 0;
+    color: #b59233;
   }
+
+  0% {
+    opacity: 0.25;
+    width: 1%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 /*------------------------------- All Media Queries --------------------------*/
 /*- < 249px -*/
 @media only screen and (max-width: 249px) {
-.game-heading h1 {
-  font-size: 1em;
-  text-align: center;
-  padding: 1em;
-  margin: 1em;
+  .game-heading h1 {
+    font-size: 1em;
+    text-align: center;
+    padding: 1em;
+    margin: 1em;
+  }
 }
-}
+
 /*- 250px - 499px -*/
 @media only screen and (min-width: 250px) and (max-width: 320px) {
   body {
     font-size: 0.7em;
   }
+
   h2 {
     padding-top: 0.5em;
   }
+
   .game-heading h1 {
     font-size: 1.8em;
     text-align: center;
@@ -342,11 +415,13 @@ h3 {
     margin: 1.3em;
   }
 }
+
 /*- 250px - 499px -*/
 @media only screen and (min-width: 321px) and (max-width: 499px) {
   body {
     font-size: 0.9em;
   }
+
   .game-heading h1 {
     font-size: 1.6em;
     text-align: center;
@@ -354,64 +429,76 @@ h3 {
     margin: 0.4em;
   }
 }
+
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
   body {
     font-size: 1em;
   }
+
   .game-heading h1 {
     font-size: 1.2em;
     text-align: center;
     padding: 1em;
     margin: 1em;
   }
-  .charBoxes{
+
+  .charBoxes {
     margin: 0.1em 0.1em 0.1em 0.1em;
   }
 }
+
 /*- 767px - 991px -*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
     font-size: 1.4em;
   }
+
   .game-heading h1 {
     font-size: 1.4em;
     text-align: center;
     padding: 1em;
     margin: 1.5em;
   }
+
   .outer-screen-border {
     height: 45vh;
-    width:95vw;
+    width: 95vw;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -35%);
   }
 }
+
 /*- 992px - 1023px -*/
 @media only screen and (min-width: 992px) and (max-width: 1023px) {
   body {
     font-size: 1.6em;
   }
+
   .success-message {
-   padding-top: 10%;
+    padding-top: 10%;
   }
+
   .outer-screen-border {
     height: 55vh;
-    width:95vw;
+    width: 95vw;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -25%);
   }
 }
+
 /*- 1024px - 1200px -*/
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .success-message {
-      padding-top: 20%;
-   }
+    padding-top: 20%;
+  }
+
   body {
     font-size: 1.65em;
   }
+
   .mainframe-heading {
     margin-top: 5em;
     text-align: center;
@@ -419,40 +506,49 @@ h3 {
     color: black;
     font-weight: 500;
   }
-  .player-progress{
+
+  .player-progress {
     display: none;
   }
-  .char-boxes{
-  margin: 0.2em 0.2em 0.2em 0.2em;
+
+  .char-boxes {
+    margin: 0.2em 0.2em 0.2em 0.2em;
   }
 }
+
 /*- 1201px > -*/
 @media only screen and (min-width: 1201px) and (max-width: 3000px) {
-body {
-  font-size: 1.45em;
+  body {
+    font-size: 1.45em;
   }
+
   .game-heading h1 {
-  display: none;
+    display: none;
   }
+
   .outer-screen-border {
     height: 55vh;
-    width:95vw;
+    width: 95vw;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -25%);
   }
-.success-message {
-  padding-top: 2%;
+
+  .success-message {
+    padding-top: 2%;
   }
-.success-message h1 {
-  padding: 0 0 0 0;
+
+  .success-message h1 {
+    padding: 0 0 0 0;
   }
-.outer-screen-border {
-  margin-top: 1%;
-  padding-top: 0.2em;
-  position:fixed;
-  height: 60vh;
-  width:100vw;
+
+  .outer-screen-border {
+    margin-top: 1%;
+    padding-top: 0.2em;
+    position: fixed;
+    height: 60vh;
+    width: 100vw;
+  }
 }
-}
+
 /* -------------------------- End of file ------------------------*/
