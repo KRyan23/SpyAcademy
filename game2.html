@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/game2.css"/>
   <title>Spy Academy Break The Password</title>
 </head>
@@ -20,7 +21,7 @@
 <div class="abort-message" id="abort-message-show" style="display: none;">
 <div class="container-fluid">
   <div class="row d-flex justify-content-end">
-    <div class="col-sm-8 col-md-8">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
       <div class="speach-bubble">
       <p class="speach-bubble-text"><i class="fas fa-quote-left"></i> Well Cadet it looks like your mission was unsucessful this time, Why not have another try? <i class="fas fa-quote-right"></i></p>
       </div>
@@ -28,12 +29,12 @@
   </div>
   <div class="row d-flex">
     <div class="col-sm-4 col-md-4">
-      <img src="assets/images/combination_lock/spy.png" class="" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
+      <img src="assets/images/combination_lock/spy.png"  alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
     </div>
   </div>
 <div class="row d-flex justify-content-center">
   <div class="col-sm-12 col-md-12">
-    <a href="game2.html">
+    <a href="index.html">
     <img src="assets/images/combination_lock/bigredbuttonstartover.png" class="start-over-button" alt="start-over-button" aria-label="start-over-button" title="start-over-button"/>
     </a>
     </div>
@@ -47,11 +48,14 @@
     <div class="col-xxl-8 col-xl-6 col-lg-10 col-md-12 col-sm-8 col-xm-2 outer-screen-border text-center hide-after-abort">
 <!--  This section is for the instruction div which fades out once Start is pressed -->
     <div class="row" id="instructions-container">
-    <div class="col-xxl-4 col-xl-4 col-lg-10 col-md-10 col-sm-6 col-xm-2 instructions">
-    <p>Instructions</p>
-    Goal - Using the letters on the keypad guess the correct password order.<br><br>
-    How ? - Select a password box then click one of the letters on the keypad, remember to keep and eye on your spy lives!
-    </div>
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+            <h2 class="goals-heading text-center" aria-label="goals heading" title="goals heading"><u><em>Goal</em></u></h2>
+            <p class="instructions">Using the letters on the keypad guess the correct password order for each box.</p>
+            <h2 class="how-heading text-center" aria-label="how heading" title="how heading"><u><em>How?</em></u></h2>
+            <p class="instructions">Select a password box, then click one of the letters on the keypad, dont let your Spy Lives run out!</p><p class="instructions"><em>Hint</em>:(each password is a <u>real word!</u>)</p>
+          </div>
+      </div>
     </div>
   </div>
 </div>
@@ -59,13 +63,14 @@
 <!-- This is for the mainframe heading -->
 <div class="container-fluid">
   <div class="row">
-      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center hide-after-abort">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center hide-after-abort">
         <div class="mainframe-heading"><p>Mainframe Password</p></div>
         <br>
         <div id="player-progress" style="display: none;">
-        Attempts left
-        <br>
-        <span id="attempts">00</span>
+
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center" aria-label="spy lives" title="spy lives">
+          <span class="attempts-heading"><i class="fas fa-2x fa-user-secret"></i></span><br><span id="attempts">XXXX</span>
+        </div>
         <br>
         <img src="assets/images/break_the_password/spy.png" class="spy-image-badge" id="first-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy" style="opacity: 1;"/>
         <img src="assets/images/break_the_password/spy.png" class="spy-image-badge" id="second-badge" alt="image of a spy" aria-label="image of a spy" title="image of a spy"/>
@@ -78,72 +83,72 @@
 <!-- This is the section for the password boxes -->
 <div class="container-fluid">
 <div class="row d-flex justify-content-center">
-   <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xm-12 text-center hide-after-abort">
+   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-10 col-sm-10 col-10 text-center hide-after-abort">
     <div class="boxes-spyimage-trys" id="password-boxes" style="display: none;">
 <!-- The character boxes get dynamically added into this section -->
     </div>
   </div>
 </div>
  <!-- This is for the keyboard -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xm-2 outer-keyboard-border text-center hide-after-abort">
-      <div class="keyboard-surround">
-        <div class="start-abort-key text-center" aria-label="Start/Abort Button" title="Start/Abort Button" id="start">
-        Start
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 0" title="key 0" id="key-0">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 1" title="key 1" id="key-1">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 2" title="key 2" id="key-2">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 3" title="key 3" id="key-3">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 4" title="key 4" id="key-4">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 5" title="key 5" id="key-5">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 6" title="key 6" id="key-6">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 7" title="key 7" id="key-7">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 8" title="key 8" id="key-8">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 9" title="key 9" id="key-9">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 10" title="key 10" id="key-10">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 11" title="key 11" id="key-11">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 12" title="key 12"id="key-12">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 13" title="key 13" id="key-13">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 14" title="key 14" id="key-14">
-        .
-        </div>
-        <div class="keyboard-keys text-center" aria-label="key 15" title="key 15" id="key-15">
-        .
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+ <div class="container-fluid">
+   <div class="row">
+     <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xm-2 outer-keyboard-border text-center hide-after-abort">
+       <div class="keyboard-surround">
+         <div class="start-abort-key text-center" aria-label="Start/Abort Button" title="Start/Abort Button" id="start">
+         Start
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-0" title="password-box-0" id="key-0">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-1" title="password-box-1" id="key-1">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-2" title="password-box-2" id="key-2">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-3" title="password-box-3" id="key-3">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-4" title="password-box-4" id="key-4">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-5" title="password-box-5" id="key-5">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-6" title="password-box-6" id="key-6">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-7" title="password-box-7" id="key-7">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-8" title="password-box-8" id="key-8">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-9" title="password-box-9" id="key-9">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-10" title="password-box-10" id="key-10">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-11" title="password-box-11" id="key-11">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-12" title="password-box-12"id="key-12">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-13" title="password-box-13" id="key-13">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-14" title="password-box-14" id="key-14">
+         .
+         </div>
+         <div class="keyboard-keys text-center" aria-label="password-box-15" title="password-box-15" id="key-15">
+         .
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 <!-- End div for combination control container -->
 <!-- This part is the congratulations section for a sucessfull game-->
 <div>
