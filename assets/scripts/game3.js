@@ -1,39 +1,26 @@
-//Start
-//This function waits for the player to click the Big Red button then runs startGame
-document.getElementById("big-red-button").onclick = function() {
-startGame();
-}
-//This function handles the player to clicking eitheer the Start or Abort fucntions of the button
-document.getElementById("start-abort").onclick = function() {
-let quitGame = document.querySelector('#start-abort').innerHTML;         //Queries the text of the button if it matches 'Abort', then it runs stopGame.
-if(quitGame=="Abort!"){
-  console.log(quitGame);
-  stopGame();
-}
-clearInterval(interval);                                                //Clears and existing running timers from a previous session.
-setlevel();                                                             //Calls setlevel which calculate the allowed time based on age, this is then passed to function 'countdown'
-countdown(localStorage.getItem("theTime"));                             //Calls the countdown function using the variable stored in 'theTime'
-document.querySelector("#start-abort").innerText = "Abort!";            //Changes the start button text to abort
-document.getElementById("start-abort").style.cssText = "background:black; color:yellow; opacity:1;"; //Changes the start button to yellow with black tex
-document.getElementsByClassName("start-abort-key")[0].style.cssText = "animation: flashdiv 1s;";    // Stops the start button pulsing after being clicked
-}
+var wiresarray = [1,2,3,4,5,6,7,8];
+var interval;
+
 //This is the main function that runs the game sequence
 function startGame(){
-  hideContent();                                                        //1. Calls hideContent which hides the front page.
-  unhideContent();                                                      //2. Calls unhideContent which displays the contents of the main game.
-  assignButtonColours();                                                //3. Assigns the 'Wire' colors as opposed to using inline styling or multiple classes.
-  generateDiffuseOrder()                                                //4. This function randomises the number 1 - 8 in an array.
-
+  hideContent();
+  unhideContent();
+  assignButtonColours();
+  generateDiffuseOrder();
+  clearInterval(interval);
+  setlevel();
+  countdown(localStorage.getItem("theTime"));
+  listeningForClick();
 }
 //This function applies a css rule to hide all elements with class 'hide-after-start'
 function hideContent(){
-  for(i=0;i<4;i++){
+  for(var i=0;i<4;i++){
     document.getElementsByClassName("hide-after-start")[i].style.cssText = "display:none;";
   }
 }
 //This function unhides the main game content
 function unhideContent(){
-  for(j=0;j<4;j++){
+  for(var j=0;j<4;j++){
     document.getElementsByClassName("show-after-start")[j].style.cssText = "display:contents;";
     document.getElementsByClassName("show-after-start")[j].style.cssText = "animation: fadein 1s;";
     }
@@ -41,18 +28,18 @@ function unhideContent(){
 }
 // This function displays the 'Unsuccessful' message when either the player runs out of time or hits the 'abort' button
 function stopGame(){
-for(k=0;k<4;k++){
-  document.getElementsByClassName("show-after-start")[k].style.cssText = "display:none;";     // This reverses the action of the unhidecontent function and hides all game content when stopGame is called..
+for(var z=0;z<4;z++){
+  document.getElementsByClassName("show-after-start")[z].style.cssText = "display:none;";
 }
- document.getElementsByClassName("outer-screen-border")[0].style.cssText = "display:none;";   // Hides the Outer Screen border
- document.getElementsByClassName("game-heading")[0].style.cssText = "display:none;";          // Hides the Game Heading
- document.getElementById("abort-message-show").style.cssText = "display:contents;";           // Shows the abort/unsuccessful message.
+ document.getElementsByClassName("outer-screen-border")[0].style.cssText = "display:none;";
+ document.getElementsByClassName("game-heading")[0].style.cssText = "display:none;";
+ document.getElementById("abort-message-show").style.cssText = "display:contents;";
 }
 
 //This function sets the allowed time based on age
 function setlevel(){
-let level = localStorage.getItem("age");
-let time;
+var level = localStorage.getItem("age");
+var time;
 if (level >= 6 && level <= 8){
   time = 1242; // 20 minutes
 }else if (level >= 9 && level <= 12) {
@@ -60,18 +47,14 @@ if (level >= 6 && level <= 8){
 }else{
   time = 1062; // 17 minutes
 }
-localStorage.setItem("theTime", time); //Puts the time allocation on local storage so it can be manipulated by other functions
+localStorage.setItem("theTime", time);
 }
-/* This is the main timer function that does 3 thinges
-1. Allocates the timer a user gets based on age.
-2. Updates the onscreen countodwon timer
-3. Terminates the game if certain conditions are met */
-var interval;
+/* This is the main timer function */
 function countdown(seconds) {
-  let counter = seconds;
-  let minutes;
-  let x = 60;
-  let y = 0;
+  var counter = seconds;
+  var minutes;
+  var x = 60;
+  var y = 0;
   interval = setInterval(() => {
     counter--;
     x--;
@@ -116,40 +99,50 @@ function countdown(seconds) {
       minutes = 2;}
     else if (counter < 122 && counter >= 62){
       minutes = 1;
-          document.getElementById("time-remaining").style.cssText = "color:orange; opacity:0.85;"; //Changes the text to orange to signify < 2mins left
-          document.getElementById("flashing-bomb-text").style.cssText = "color:orange; animation:flashdiv 2s infinite; opacity:0.85;"; //Changes the color of the Bomb! text to orange and flashes it every 1s
-          document.getElementsByClassName("bomb")[0].style.cssText = "border:9px double orange;"; //Increase the border size and sets the border the same color as the clock
-        }else{ minutes = 0;
-          document.getElementById("time-remaining").style.cssText = "color:red; opacity:1;";   //Changes the text to red to signify < 1mins left
-          document.getElementById("flashing-bomb-text").style.cssText = "color:red; animation:flashdiv 500ms infinite; opacity:1;"; //Changes the color of the Bomb! text to red and flashes it every 0.5s
-          document.getElementsByClassName("bomb")[0].style.cssText = "border:12px double red;"; //Further Increases the border size and sets the border the same color as the clock
+          timeLessThanTwo();
+        }else{
+      minutes = 0;
+        timeLessThanOne();
         }
-    //Display seconds 0 - 59
-    if(x < 0 ){x = 59;}
-    //This condition pads the number with a "0" if the seconds are < 10.
-    if (x < 10){document.getElementById("time-remaining").innerHTML = "0" + minutes + ":" + y + x;}
-    //This condition does not pad the number with a "0" if the seconds are > 10.
-    else{document.getElementById("time-remaining").innerHTML =  minutes + ":" + x;}
-    //Terminate the game when counter reaches 1 second left and when winflags value is set to "0", then display the abort/loose message.
-  if (counter == 1 ){
+    if (x < 0 ){
+      x = 59;
+    }
+    if (x < 10){
+      document.getElementById("time-remaining").innerHTML =  minutes + ":" + y + x;
+    }
+    else{
+      document.getElementById("time-remaining").innerHTML =  minutes + ":" + x;
+    }
+    if (counter == 1 ){
         stopGame();
       document.getElementById("abort-message-show").removeAttribute("style");
     }
-      document.getElementsByClassName("outer-clock-border")[0].style.cssText = "border-color:grey;";//Resets the clock face border color back to grey after 1 second
-},1000); //1000ms
+      document.getElementsByClassName("outer-clock-border")[0].style.cssText = "border-color:grey;";
+},1000);
 }
-/* This function assigns the same colours to the 'wires'/buttons each time the game is started rather than using individual classes*/
+
+/* This function applies styles when the timer is < 2 minutes remaining */
+function timeLessThanTwo(){
+  document.getElementById("time-remaining").style.cssText = "color:orange; opacity:0.85;";
+  document.getElementById("flashing-bomb-text").style.cssText = "color:orange; animation:flashdiv 2s infinite; opacity:0.85;";
+  document.getElementsByClassName("bomb")[0].style.cssText = "border:9px double orange;";
+}
+/* This function applies styles when the timer is < 1 minutes remaining */
+function timeLessThanOne(){
+document.getElementById("time-remaining").style.cssText = "color:red; opacity:1;";
+document.getElementById("flashing-bomb-text").style.cssText = "color:red; animation:flashdiv 500ms infinite; opacity:1;";
+document.getElementsByClassName("bomb")[0].style.cssText = "border:12px double red;";
+}
+/* This function assigns the same colours to the 'wires'/buttons each time the game is started rather than using individual classes */
 function assignButtonColours(){
-  let colorChoice= ["blue","brown","gold","green","black","red","purple","orange"]; //Put the preferred colors in an array called 'colorChoice'
-  for(i=0;i<colorChoice.length;i++){
-    document.getElementsByClassName("wires")[i].style.cssText = `background-color:${colorChoice[i]};`; // Assign a different colour to the each of the wires.
+  var colorChoice= ["blue","brown","silver","green","black","red","purple","orange"];
+  for(var i=0;i<colorChoice.length;i++){
+    document.getElementsByClassName("wires")[i].style.cssText = `background-color:${colorChoice[i]};`;
   }
 }
 // Start of the fisherYates function///////////////////////////////////////////////////////////////////////////////////////////
  /*This function is not my code it uses the fisherYates method to jumble up the contents of an array in this case numbers 1 - 8
  https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array */
-var wiresarray = [1,2,3,4,5,6,7,8];
-// Use an array to store the numbers 1 - 8
 function generateDiffuseOrder(){
  var count = wiresarray.length,
      randomnumber,
@@ -158,23 +151,23 @@ function generateDiffuseOrder(){
   randomnumber = Math.random() * count-- | 0;
   temp = wiresarray[count];
   wiresarray[count] = wiresarray[randomnumber];
-  wiresarray[randomnumber] = temp
+  wiresarray[randomnumber] = temp;
  }
 }
 // End of the fisherYates function//////////////////////////////////////////////////////////////////////////////////////////////
 
 //This function listens for a click event on anything with a class of 'wires'
+function listeningForClick(){
 $(document).on('click', '.wires', function(){
-       let wire = ($(this).attr('id'));                            //Get id of the password box that was clicked on
-       localStorage.setItem("wireId", wire);                       //Commit the value of the password boxes id to local storage
-       checkanswers();                                             //Calls the check answers function
+       var wire = ($(this).attr('id'));
+       localStorage.setItem("wireId", wire);
+       checkAnswers();
     });
-
+}
 // This function compares the correct sequence chosen by the user to the sequence in the array.
-function checkanswers(){
-
-  let theWiresId = localStorage.getItem("wireId");                 //Assigns the current value of local store to the variable theWiresId
-  let indexNumber;                                                //This section updates the variable indexNumber depending on which id value is chosen
+function checkAnswers(){
+  var theWiresId = localStorage.getItem("wireId");
+  var indexNumber;
   if(theWiresId == 'wire-1'){
      indexNumber = 1;
   }else if(theWiresId == 'wire-2'){
@@ -194,38 +187,41 @@ function checkanswers(){
   }else{
     console.log('Invalid Choice');
   }
-
-if(indexNumber == wiresarray[0]){                                       // Check if index number is equal to the 1st number in the array
-  wiresarray.shift();                                                   // Delete the 1st entry in the array if correctly guessed.
+if(indexNumber == wiresarray[0]){
+  wiresarray.shift();
   document.getElementById(theWiresId).style.cssText = "animation:flashdiv 0.1s 10; background-color: white; color: #00FF00; font-size: 95%;";
-  document.getElementById(theWiresId).innerText = "Correct!";          //Apply styling and change text on the button after a successful choice
-  document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.2s 12;border-color:green;"; //
+  document.getElementById(theWiresId).innerText = "Correct!";
+  document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.2s 12;border-color:green;";
 }else{
-  document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.1s 2;border-color:red;"; //
-  var wronganswer = localStorage.getItem("theTime");                  // Assigns the currently allocated time to the wronganswer variable
-  wronganswer = (wronganswer -60);                                    // If a wrong answer is guessed, remove 60s off the time.
-  localStorage.setItem("theTime", wronganswer);                       // Update 'theTime' entry in local storage - 60s
-  clearInterval(interval);                                            // Clears the current timer.
-  countdown(localStorage.getItem("theTime"));                         // Calls the countdown function to start the timer with the new parameter
+  document.getElementsByClassName("outer-clock-border")[0].style.cssText = "animation:flashdiv 0.1s 2;border-color:red;";
+  var wronganswer = localStorage.getItem("theTime");
+  wronganswer = (wronganswer -60);
+  localStorage.setItem("theTime", wronganswer);
+  clearInterval(interval);
+  countdown(localStorage.getItem("theTime"));
 }
-if(wronganswer <= 0){                                                 // If 'theTime' is less than or equal to 0 run stopGame to stop the game with a failure message
+if(wronganswer <= 0){
   stopGame();
 }
-finishGame();                                                         // Calls 'finishGame' at the end of the function run
+finishGame();
 }
 
 
+/* This function finishes up the game and displays the success message */
 function finishGame(){
-  if (wiresarray.length === 0) {                                      // Checks if the array is empty / all answer guess correctly
-  for(k=0;k<4;k++){
-    document.getElementsByClassName("show-after-start")[k].style.cssText = "display:none;";      // This hides all game content when stopGame is called.
-    document.getElementsByClassName("outer-screen-border")[0].style.cssText = "display:none;";   // Hides the Outer Screen border
-    document.getElementsByClassName("game-heading")[0].style.cssText = "display:none;";          // Hides the Game Heading
-
+  if (wiresarray.length === 0) {
+  for(var k=0;k<4;k++){
+    document.getElementsByClassName("show-after-start")[k].style.cssText = "display:none;";
+    document.getElementsByClassName("outer-screen-border")[0].style.cssText = "display:none;";
+    document.getElementsByClassName("game-heading")[0].style.cssText = "display:none;";
 }
-   document.getElementById("game3-success").style.cssText = "display:contents;";                // Shows the success message
+   document.getElementById("game3-success").style.cssText = "display:contents;";
 }
 }
-
-// Need write a nextgame function to finish it off
-//--------------------------------End Of File--------------------------------------------------
+//This function waits for the player to click the Big Red button then runs startGame
+function waitingForBigRedButton(){
+document.getElementById("big-red-button").onclick = function() {
+startGame();
+};
+}
+waitingForBigRedButton();
