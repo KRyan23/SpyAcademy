@@ -137,6 +137,7 @@ function checkanswer() {
   function lockidvalue() {
     var changeTheId = document.getElementById(theidof);
     changeTheId.id = theidof + "-correct";
+    alert("Correct! Please Choose another 'X' Box before Clicking a letter!");
   }
 
   if (boxcontents.includes(privatePassword[0]) && theidof.includes("char-box-0")) {
