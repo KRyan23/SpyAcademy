@@ -30,8 +30,7 @@
     -   #### Returning Visitor Goals
 
         1. As a Returning Visitor, I would like an easy way to get in touch since I would like more information about the sites content.
-        2. As a Returning Visitor, I would like to pick up where I left off even if I havent passed all 3 games.
-        3. As a Returning Visitor, I would like to share my best times and scores with other users of the game while also picking up any tips on passing a difficult level.
+        2. As a Returning Visitor, I would like to share my best times and scores with other users of the game while also picking up any tips on passing a difficult level.
 
     -   #### Frequent User Goals
         1. As a Frequent User, I would like to check their social media pages for any updates to the game.
@@ -59,14 +58,14 @@
 
 *   ### Wireframes
 
-    - Desktop Wireframes - [View here](assets/docs/SpyAcademy-Desktop&SiteMap.pdf)
-    - Tablet Wireframes - [View here](assets/docs/SpyAcademy-Tablet&SiteMap.pdf)
-    - Mobile Wireframes - [View here](assets/docs/SpyAcademy-Mobile&SiteMap.pdf)
+    - Desktop Wireframes - [View here](/assets/docs/SpyAcademy-Desktop&SiteMap.pdf)
+    - Tablet Wireframes - [View here](/assets/docs/SpyAcademy-Tablet&SiteMap.pdf)
+    - Mobile Wireframes - [View here](/assets/docs/SpyAcademy-Mobile&SiteMap.pdf)
 
 
     *   ### Screenshots
 
-        -
+        - [View here](/assets/docs/screenshots.pdf)
 
 
 ## Features
@@ -83,16 +82,16 @@
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [Javascript](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.2.1:](https://getbootstrap.com/docs/4.2/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [JQuery:](https://code.jquery.com/)
-    - JQuery was used on....
+    - JQuery was used on all 3 game.js files.
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the "" font into the style.css file which is used on all pages throughout the site.
+    - Google fonts were used to import the "Saria Stencil One" font into the style.css file which is used on all pages throughout the site.
 1. [Font Awesome v5.15.2:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [Git](https://git-scm.com/)
@@ -111,8 +110,9 @@
 
 The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Mark-up Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]()
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]()
+-   [W3C Mark-up Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/Html-Css-results.pdf)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/Html-Css-results.pdf)
+-   [JSHint ](https://jshint.com/) - [Results](/assets/docs/JSHint.pdf)
 
 
 ### Testing User Stories from User Experience Section
@@ -125,10 +125,10 @@ The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to val
         1. Upon landing on the main page users are greeted with a clean site which conveys the message that you are entering a game.
         2. On clicking the 'Enter Game' button the site further reinforces the message of its purpose by describing the purpose of the site and reinforcing the point using the '3' Spy Badge Imagery that appears throughout the game.
 
-    2. As a First Time Visitor, I would like to try out the games easily to see if I am interested..
+    2. As a First Time Visitor, I would like to try out the games easily to see if I am interested.
 
         1. The site has been designed to give a good and unimpeded flow from start to end.
-        2. At any stage through each game the user has the opportunity to click the abort button which will bring them back to the index page.
+        2. The user must prgress throught the 'Academy' passing each challenge to be able to go to the next, after finishing all 3 succesfully, the have the option to go back to             the start of Spy Academy and try them out again.
 
 
     3. As a First Time Visitor, I would like to try out the game as a parent to see if it is appropriate for my child.
@@ -142,11 +142,8 @@ The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to val
 
         1. Since the layout of the game is not a traditional webpage there is no contact information, so the user is directed to the social media links in order to get in touch.
 
-    2. As a Returning Visitor, I would like to pick up where I left off even if I havent passed all 3 games.
-        1. The game uses localStorage to hold progress information if the user exits out of the game so they can close the browser and still pickup where they left off from before.
-        2. The exception to this rule is the user hits the 'Abort' key at any stage, this will deliberatly clear the localStorage associated with game progress.
-
-    3. As a Returning Visitor, I would like to share my best times and scores with other users of the game while also picking up any tips on passing a difficult level.
+    
+    2. As a Returning Visitor, I would like to share my best times and scores with other users of the game while also picking up any tips on passing a difficult level.
 
         1. The best way for the user got about this is by tweeting to a dedicated channel, or joining one of the many Facebook groups setup for this game.
         They can use the social media links at the bottom of the page to acheive this.
@@ -157,7 +154,7 @@ The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to val
 
         1. As with any new service or product and prior to launch there would be dedicated social media channels setup specifically to allow their users to easily interact.
         2. Users can just launch the dedicatted social media channels from the links provided.
-  2. As a Frequent younger user, I dont have a social media account and would just like to play the games without any restrictions.
+    2. As a Frequent younger user, I don't have a social media account and would just like to play the games without any restrictions.
         1. The site itself does not hold a database of users or require login to use its services so there is unrestricted access at all times.
 
 ### Further Testing
@@ -166,13 +163,10 @@ The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to val
 - The website was continually checked on a variety of emulated devices under Chromes Developer tools, these included Desktop, Moto4, GalaxyS5, Pixel, IPhones5,6,7,8,X, IPad/Pro and the Surface Duo.
 -   Internal and external linking were continually tested throughout the project to ensure functionality.
 -   Family members were asked to review the site and to give their initial thoughts and feedback. Their input was used to make small design changes to all 3 games.
--
 
 ### Known Bugs
 
--
--
--
+-  [Results](/assets/docs/known-bugs.pdf)
 
 ## Deployment
 
@@ -224,7 +218,8 @@ $ git clone https://kryan23.github.io/SpyAcademy/
 
 ### Code
 
--
+- All code written by myself except for the Fisher Yates function in game3.js line 143
+(https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
 ### Content
 
