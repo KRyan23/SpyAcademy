@@ -2,6 +2,7 @@ var winflag;
 var trys;
 var combo = [];
 var correctGuess = "background:green; color:white; opacity:0.75";
+var i;
 
 /* Waits for abort button to be clicked */
 function waitingForStartButton() {
